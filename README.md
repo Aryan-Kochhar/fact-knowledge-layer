@@ -15,6 +15,21 @@ locally on `sentence-transformers` so no tokens are spent finding candidates.
 
 ---
 
+### Where to look
+
+| | |
+|---|---|
+| **Just run it** | [Setup](#setup-and-run-instructions) — one command, no API key needed to see results |
+| **The four required cases** | [Results](#results-on-the-starter-corpus) — corroboration, contradiction, context, failure |
+| **How it works** | [Architecture](#architecture) — two diagrams, then the ideas behind them |
+| **Why it's built this way** | [Design decisions](#design-decisions-and-trade-offs) and [what went wrong](#things-that-went-wrong-and-what-fixed-them) |
+| **What it can't do** | [Limitations](#limitations-and-next-steps) |
+
+The first three take about five minutes. The rest is there if you want the
+reasoning behind a particular decision.
+
+---
+
 ## Setup and Run Instructions
 
 **Requirements: Python 3.11 or newer. That is the whole list.** Node is not
@@ -166,25 +181,69 @@ flagged where the model's label contradicted the deterministic analysis. The
 
 ## Approach
 
-### Pipeline
+### Architecture
 
+Two phases. The first turns one document into verified facts; the second
+compares those facts against everything already stored.
+
+Purple is an LLM call — the only step that costs quota. Green is deterministic
+Python: free, auditable, and identical on every run. Orange is a gate that can
+reject its input, and red is what gets thrown away and logged rather than
+silently kept.
+
+**1. Ingesting one document**
+
+```mermaid
+flowchart TD
+    P["<b>Parse</b><br/>column-aware text and tables<br/>printed page labels recovered"]
+    P --> C["<b>Chunk</b> · page-aware, ~15k chars<br/>+ <b>Profile</b>: one call infers the<br/>entity, period and currency"]
+    C --> E{{"<b>Extract</b> · one call per chunk<br/>facts, each with a verbatim quote"}}
+    E --> V{"<b>VERIFY</b><br/>is that quote really on that page?"}
+    V -- "no" --> R[/"<b>rejected</b> · 2.15%<br/>logged, never stored"/]
+    V -- "yes, or relocated" --> N["<b>Normalise</b> · deterministic<br/>8,142 crore → 81.42e9 INR<br/>FY24 · 2023-24 → FY2024"]
+    N --> M["<b>Embed</b> · local, no API<br/>metric identity only —<br/>value and period excluded"]
+    M --> D[("<b>SQLite</b>")]
+
+    classDef llm fill:#ede9fe,stroke:#7c3aed,stroke-width:1.5px,color:#2e1065
+    classDef det fill:#ecfdf5,stroke:#059669,stroke-width:1.5px,color:#064e3b
+    classDef gate fill:#fff7ed,stroke:#ea580c,stroke-width:2px,color:#7c2d12
+    classDef store fill:#1e293b,stroke:#0f172a,color:#f8fafc
+    classDef drop fill:#fef2f2,stroke:#dc2626,stroke-width:1.5px,color:#7f1d1d
+    class E llm
+    class P,C,N,M det
+    class V gate
+    class D store
+    class R drop
 ```
-PDF
- |
- |--> parse        per-page text in true reading order, tables rendered inline,
- |                 printed page labels recovered
- |--> profile      ONE call per document: infer the entity, reporting period,
- |                 currency and scale that the rest of the document assumes
- |--> chunk        page-aware, ~15k chars, every page stamped [[page N]]
- |--> extract      one call per chunk -> atomic facts with verbatim quotes
- |--> VERIFY       locate each quote in the real page text; reject what is absent
- |--> normalise    deterministic: value+unit -> number, period -> canonical key
- |--> embed        local MiniLM over metric identity (not values, not periods)
- |--> candidates   vector search + exact metric blocking, ranked by expected value
- |--> analyse      deterministic: unit conversion, numeric delta, period/scope diff
- `--> judge        batched LLM call -> corroborates / contradicts /
-                   reconcilable_context / unrelated, with written reasoning,
-                   then cross-checked against the deterministic analysis
+
+**2. Linking against everything already known**
+
+Only the new document's facts run through this. Existing facts are already
+parsed, extracted and embedded, which is what makes ingestion incremental.
+
+```mermaid
+flowchart TD
+    A["<b>Candidates</b> · new facts vs the store<br/>vector search + exact metric blocking"]
+    A --> B["<b>Analyse</b> · deterministic<br/>unit conversion, numeric delta,<br/>period / scope / basis difference"]
+    B --> C["<b>Rank and cap</b><br/>same-period value gaps first;<br/>bounds how much judgment is spent"]
+    C -- "over budget" --> S[/"skipped, logged —<br/>not the same as unrelated"/]
+    C --> J{{"<b>Judge</b> · one call per 12 pairs<br/>label + written reasoning"}}
+    J --> V{"<b>Validate</b><br/>does the verdict survive<br/>the arithmetic?"}
+    V -- "no" --> F[/"flagged,<br/>confidence halved"/]
+    V -- "yes" --> O["corroborates · contradicts<br/>reconcilable_context · unrelated"]
+    F --> O
+    O --> D[("<b>SQLite</b> → UI")]
+
+    classDef llm fill:#ede9fe,stroke:#7c3aed,stroke-width:1.5px,color:#2e1065
+    classDef det fill:#ecfdf5,stroke:#059669,stroke-width:1.5px,color:#064e3b
+    classDef gate fill:#fff7ed,stroke:#ea580c,stroke-width:2px,color:#7c2d12
+    classDef store fill:#1e293b,stroke:#0f172a,color:#f8fafc
+    classDef drop fill:#fef2f2,stroke:#dc2626,stroke-width:1.5px,color:#7f1d1d
+    class J llm
+    class A,B,C,O det
+    class V gate
+    class D store
+    class S,F drop
 ```
 
 ### Module map
@@ -439,13 +498,30 @@ All four suggested extensions are implemented.
 
 ### AI tools used
 
-- **Claude Code (Opus 5)** for building the system: architecture, implementation,
-  the test suite, and the debugging sessions that produced the fixes above.
-- **Google Gemini** at runtime: `gemini-3.5-flash-lite` for extraction and
-  document profiling, `gemini-3.1-flash-lite` for routine judgment,
-  `gemini-3.5-flash` for escalated contradiction candidates.
-- **sentence-transformers (`all-MiniLM-L6-v2`)** locally for candidate retrieval,
-  chosen so that finding candidate pairs costs no tokens.
+The brief permits coding agents and asks that their use be disclosed, so here is
+the split, honestly.
+
+**Mine.** The stack and the pipeline design: page-aware chunking that preserves
+page numbers for citation, per-chunk extraction into a loose fact record,
+embedding each fact and vector-searching for near-duplicates, then a second LLM
+call to judge how a pair relates. Also the decisions to rotate a pool of
+free-tier keys, to embed locally so candidate search costs no tokens, to make
+ingestion incremental, and to surface a failure case deliberately. Then the
+direction during the build: dropping the deployment work once it proved to be
+overkill, and pushing for the security audit that found API keys leaking into a
+database about to be committed.
+
+**Claude Code (Opus 5).** Implementation, the 166 tests, and the debugging that
+produced the fixes described above. It also contributed design that was not in
+my brief: the quote-verification gate that rejects any fact whose evidence
+cannot be located, the deterministic normalisation layer, the document-profile
+pass, the priority ranking that rations judgment calls, and the validator that
+cross-checks each verdict against the arithmetic.
+
+**At runtime**, the system uses Google Gemini — `gemini-3.5-flash-lite` for
+extraction and profiling, `gemini-3.1-flash-lite` for routine judgment,
+`gemini-3.5-flash` for escalated contradiction candidates — and
+`sentence-transformers` (`all-MiniLM-L6-v2`) locally for candidate retrieval.
 
 ---
 
