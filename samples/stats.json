@@ -1,0 +1,77 @@
+{
+  "documents": [
+    {
+      "filename": "01-india-economic-survey-2024-25-excerpt.pdf",
+      "title": "Economic Survey 2024-25",
+      "page_count": 89,
+      "facts": 338
+    },
+    {
+      "filename": "02-rbi-annual-report-2024-25-excerpt.pdf",
+      "title": "Annual Report 2024-25",
+      "page_count": 100,
+      "facts": 667
+    },
+    {
+      "filename": "03-imf-india-2025-article-iv-excerpt.pdf",
+      "title": "2025 Article IV Consultation—Press Release; Staff Report; Staff Statement; and Statement by the Executive Director for India",
+      "page_count": 95,
+      "facts": 464
+    },
+    {
+      "filename": "01-delhivery-prospectus-2022-excerpt.pdf",
+      "title": "Prospectus",
+      "page_count": 100,
+      "facts": 674
+    },
+    {
+      "filename": "02-delhivery-annual-report-fy24-excerpt.pdf",
+      "title": "Delhivery Limited Annual Report 2023-24",
+      "page_count": 100,
+      "facts": 1233
+    },
+    {
+      "filename": "03-delhivery-q4-fy24-earnings-presentation.pdf",
+      "title": "Investor Presentation for the Earnings Audio / Video Conference Call Q4 & FY24",
+      "page_count": 27,
+      "facts": 84
+    }
+  ],
+  "facts": 3460,
+  "relations": {
+    "contradicts": 6,
+    "corroborates": 80,
+    "reconcilable_context": 834,
+    "unrelated": 457
+  },
+  "verification": {
+    "relocated": 47,
+    "verified": 3413
+  },
+  "issues": {
+    "judgment_inconsistent": 50,
+    "pairs_over_budget": 1,
+    "quote_not_found": 76,
+    "quote_relocated": 51
+  },
+  "llm_calls": [
+    {
+      "purpose": "extract",
+      "model": "gemini-3.5-flash-lite",
+      "calls": 155,
+      "avg_ms": 12517.0
+    },
+    {
+      "purpose": "judge",
+      "model": "gemini-3.1-flash-lite",
+      "calls": 118,
+      "avg_ms": 64562.0
+    },
+    {
+      "purpose": "profile",
+      "model": "gemini-3.5-flash-lite",
+      "calls": 6,
+      "avg_ms": 1589.0
+    }
+  ]
+}

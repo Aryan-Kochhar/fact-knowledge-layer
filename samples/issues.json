@@ -1,0 +1,4016 @@
+[
+  {
+    "id": "iss_f28d03c343664628",
+    "doc_id": "d_69d71fcd3a244134",
+    "chunk_id": "c_a1fca05250764d5e",
+    "kind": "quote_relocated",
+    "severity": "info",
+    "detail": "model cited page 14 but the quote for 'India — real gross value added growth' is on page 17; citation corrected.",
+    "payload": {
+      "claimed": 14,
+      "actual": 17
+    },
+    "created_at": "2026-09-07T12:09:16+00:00",
+    "filename": "01-india-economic-survey-2024-25-excerpt.pdf"
+  },
+  {
+    "id": "iss_52fbe46f0eaf4cfe",
+    "doc_id": "d_69d71fcd3a244134",
+    "chunk_id": "c_a1fca05250764d5e",
+    "kind": "quote_relocated",
+    "severity": "info",
+    "detail": "model cited page 14 but the quote for 'India — agriculture sector growth' is on page 17; citation corrected.",
+    "payload": {
+      "claimed": 14,
+      "actual": 17
+    },
+    "created_at": "2026-09-07T12:09:16+00:00",
+    "filename": "01-india-economic-survey-2024-25-excerpt.pdf"
+  },
+  {
+    "id": "iss_eead6497ff0a4ca0",
+    "doc_id": "d_69d71fcd3a244134",
+    "chunk_id": "c_a1fca05250764d5e",
+    "kind": "quote_relocated",
+    "severity": "info",
+    "detail": "model cited page 14 but the quote for 'India — total Kharif food grain production' is on page 17; citation corrected.",
+    "payload": {
+      "claimed": 14,
+      "actual": 17
+    },
+    "created_at": "2026-09-07T12:09:16+00:00",
+    "filename": "01-india-economic-survey-2024-25-excerpt.pdf"
+  },
+  {
+    "id": "iss_6540f0c74be1450d",
+    "doc_id": "d_69d71fcd3a244134",
+    "chunk_id": "c_a1fca05250764d5e",
+    "kind": "quote_relocated",
+    "severity": "info",
+    "detail": "model cited page 14 but the quote for 'India — total Kharif food grain production growth' is on page 17; citation corrected.",
+    "payload": {
+      "claimed": 14,
+      "actual": 17
+    },
+    "created_at": "2026-09-07T12:09:16+00:00",
+    "filename": "01-india-economic-survey-2024-25-excerpt.pdf"
+  },
+  {
+    "id": "iss_b0dca24aa0ec4e0c",
+    "doc_id": "d_69d71fcd3a244134",
+    "chunk_id": "c_a1fca05250764d5e",
+    "kind": "quote_relocated",
+    "severity": "info",
+    "detail": "model cited page 14 but the quote for 'India — total Kharif food grain production growth' is on page 17; citation corrected.",
+    "payload": {
+      "claimed": 14,
+      "actual": 17
+    },
+    "created_at": "2026-09-07T12:09:16+00:00",
+    "filename": "01-india-economic-survey-2024-25-excerpt.pdf"
+  },
+  {
+    "id": "iss_cde298da41094840",
+    "doc_id": "d_69d71fcd3a244134",
+    "chunk_id": "c_a1fca05250764d5e",
+    "kind": "quote_relocated",
+    "severity": "info",
+    "detail": "model cited page 14 but the quote for 'India — rabi sowing growth of wheat' is on page 18; citation corrected.",
+    "payload": {
+      "claimed": 14,
+      "actual": 18
+    },
+    "created_at": "2026-09-07T12:09:16+00:00",
+    "filename": "01-india-economic-survey-2024-25-excerpt.pdf"
+  },
+  {
+    "id": "iss_f7721e07c45e4dac",
+    "doc_id": "d_69d71fcd3a244134",
+    "chunk_id": "c_a1fca05250764d5e",
+    "kind": "quote_relocated",
+    "severity": "info",
+    "detail": "model cited page 14 but the quote for 'India — rabi sowing growth of gram' is on page 18; citation corrected.",
+    "payload": {
+      "claimed": 14,
+      "actual": 18
+    },
+    "created_at": "2026-09-07T12:09:16+00:00",
+    "filename": "01-india-economic-survey-2024-25-excerpt.pdf"
+  },
+  {
+    "id": "iss_606d375b47c64ce9",
+    "doc_id": "d_69d71fcd3a244134",
+    "chunk_id": "c_a1fca05250764d5e",
+    "kind": "quote_relocated",
+    "severity": "info",
+    "detail": "model cited page 15 but the quote for 'India — industrial sector growth' is on page 18; citation corrected.",
+    "payload": {
+      "claimed": 15,
+      "actual": 18
+    },
+    "created_at": "2026-09-07T12:09:16+00:00",
+    "filename": "01-india-economic-survey-2024-25-excerpt.pdf"
+  },
+  {
+    "id": "iss_d039c32853324153",
+    "doc_id": "d_69d71fcd3a244134",
+    "chunk_id": "c_a1fca05250764d5e",
+    "kind": "quote_relocated",
+    "severity": "info",
+    "detail": "model cited page 15 but the quote for 'India — industrial sector growth' is on page 18; citation corrected.",
+    "payload": {
+      "claimed": 15,
+      "actual": 18
+    },
+    "created_at": "2026-09-07T12:09:16+00:00",
+    "filename": "01-india-economic-survey-2024-25-excerpt.pdf"
+  },
+  {
+    "id": "iss_a9ba58bd8ca642c0",
+    "doc_id": "d_69d71fcd3a244134",
+    "chunk_id": "c_986f0e75c0b44a56",
+    "kind": "quote_not_found",
+    "severity": "warning",
+    "detail": "rejected fact 'India — real GDP growth rate': its quote does not appear in pages 35–40 (best similarity 0.00).",
+    "payload": {
+      "fact": {
+        "subject": "India",
+        "predicate": "real GDP growth rate",
+        "value": "6.4",
+        "unit": "per cent",
+        "time_scope": "FY25",
+        "qualifiers": [],
+        "basis": "estimate",
+        "fact_type": "percentage",
+        "quote": "real GDP is estimated to grow by 6.4 per cent in FY25",
+        "page": 35,
+        "confidence": 0.95
+      },
+      "best_score": 0.0
+    },
+    "created_at": "2026-09-07T12:09:16+00:00",
+    "filename": "01-india-economic-survey-2024-25-excerpt.pdf"
+  },
+  {
+    "id": "iss_cdaf4347c3dd4a6d",
+    "doc_id": "d_69d71fcd3a244134",
+    "chunk_id": "c_9e030142af0a4166",
+    "kind": "quote_not_found",
+    "severity": "warning",
+    "detail": "rejected fact 'India — real GDP growth rate': its quote does not appear in pages 24–28 (best similarity 0.49).",
+    "payload": {
+      "fact": {
+        "subject": "India",
+        "predicate": "real GDP growth rate",
+        "value": "6.4",
+        "unit": "per cent",
+        "time_scope": "FY25",
+        "qualifiers": [],
+        "basis": "estimate",
+        "fact_type": "percentage",
+        "quote": "real GDP is estimated to grow by 6.4 per cent in FY25",
+        "page": 24,
+        "confidence": 1.0
+      },
+      "best_score": 0.491
+    },
+    "created_at": "2026-09-07T12:09:17+00:00",
+    "filename": "01-india-economic-survey-2024-25-excerpt.pdf"
+  },
+  {
+    "id": "iss_d649da3712904491",
+    "doc_id": "d_69d71fcd3a244134",
+    "chunk_id": "c_3b2d74461dab4158",
+    "kind": "quote_not_found",
+    "severity": "warning",
+    "detail": "rejected fact 'India — real GDP growth': its quote does not appear in pages 19–23 (best similarity 0.00).",
+    "payload": {
+      "fact": {
+        "subject": "India",
+        "predicate": "real GDP growth",
+        "value": "6.4",
+        "unit": "per cent",
+        "time_scope": "FY25",
+        "qualifiers": [
+          "real GDP",
+          "estimated"
+        ],
+        "basis": "estimate",
+        "fact_type": "percentage",
+        "quote": "Readers should note that real GDP is estimated to grow by 6.4 per cent in FY25",
+        "page": 19,
+        "confidence": 1.0
+      },
+      "best_score": 0.0
+    },
+    "created_at": "2026-09-07T12:09:19+00:00",
+    "filename": "01-india-economic-survey-2024-25-excerpt.pdf"
+  },
+  {
+    "id": "iss_86483fb1a78b4ea5",
+    "doc_id": "d_69d71fcd3a244134",
+    "chunk_id": "c_98888e486c5f4c87",
+    "kind": "quote_not_found",
+    "severity": "warning",
+    "detail": "rejected fact 'India — real GDP growth rate': its quote does not appear in pages 29–34 (best similarity 0.60).",
+    "payload": {
+      "fact": {
+        "subject": "India",
+        "predicate": "real GDP growth rate",
+        "value": "6.4",
+        "unit": "per cent",
+        "time_scope": "FY25",
+        "qualifiers": [
+          "real GDP"
+        ],
+        "basis": "estimate",
+        "fact_type": "percentage",
+        "quote": "real GDP is estimated to grow by 6.4 per cent in FY25",
+        "page": 29,
+        "confidence": 0.95
+      },
+      "best_score": 0.604
+    },
+    "created_at": "2026-09-07T12:09:19+00:00",
+    "filename": "01-india-economic-survey-2024-25-excerpt.pdf"
+  },
+  {
+    "id": "iss_a7486a0245eb47c8",
+    "doc_id": "d_69d71fcd3a244134",
+    "chunk_id": "c_8798e8acbd364178",
+    "kind": "quote_not_found",
+    "severity": "warning",
+    "detail": "rejected fact 'India — real GDP growth rate': its quote does not appear in pages 74–78 (best similarity 0.00).",
+    "payload": {
+      "fact": {
+        "subject": "India",
+        "predicate": "real GDP growth rate",
+        "value": "6.4",
+        "unit": "per cent",
+        "time_scope": "FY25",
+        "qualifiers": [],
+        "basis": "estimate",
+        "fact_type": "percentage",
+        "quote": "Readers should note that real GDP is estimated to grow by 6.4 per cent in FY25",
+        "page": 74,
+        "confidence": 1.0
+      },
+      "best_score": 0.0
+    },
+    "created_at": "2026-09-07T12:09:26+00:00",
+    "filename": "01-india-economic-survey-2024-25-excerpt.pdf"
+  },
+  {
+    "id": "iss_87e64ba1ea0e4cd5",
+    "doc_id": "d_69d71fcd3a244134",
+    "chunk_id": "c_8798e8acbd364178",
+    "kind": "quote_relocated",
+    "severity": "info",
+    "detail": "model cited page 120 but the quote for 'India — core inflation' is on page 78; citation corrected.",
+    "payload": {
+      "claimed": 120,
+      "actual": 78
+    },
+    "created_at": "2026-09-07T12:09:26+00:00",
+    "filename": "01-india-economic-survey-2024-25-excerpt.pdf"
+  },
+  {
+    "id": "iss_66af95f91dc44c29",
+    "doc_id": "d_69d71fcd3a244134",
+    "chunk_id": "c_8798e8acbd364178",
+    "kind": "quote_relocated",
+    "severity": "info",
+    "detail": "model cited page 120 but the quote for 'India — wholesale price inflation' is on page 78; citation corrected.",
+    "payload": {
+      "claimed": 120,
+      "actual": 78
+    },
+    "created_at": "2026-09-07T12:09:26+00:00",
+    "filename": "01-india-economic-survey-2024-25-excerpt.pdf"
+  },
+  {
+    "id": "iss_5fa2927312f9467b",
+    "doc_id": "d_69d71fcd3a244134",
+    "chunk_id": "c_5f832cf4205f4899",
+    "kind": "quote_not_found",
+    "severity": "warning",
+    "detail": "rejected fact 'medical-scientific instruments export — export value': its quote does not appear in pages 54–58 (best similarity 0.68).",
+    "payload": {
+      "fact": {
+        "subject": "medical-scientific instruments export",
+        "predicate": "export value",
+        "value": "62.7",
+        "unit": "USD million",
+        "time_scope": "April to November 2024",
+        "qualifiers": [],
+        "basis": "actual",
+        "fact_type": "monetary",
+        "quote": "and USD 62.7 million (exported to 9 new markets), respectively.",
+        "page": 57,
+        "confidence": 0.95
+      },
+      "best_score": 0.678
+    },
+    "created_at": "2026-09-07T12:09:27+00:00",
+    "filename": "01-india-economic-survey-2024-25-excerpt.pdf"
+  },
+  {
+    "id": "iss_e659f8c536cf40cc",
+    "doc_id": "d_69d71fcd3a244134",
+    "chunk_id": "c_2b220b90368649a9",
+    "kind": "quote_not_found",
+    "severity": "warning",
+    "detail": "rejected fact 'India — real GDP growth rate estimate': its quote does not appear in pages 79–84 (best similarity 0.00).",
+    "payload": {
+      "fact": {
+        "subject": "India",
+        "predicate": "real GDP growth rate estimate",
+        "value": "6.4",
+        "unit": "per cent",
+        "time_scope": "FY25",
+        "qualifiers": [],
+        "basis": "estimate",
+        "fact_type": "percentage",
+        "quote": "real GDP is estimated to grow by 6.4 per cent in FY25",
+        "page": 79,
+        "confidence": 1.0
+      },
+      "best_score": 0.0
+    },
+    "created_at": "2026-09-07T12:09:32+00:00",
+    "filename": "01-india-economic-survey-2024-25-excerpt.pdf"
+  },
+  {
+    "id": "iss_c14cf5945eab45a7",
+    "doc_id": "d_33d386a77d7f4fc3",
+    "chunk_id": "c_ced5afa587a6494a",
+    "kind": "quote_not_found",
+    "severity": "warning",
+    "detail": "rejected fact 'India — net foreign direct investment inflows': its quote does not appear in pages 11–14 (best similarity 0.48).",
+    "payload": {
+      "fact": {
+        "subject": "India",
+        "predicate": "net foreign direct investment inflows",
+        "value": "0.4",
+        "unit": "USD billion",
+        "time_scope": "2024-25",
+        "qualifiers": [
+          "net"
+        ],
+        "basis": "actual",
+        "fact_type": "monetary",
+        "quote": "Net foreign direct investment (FDI) inflows stood at US$ 0.4 billion during 2024-25, lower than US$ 10.1 billion a year ago",
+        "page": 12,
+        "confidence": 1.0
+      },
+      "best_score": 0.483
+    },
+    "created_at": "2026-09-07T12:10:58+00:00",
+    "filename": "02-rbi-annual-report-2024-25-excerpt.pdf"
+  },
+  {
+    "id": "iss_5c71a6b291df4325",
+    "doc_id": "d_33d386a77d7f4fc3",
+    "chunk_id": "c_ced5afa587a6494a",
+    "kind": "quote_not_found",
+    "severity": "warning",
+    "detail": "rejected fact 'Unified Payments Interface (UPI) — global real-time payments market share': its quote does not appear in pages 11–14 (best similarity 0.66).",
+    "payload": {
+      "fact": {
+        "subject": "Unified Payments Interface (UPI)",
+        "predicate": "global real-time payments market share",
+        "value": "48.5",
+        "unit": "%",
+        "time_scope": "2024",
+        "qualifiers": [
+          "by volume"
+        ],
+        "basis": "actual",
+        "fact_type": "percentage",
+        "quote": "moreover, the success of Unified Payments Interface (UPI) placed India in a leadership position with a share of 48.5 per cent in global real-time payments by volume6.",
+        "page": 14,
+        "confidence": 1.0
+      },
+      "best_score": 0.664
+    },
+    "created_at": "2026-09-07T12:10:58+00:00",
+    "filename": "02-rbi-annual-report-2024-25-excerpt.pdf"
+  },
+  {
+    "id": "iss_0d54b0f98d814cd6",
+    "doc_id": "d_33d386a77d7f4fc3",
+    "chunk_id": "c_ac5c4e3bccf54f64",
+    "kind": "quote_not_found",
+    "severity": "warning",
+    "detail": "rejected fact 'India Gross Domestic Investment — Ratio of gross capital formation (GCF) to GDP at current prices': its quote does not appear in pages 24–27 (best similarity 0.70).",
+    "payload": {
+      "fact": {
+        "subject": "India Gross Domestic Investment",
+        "predicate": "Ratio of gross capital formation (GCF) to GDP at current prices",
+        "value": "31.4",
+        "unit": "%",
+        "time_scope": "2023-24",
+        "qualifiers": [
+          "current prices"
+        ],
+        "basis": "actual",
+        "fact_type": "percentage",
+        "quote": "declined to 31.4 per cent in 2023-24 from\n32.6 per cent in the preceding year",
+        "page": 25,
+        "confidence": 0.95
+      },
+      "best_score": 0.701
+    },
+    "created_at": "2026-09-07T12:10:58+00:00",
+    "filename": "02-rbi-annual-report-2024-25-excerpt.pdf"
+  },
+  {
+    "id": "iss_6616479eea1f498f",
+    "doc_id": "d_33d386a77d7f4fc3",
+    "chunk_id": "c_504d9d03defd4640",
+    "kind": "quote_not_found",
+    "severity": "warning",
+    "detail": "rejected fact 'Reserve Bank of India — Food and beverages inflation': its quote does not appear in pages 41–44 (best similarity 0.00).",
+    "payload": {
+      "fact": {
+        "subject": "Reserve Bank of India",
+        "predicate": "Food and beverages inflation",
+        "value": "7.4",
+        "unit": "per cent",
+        "time_scope": "April 2024-January 2025",
+        "qualifiers": [
+          "standalone"
+        ],
+        "basis": "actual",
+        "fact_type": "percentage",
+        "quote": "II.3.10 Food and beverages inflation averaged\n7.4 per cent in April 2024-January 2025 as\ncompared to 6.9 per cent in the corresponding\nperiod of 2023-24.",
+        "page": 42,
+        "confidence": 0.95
+      },
+      "best_score": 0.0
+    },
+    "created_at": "2026-09-07T12:11:10+00:00",
+    "filename": "02-rbi-annual-report-2024-25-excerpt.pdf"
+  },
+  {
+    "id": "iss_745696769e854119",
+    "doc_id": "d_33d386a77d7f4fc3",
+    "chunk_id": "c_504d9d03defd4640",
+    "kind": "quote_not_found",
+    "severity": "warning",
+    "detail": "rejected fact 'Reserve Bank of India — Food and beverages inflation': its quote does not appear in pages 41–44 (best similarity 0.00).",
+    "payload": {
+      "fact": {
+        "subject": "Reserve Bank of India",
+        "predicate": "Food and beverages inflation",
+        "value": "6.9",
+        "unit": "per cent",
+        "time_scope": "April 2023-January 2024",
+        "qualifiers": [
+          "standalone"
+        ],
+        "basis": "actual",
+        "fact_type": "percentage",
+        "quote": "II.3.10 Food and beverages inflation averaged\n7.4 per cent in April 2024-January 2025 as\ncompared to 6.9 per cent in the corresponding\nperiod of 2023-24.",
+        "page": 42,
+        "confidence": 0.95
+      },
+      "best_score": 0.0
+    },
+    "created_at": "2026-09-07T12:11:10+00:00",
+    "filename": "02-rbi-annual-report-2024-25-excerpt.pdf"
+  },
+  {
+    "id": "iss_c20a34cfb634446f",
+    "doc_id": "d_33d386a77d7f4fc3",
+    "chunk_id": "c_504d9d03defd4640",
+    "kind": "quote_relocated",
+    "severity": "info",
+    "detail": "model cited page 43 but the quote for 'Reserve Bank of India — Food inflation' is on page 42; citation corrected.",
+    "payload": {
+      "claimed": 43,
+      "actual": 42
+    },
+    "created_at": "2026-09-07T12:11:10+00:00",
+    "filename": "02-rbi-annual-report-2024-25-excerpt.pdf"
+  },
+  {
+    "id": "iss_e34edcec112a4f22",
+    "doc_id": "d_33d386a77d7f4fc3",
+    "chunk_id": "c_504d9d03defd4640",
+    "kind": "quote_relocated",
+    "severity": "info",
+    "detail": "model cited page 43 but the quote for 'Reserve Bank of India — Food inflation' is on page 42; citation corrected.",
+    "payload": {
+      "claimed": 43,
+      "actual": 42
+    },
+    "created_at": "2026-09-07T12:11:10+00:00",
+    "filename": "02-rbi-annual-report-2024-25-excerpt.pdf"
+  },
+  {
+    "id": "iss_ac903c08c4634c51",
+    "doc_id": "d_33d386a77d7f4fc3",
+    "chunk_id": "c_504d9d03defd4640",
+    "kind": "quote_relocated",
+    "severity": "info",
+    "detail": "model cited page 43 but the quote for 'Reserve Bank of India — Vegetables inflation weight in food and beverages group' is on page 42; citation corrected.",
+    "payload": {
+      "claimed": 43,
+      "actual": 42
+    },
+    "created_at": "2026-09-07T12:11:10+00:00",
+    "filename": "02-rbi-annual-report-2024-25-excerpt.pdf"
+  },
+  {
+    "id": "iss_36a0e60ebe2f4e29",
+    "doc_id": "d_33d386a77d7f4fc3",
+    "chunk_id": "c_504d9d03defd4640",
+    "kind": "quote_relocated",
+    "severity": "info",
+    "detail": "model cited page 43 but the quote for 'Reserve Bank of India — Vegetables inflation' is on page 42; citation corrected.",
+    "payload": {
+      "claimed": 43,
+      "actual": 42
+    },
+    "created_at": "2026-09-07T12:11:10+00:00",
+    "filename": "02-rbi-annual-report-2024-25-excerpt.pdf"
+  },
+  {
+    "id": "iss_70ae53d7f4c24f4e",
+    "doc_id": "d_33d386a77d7f4fc3",
+    "chunk_id": "c_2e901226977348aa",
+    "kind": "quote_not_found",
+    "severity": "warning",
+    "detail": "rejected fact 'Scheduled Commercial Banks — Personal loans growth rate': its quote does not appear in pages 55–58 (best similarity 0.00).",
+    "payload": {
+      "fact": {
+        "subject": "Scheduled Commercial Banks",
+        "predicate": "Personal loans growth rate",
+        "value": "14.0",
+        "unit": "per cent",
+        "time_scope": "as at end-March 2025",
+        "qualifiers": [
+          "Personal Loans"
+        ],
+        "basis": "actual",
+        "fact_type": "percentage",
+        "quote": "Personal loans grew by 14.0 per cent as at end-March 2025 as compared with 17.6 per cent during the previous year",
+        "page": 57,
+        "confidence": 1.0
+      },
+      "best_score": 0.0
+    },
+    "created_at": "2026-09-07T12:11:11+00:00",
+    "filename": "02-rbi-annual-report-2024-25-excerpt.pdf"
+  },
+  {
+    "id": "iss_63da984924754f5d",
+    "doc_id": "d_33d386a77d7f4fc3",
+    "chunk_id": "c_2e901226977348aa",
+    "kind": "quote_not_found",
+    "severity": "warning",
+    "detail": "rejected fact 'Scheduled Commercial Banks — Personal loans growth rate': its quote does not appear in pages 55–58 (best similarity 0.00).",
+    "payload": {
+      "fact": {
+        "subject": "Scheduled Commercial Banks",
+        "predicate": "Personal loans growth rate",
+        "value": "17.6",
+        "unit": "per cent",
+        "time_scope": "2023-24",
+        "qualifiers": [
+          "Personal Loans"
+        ],
+        "basis": "actual",
+        "fact_type": "percentage",
+        "quote": "Personal loans grew by 14.0 per cent as at end-March 2025 as compared with 17.6 per cent during the previous year",
+        "page": 57,
+        "confidence": 1.0
+      },
+      "best_score": 0.0
+    },
+    "created_at": "2026-09-07T12:11:11+00:00",
+    "filename": "02-rbi-annual-report-2024-25-excerpt.pdf"
+  },
+  {
+    "id": "iss_ce5fc152b0b94b54",
+    "doc_id": "d_33d386a77d7f4fc3",
+    "chunk_id": "c_2e901226977348aa",
+    "kind": "quote_not_found",
+    "severity": "warning",
+    "detail": "rejected fact 'Scheduled Commercial Banks — Vehicle loans growth rate': its quote does not appear in pages 55–58 (best similarity 0.00).",
+    "payload": {
+      "fact": {
+        "subject": "Scheduled Commercial Banks",
+        "predicate": "Vehicle loans growth rate",
+        "value": "8.6",
+        "unit": "per cent",
+        "time_scope": "as at end-March 2025",
+        "qualifiers": [
+          "Vehicle Loans"
+        ],
+        "basis": "actual",
+        "fact_type": "percentage",
+        "quote": "Other segments within personal loans such as vehicle loans and other personal loans grew by 8.6 and 8.4 per cent, respectively, at end-March 2025",
+        "page": 57,
+        "confidence": 1.0
+      },
+      "best_score": 0.0
+    },
+    "created_at": "2026-09-07T12:11:11+00:00",
+    "filename": "02-rbi-annual-report-2024-25-excerpt.pdf"
+  },
+  {
+    "id": "iss_402c8f68dc154601",
+    "doc_id": "d_33d386a77d7f4fc3",
+    "chunk_id": "c_2e901226977348aa",
+    "kind": "quote_not_found",
+    "severity": "warning",
+    "detail": "rejected fact 'Scheduled Commercial Banks — Other personal loans growth rate': its quote does not appear in pages 55–58 (best similarity 0.00).",
+    "payload": {
+      "fact": {
+        "subject": "Scheduled Commercial Banks",
+        "predicate": "Other personal loans growth rate",
+        "value": "8.4",
+        "unit": "per cent",
+        "time_scope": "as at end-March 2025",
+        "qualifiers": [
+          "Other Personal Loans"
+        ],
+        "basis": "actual",
+        "fact_type": "percentage",
+        "quote": "Other segments within personal loans such as vehicle loans and other personal loans grew by 8.6 and 8.4 per cent, respectively, at end-March 2025",
+        "page": 57,
+        "confidence": 1.0
+      },
+      "best_score": 0.0
+    },
+    "created_at": "2026-09-07T12:11:11+00:00",
+    "filename": "02-rbi-annual-report-2024-25-excerpt.pdf"
+  },
+  {
+    "id": "iss_ee789fd118a348c4",
+    "doc_id": "d_33d386a77d7f4fc3",
+    "chunk_id": "c_7fffe361e80c4f7a",
+    "kind": "quote_not_found",
+    "severity": "warning",
+    "detail": "rejected fact 'core inflation — inflation': its quote does not appear in pages 45–48 (best similarity 0.77).",
+    "payload": {
+      "fact": {
+        "subject": "core inflation",
+        "predicate": "inflation",
+        "value": "3.1",
+        "unit": "per cent",
+        "time_scope": "May-June 2024",
+        "qualifiers": [
+          "excluding food and fuel"
+        ],
+        "basis": "actual",
+        "fact_type": "percentage",
+        "quote": "After touching 3.1 per cent during May-June 2024 – the lowest in the current series – it picked up in the subsequent months to reach 4.1 per cent in March",
+        "page": 46,
+        "confidence": 0.95
+      },
+      "best_score": 0.767
+    },
+    "created_at": "2026-09-07T12:11:11+00:00",
+    "filename": "02-rbi-annual-report-2024-25-excerpt.pdf"
+  },
+  {
+    "id": "iss_95c984c9134d4f90",
+    "doc_id": "d_33d386a77d7f4fc3",
+    "chunk_id": "c_7fffe361e80c4f7a",
+    "kind": "quote_relocated",
+    "severity": "info",
+    "detail": "model cited page 46 but the quote for 'core inflation — inflation' is on page 47; citation corrected.",
+    "payload": {
+      "claimed": 46,
+      "actual": 47
+    },
+    "created_at": "2026-09-07T12:11:11+00:00",
+    "filename": "02-rbi-annual-report-2024-25-excerpt.pdf"
+  },
+  {
+    "id": "iss_8e6a1472b2c14a07",
+    "doc_id": "d_33d386a77d7f4fc3",
+    "chunk_id": "c_19fa9f9181c04fa4",
+    "kind": "quote_relocated",
+    "severity": "info",
+    "detail": "model cited page 50 but the quote for 'Currency in circulation — growth rate' is on page 49; citation corrected.",
+    "payload": {
+      "claimed": 50,
+      "actual": 49
+    },
+    "created_at": "2026-09-07T12:11:11+00:00",
+    "filename": "02-rbi-annual-report-2024-25-excerpt.pdf"
+  },
+  {
+    "id": "iss_a793fffcd1894174",
+    "doc_id": "d_33d386a77d7f4fc3",
+    "chunk_id": "c_19fa9f9181c04fa4",
+    "kind": "quote_relocated",
+    "severity": "info",
+    "detail": "model cited page 50 but the quote for 'Currency in circulation — growth rate' is on page 49; citation corrected.",
+    "payload": {
+      "claimed": 50,
+      "actual": 49
+    },
+    "created_at": "2026-09-07T12:11:11+00:00",
+    "filename": "02-rbi-annual-report-2024-25-excerpt.pdf"
+  },
+  {
+    "id": "iss_458bd9bc417748a9",
+    "doc_id": "d_33d386a77d7f4fc3",
+    "chunk_id": "c_19fa9f9181c04fa4",
+    "kind": "quote_not_found",
+    "severity": "warning",
+    "detail": "rejected fact 'Gold — share in net foreign assets': its quote does not appear in pages 49–54 (best similarity 0.77).",
+    "payload": {
+      "fact": {
+        "subject": "Gold",
+        "predicate": "share in net foreign assets",
+        "value": "12.0",
+        "unit": "per cent",
+        "time_scope": "as at end-March 2025",
+        "qualifiers": [],
+        "basis": "actual",
+        "fact_type": "percentage",
+        "quote": "The share of gold in NFA increased to 12.0 per cent as at end-March 2025 from 8.3 per cent as at end-March 2024",
+        "page": 51,
+        "confidence": 1.0
+      },
+      "best_score": 0.766
+    },
+    "created_at": "2026-09-07T12:11:11+00:00",
+    "filename": "02-rbi-annual-report-2024-25-excerpt.pdf"
+  },
+  {
+    "id": "iss_56f3ba939b254937",
+    "doc_id": "d_33d386a77d7f4fc3",
+    "chunk_id": "c_19fa9f9181c04fa4",
+    "kind": "quote_not_found",
+    "severity": "warning",
+    "detail": "rejected fact 'Gold — share in net foreign assets': its quote does not appear in pages 49–54 (best similarity 0.77).",
+    "payload": {
+      "fact": {
+        "subject": "Gold",
+        "predicate": "share in net foreign assets",
+        "value": "8.3",
+        "unit": "per cent",
+        "time_scope": "as at end-March 2024",
+        "qualifiers": [],
+        "basis": "actual",
+        "fact_type": "percentage",
+        "quote": "The share of gold in NFA increased to 12.0 per cent as at end-March 2025 from 8.3 per cent as at end-March 2024",
+        "page": 51,
+        "confidence": 1.0
+      },
+      "best_score": 0.766
+    },
+    "created_at": "2026-09-07T12:11:11+00:00",
+    "filename": "02-rbi-annual-report-2024-25-excerpt.pdf"
+  },
+  {
+    "id": "iss_d77cf2bb87374f14",
+    "doc_id": "d_33d386a77d7f4fc3",
+    "chunk_id": "c_50b6e9d084064e8e",
+    "kind": "quote_not_found",
+    "severity": "warning",
+    "detail": "rejected fact '10-year generic G-sec yield — closing yield': its quote does not appear in pages 63–66 (best similarity 0.70).",
+    "payload": {
+      "fact": {
+        "subject": "10-year generic G-sec yield",
+        "predicate": "closing yield",
+        "value": "7.01",
+        "unit": "per cent",
+        "time_scope": "Q1:2024-25",
+        "qualifiers": [],
+        "basis": "actual",
+        "fact_type": "percentage",
+        "quote": "The 10-year generic G-sec yield closed the quarter at 7.01 per cent, a decline of 5 bps from its level as at end-March 2024",
+        "page": 63,
+        "confidence": 1.0
+      },
+      "best_score": 0.705
+    },
+    "created_at": "2026-09-07T12:11:17+00:00",
+    "filename": "02-rbi-annual-report-2024-25-excerpt.pdf"
+  },
+  {
+    "id": "iss_39d455d5248d4db8",
+    "doc_id": "d_33d386a77d7f4fc3",
+    "chunk_id": "c_50b6e9d084064e8e",
+    "kind": "quote_not_found",
+    "severity": "warning",
+    "detail": "rejected fact '10-year generic G-sec yield — quarterly yield change': its quote does not appear in pages 63–66 (best similarity 0.70).",
+    "payload": {
+      "fact": {
+        "subject": "10-year generic G-sec yield",
+        "predicate": "quarterly yield change",
+        "value": "-5",
+        "unit": "bps",
+        "time_scope": "Q1:2024-25",
+        "qualifiers": [],
+        "basis": "actual",
+        "fact_type": "numeric",
+        "quote": "The 10-year generic G-sec yield closed the quarter at 7.01 per cent, a decline of 5 bps from its level as at end-March 2024",
+        "page": 63,
+        "confidence": 1.0
+      },
+      "best_score": 0.705
+    },
+    "created_at": "2026-09-07T12:11:17+00:00",
+    "filename": "02-rbi-annual-report-2024-25-excerpt.pdf"
+  },
+  {
+    "id": "iss_05194441dd1b473a",
+    "doc_id": "d_33d386a77d7f4fc3",
+    "chunk_id": "c_c8e3543c9b384e5e",
+    "kind": "quote_not_found",
+    "severity": "warning",
+    "detail": "rejected fact 'Equity-oriented mutual fund schemes — net mobilisation': its quote does not appear in pages 67–71 (best similarity 0.00).",
+    "payload": {
+      "fact": {
+        "subject": "Equity-oriented mutual fund schemes",
+        "predicate": "net mobilisation",
+        "value": "4.2",
+        "unit": "lakh crore INR",
+        "time_scope": "2024-25",
+        "qualifiers": [
+          "equity-oriented"
+        ],
+        "basis": "actual",
+        "fact_type": "monetary",
+        "quote": "Net mobilisation by equity-oriented mutual fund schemes rose to ₹4.2 lakh crore from ₹1.8 lakh crore during the previous year.",
+        "page": 67,
+        "confidence": 1.0
+      },
+      "best_score": 0.0
+    },
+    "created_at": "2026-09-07T12:11:21+00:00",
+    "filename": "02-rbi-annual-report-2024-25-excerpt.pdf"
+  },
+  {
+    "id": "iss_434aa8ad65d14eb0",
+    "doc_id": "d_33d386a77d7f4fc3",
+    "chunk_id": "c_c8e3543c9b384e5e",
+    "kind": "quote_not_found",
+    "severity": "warning",
+    "detail": "rejected fact 'Equity-oriented mutual fund schemes — net mobilisation': its quote does not appear in pages 67–71 (best similarity 0.00).",
+    "payload": {
+      "fact": {
+        "subject": "Equity-oriented mutual fund schemes",
+        "predicate": "net mobilisation",
+        "value": "1.8",
+        "unit": "lakh crore INR",
+        "time_scope": "2023-24",
+        "qualifiers": [
+          "equity-oriented"
+        ],
+        "basis": "actual",
+        "fact_type": "monetary",
+        "quote": "Net mobilisation by equity-oriented mutual fund schemes rose to ₹4.2 lakh crore from ₹1.8 lakh crore during the previous year.",
+        "page": 67,
+        "confidence": 1.0
+      },
+      "best_score": 0.0
+    },
+    "created_at": "2026-09-07T12:11:21+00:00",
+    "filename": "02-rbi-annual-report-2024-25-excerpt.pdf"
+  },
+  {
+    "id": "iss_229150e138b345bb",
+    "doc_id": "d_33d386a77d7f4fc3",
+    "chunk_id": "c_872d84aaca184c6f",
+    "kind": "quote_not_found",
+    "severity": "warning",
+    "detail": "rejected fact 'India Central Government — gross tax revenue': its quote does not appear in pages 72–76 (best similarity 0.56).",
+    "payload": {
+      "fact": {
+        "subject": "India Central Government",
+        "predicate": "gross tax revenue",
+        "value": "12.0",
+        "unit": "% of GDP",
+        "time_scope": "2025-26",
+        "qualifiers": [
+          "Budget Estimates"
+        ],
+        "basis": "projection",
+        "fact_type": "percentage",
+        "quote": "The gross tax revenue is budgeted to reach its peak of 12.0 per cent of GDP in 2025-26 (BE)",
+        "page": 72,
+        "confidence": 1.0
+      },
+      "best_score": 0.562
+    },
+    "created_at": "2026-09-07T12:11:21+00:00",
+    "filename": "02-rbi-annual-report-2024-25-excerpt.pdf"
+  },
+  {
+    "id": "iss_5f85162345bc445a",
+    "doc_id": "d_33d386a77d7f4fc3",
+    "chunk_id": "c_872d84aaca184c6f",
+    "kind": "quote_relocated",
+    "severity": "info",
+    "detail": "model cited page 75 but the quote for 'advanced economies — output growth' is on page 72; citation corrected.",
+    "payload": {
+      "claimed": 75,
+      "actual": 72
+    },
+    "created_at": "2026-09-07T12:11:21+00:00",
+    "filename": "02-rbi-annual-report-2024-25-excerpt.pdf"
+  },
+  {
+    "id": "iss_6592777ec67843eb",
+    "doc_id": "d_33d386a77d7f4fc3",
+    "chunk_id": "c_872d84aaca184c6f",
+    "kind": "quote_not_found",
+    "severity": "warning",
+    "detail": "rejected fact 'world trade volume — growth': its quote does not appear in pages 72–76 (best similarity 0.00).",
+    "payload": {
+      "fact": {
+        "subject": "world trade volume",
+        "predicate": "growth",
+        "value": "3.8",
+        "unit": "%",
+        "time_scope": "2024",
+        "qualifiers": [
+          "goods and services"
+        ],
+        "basis": "actual",
+        "fact_type": "percentage",
+        "quote": "world trade volume (goods and services) growth recovered from 1.0 per cent in 2023 to 3.8 per cent in 2024",
+        "page": 76,
+        "confidence": 1.0
+      },
+      "best_score": 0.0
+    },
+    "created_at": "2026-09-07T12:11:21+00:00",
+    "filename": "02-rbi-annual-report-2024-25-excerpt.pdf"
+  },
+  {
+    "id": "iss_f68393e8308a4b7b",
+    "doc_id": "d_33d386a77d7f4fc3",
+    "chunk_id": "c_872d84aaca184c6f",
+    "kind": "quote_not_found",
+    "severity": "warning",
+    "detail": "rejected fact 'world trade volume — growth': its quote does not appear in pages 72–76 (best similarity 0.00).",
+    "payload": {
+      "fact": {
+        "subject": "world trade volume",
+        "predicate": "growth",
+        "value": "1.0",
+        "unit": "%",
+        "time_scope": "2023",
+        "qualifiers": [
+          "goods and services"
+        ],
+        "basis": "actual",
+        "fact_type": "percentage",
+        "quote": "world trade volume (goods and services) growth recovered from 1.0 per cent in 2023",
+        "page": 76,
+        "confidence": 1.0
+      },
+      "best_score": 0.0
+    },
+    "created_at": "2026-09-07T12:11:21+00:00",
+    "filename": "02-rbi-annual-report-2024-25-excerpt.pdf"
+  },
+  {
+    "id": "iss_e79889b4efc243ac",
+    "doc_id": "d_33d386a77d7f4fc3",
+    "chunk_id": "c_356e0f4124324e36",
+    "kind": "quote_not_found",
+    "severity": "warning",
+    "detail": "rejected fact 'India — engineering goods exports share of total merchandise exports': its quote does not appear in pages 77–82 (best similarity 0.77).",
+    "payload": {
+      "fact": {
+        "subject": "India",
+        "predicate": "engineering goods exports share of total merchandise exports",
+        "value": "26.7",
+        "unit": "per cent",
+        "time_scope": "2024-25",
+        "qualifiers": [],
+        "basis": "actual",
+        "fact_type": "percentage",
+        "quote": "Exports of engineering goods (accounting for 26.7 per cent of the total merchandise exports) increased by 6.7 per cent in 2024-25.",
+        "page": 78,
+        "confidence": 1.0
+      },
+      "best_score": 0.772
+    },
+    "created_at": "2026-09-07T12:11:26+00:00",
+    "filename": "02-rbi-annual-report-2024-25-excerpt.pdf"
+  },
+  {
+    "id": "iss_26f75f2f77c442c4",
+    "doc_id": "d_33d386a77d7f4fc3",
+    "chunk_id": "c_356e0f4124324e36",
+    "kind": "quote_not_found",
+    "severity": "warning",
+    "detail": "rejected fact 'India — engineering goods exports growth rate': its quote does not appear in pages 77–82 (best similarity 0.77).",
+    "payload": {
+      "fact": {
+        "subject": "India",
+        "predicate": "engineering goods exports growth rate",
+        "value": "6.7",
+        "unit": "per cent",
+        "time_scope": "2024-25",
+        "qualifiers": [],
+        "basis": "actual",
+        "fact_type": "percentage",
+        "quote": "Exports of engineering goods (accounting for 26.7 per cent of the total merchandise exports) increased by 6.7 per cent in 2024-25.",
+        "page": 78,
+        "confidence": 1.0
+      },
+      "best_score": 0.772
+    },
+    "created_at": "2026-09-07T12:11:26+00:00",
+    "filename": "02-rbi-annual-report-2024-25-excerpt.pdf"
+  },
+  {
+    "id": "iss_989cbca826454a35",
+    "doc_id": "d_33d386a77d7f4fc3",
+    "chunk_id": "c_356e0f4124324e36",
+    "kind": "quote_not_found",
+    "severity": "warning",
+    "detail": "rejected fact 'Mobile phones — share of electronic goods exports': its quote does not appear in pages 77–82 (best similarity 0.00).",
+    "payload": {
+      "fact": {
+        "subject": "Mobile phones",
+        "predicate": "share of electronic goods exports",
+        "value": "61.7",
+        "unit": "per cent",
+        "time_scope": "2024-25",
+        "qualifiers": [
+          "up to February 2025"
+        ],
+        "basis": "actual",
+        "fact_type": "percentage",
+        "quote": "Mobile phones, contributing 61.7 per cent of electronic goods exports during 2024-25 (up to February 2025), rose by 54.3 per cent (y-o-y) to US$ 21.0 billion",
+        "page": 78,
+        "confidence": 1.0
+      },
+      "best_score": 0.0
+    },
+    "created_at": "2026-09-07T12:11:26+00:00",
+    "filename": "02-rbi-annual-report-2024-25-excerpt.pdf"
+  },
+  {
+    "id": "iss_2cc9eb9dcfb74820",
+    "doc_id": "d_33d386a77d7f4fc3",
+    "chunk_id": "c_356e0f4124324e36",
+    "kind": "quote_not_found",
+    "severity": "warning",
+    "detail": "rejected fact 'Mobile phones — exports growth rate': its quote does not appear in pages 77–82 (best similarity 0.00).",
+    "payload": {
+      "fact": {
+        "subject": "Mobile phones",
+        "predicate": "exports growth rate",
+        "value": "54.3",
+        "unit": "per cent",
+        "time_scope": "2024-25",
+        "qualifiers": [
+          "y-o-y"
+        ],
+        "basis": "actual",
+        "fact_type": "percentage",
+        "quote": "Mobile phones, contributing 61.7 per cent of electronic goods exports during 2024-25 (up to February 2025), rose by 54.3 per cent (y-o-y) to US$ 21.0 billion",
+        "page": 78,
+        "confidence": 1.0
+      },
+      "best_score": 0.0
+    },
+    "created_at": "2026-09-07T12:11:26+00:00",
+    "filename": "02-rbi-annual-report-2024-25-excerpt.pdf"
+  },
+  {
+    "id": "iss_634717d728aa4376",
+    "doc_id": "d_33d386a77d7f4fc3",
+    "chunk_id": "c_356e0f4124324e36",
+    "kind": "quote_not_found",
+    "severity": "warning",
+    "detail": "rejected fact 'Mobile phones — exports value': its quote does not appear in pages 77–82 (best similarity 0.00).",
+    "payload": {
+      "fact": {
+        "subject": "Mobile phones",
+        "predicate": "exports value",
+        "value": "21.0",
+        "unit": "US$ billion",
+        "time_scope": "2024-25",
+        "qualifiers": [],
+        "basis": "actual",
+        "fact_type": "monetary",
+        "quote": "Mobile phones, contributing 61.7 per cent of electronic goods exports during 2024-25 (up to February 2025), rose by 54.3 per cent (y-o-y) to US$ 21.0 billion",
+        "page": 78,
+        "confidence": 1.0
+      },
+      "best_score": 0.0
+    },
+    "created_at": "2026-09-07T12:11:26+00:00",
+    "filename": "02-rbi-annual-report-2024-25-excerpt.pdf"
+  },
+  {
+    "id": "iss_ed729ac45cc24d4c",
+    "doc_id": "d_33d386a77d7f4fc3",
+    "chunk_id": "c_356e0f4124324e36",
+    "kind": "quote_not_found",
+    "severity": "warning",
+    "detail": "rejected fact 'Transportation receipts — transportation receipts growth rate': its quote does not appear in pages 77–82 (best similarity 0.00).",
+    "payload": {
+      "fact": {
+        "subject": "Transportation receipts",
+        "predicate": "transportation receipts growth rate",
+        "value": "19.5",
+        "unit": "per cent",
+        "time_scope": "April-December 2024",
+        "qualifiers": [
+          "y-o-y"
+        ],
+        "basis": "actual",
+        "fact_type": "percentage",
+        "quote": "Amongst other services, transportation receipts increased by 19.5 per cent (y-o-y), largely driven by an increase in global freight rates",
+        "page": 82,
+        "confidence": 1.0
+      },
+      "best_score": 0.0
+    },
+    "created_at": "2026-09-07T12:11:26+00:00",
+    "filename": "02-rbi-annual-report-2024-25-excerpt.pdf"
+  },
+  {
+    "id": "iss_bb3b339ada294887",
+    "doc_id": "d_33d386a77d7f4fc3",
+    "chunk_id": "c_639d82b175594577",
+    "kind": "quote_not_found",
+    "severity": "warning",
+    "detail": "rejected fact 'Reserve Bank of India — Short-term trade credit net inflow': its quote does not appear in pages 88–91 (best similarity 0.00).",
+    "payload": {
+      "fact": {
+        "subject": "Reserve Bank of India",
+        "predicate": "Short-term trade credit net inflow",
+        "value": "11.1",
+        "unit": "US$ billion",
+        "time_scope": "April-December 2024",
+        "qualifiers": [
+          "Short-term trade credit",
+          "net inflow"
+        ],
+        "basis": "actual",
+        "fact_type": "monetary",
+        "quote": "with a net inflow of US$ 11.1 billion as compared with a net outflow of US$ 1.0 billion during the corresponding period a year ago.",
+        "page": 89,
+        "confidence": 1.0
+      },
+      "best_score": 0.0
+    },
+    "created_at": "2026-09-07T12:11:26+00:00",
+    "filename": "02-rbi-annual-report-2024-25-excerpt.pdf"
+  },
+  {
+    "id": "iss_84135519128c49da",
+    "doc_id": "d_33d386a77d7f4fc3",
+    "chunk_id": "c_639d82b175594577",
+    "kind": "quote_not_found",
+    "severity": "warning",
+    "detail": "rejected fact 'Reserve Bank of India — Short-term trade credit net outflow': its quote does not appear in pages 88–91 (best similarity 0.00).",
+    "payload": {
+      "fact": {
+        "subject": "Reserve Bank of India",
+        "predicate": "Short-term trade credit net outflow",
+        "value": "-1.0",
+        "unit": "US$ billion",
+        "time_scope": "April-December 2023",
+        "qualifiers": [
+          "Short-term trade credit",
+          "net outflow"
+        ],
+        "basis": "actual",
+        "fact_type": "monetary",
+        "quote": "as compared with a net outflow of US$ 1.0 billion during the corresponding period a year ago.",
+        "page": 89,
+        "confidence": 1.0
+      },
+      "best_score": 0.0
+    },
+    "created_at": "2026-09-07T12:11:26+00:00",
+    "filename": "02-rbi-annual-report-2024-25-excerpt.pdf"
+  },
+  {
+    "id": "iss_7a179ca11da347f8",
+    "doc_id": "d_33d386a77d7f4fc3",
+    "chunk_id": "c_639d82b175594577",
+    "kind": "quote_not_found",
+    "severity": "warning",
+    "detail": "rejected fact 'Reserve Bank of India — Share of trade credit raised for imports of crude oil, gold, coal and copper': its quote does not appear in pages 88–91 (best similarity 0.00).",
+    "payload": {
+      "fact": {
+        "subject": "Reserve Bank of India",
+        "predicate": "Share of trade credit raised for imports of crude oil, gold, coal and copper",
+        "value": "32",
+        "unit": "%",
+        "time_scope": null,
+        "qualifiers": [
+          "imports of crude oil, gold, coal and copper"
+        ],
+        "basis": "actual",
+        "fact_type": "percentage",
+        "quote": "Around 32 per cent of the trade credit was raised for imports of crude oil, gold, coal and copper.",
+        "page": 89,
+        "confidence": 1.0
+      },
+      "best_score": 0.0
+    },
+    "created_at": "2026-09-07T12:11:26+00:00",
+    "filename": "02-rbi-annual-report-2024-25-excerpt.pdf"
+  },
+  {
+    "id": "iss_594ae5f34d074631",
+    "doc_id": "d_33d386a77d7f4fc3",
+    "chunk_id": "c_639d82b175594577",
+    "kind": "quote_not_found",
+    "severity": "warning",
+    "detail": "rejected fact 'Reserve Bank of India — India's external debt to GDP ratio': its quote does not appear in pages 88–91 (best similarity 0.56).",
+    "payload": {
+      "fact": {
+        "subject": "Reserve Bank of India",
+        "predicate": "India's external debt to GDP ratio",
+        "value": "19.1",
+        "unit": "%",
+        "time_scope": "as at end-December 2024",
+        "qualifiers": [
+          "External Debt to GDP Ratio"
+        ],
+        "basis": "actual",
+        "fact_type": "percentage",
+        "quote": "remained modest at 19.1 per cent as at end-December 2024 (18.5 per cent as at end-March 2024)",
+        "page": 89,
+        "confidence": 1.0
+      },
+      "best_score": 0.56
+    },
+    "created_at": "2026-09-07T12:11:26+00:00",
+    "filename": "02-rbi-annual-report-2024-25-excerpt.pdf"
+  },
+  {
+    "id": "iss_ca2da169a1e14bb7",
+    "doc_id": "d_33d386a77d7f4fc3",
+    "chunk_id": null,
+    "kind": "judgment_inconsistent",
+    "severity": "warning",
+    "detail": "'Government of India — Onion export duty' vs 'Onion — export duty': labelled corroborates, but the two facts carry different normalised periods. Confidence was halved and the verdict flagged for review.",
+    "payload": {
+      "relation": "corroborates",
+      "reasoning": "Fact A states the export duty was lowered to 20% in September 2024, and Fact B confirms a 20% duty has been in effect since September 13, 2024. The values are identical for the same period.",
+      "a": {
+        "value": "20",
+        "period": "2024-09",
+        "quote": "and the export duty was lowered to 20 per cent in\nSeptember 2024."
+      },
+      "b": {
+        "value": "20",
+        "period": "@2024-09-13",
+        "quote": "• 20 per cent export duty on onion since 13 September 2024."
+      }
+    },
+    "created_at": "2026-09-07T12:14:05+00:00",
+    "filename": "02-rbi-annual-report-2024-25-excerpt.pdf"
+  },
+  {
+    "id": "iss_39e9b8c3644f4789",
+    "doc_id": "d_f0157b08af9248ba",
+    "chunk_id": "c_0bd67a3166ee4a14",
+    "kind": "quote_not_found",
+    "severity": "warning",
+    "detail": "rejected fact 'India National Accounts statistics — Data Adequacy Assessment Rating': its quote does not appear in pages 71–72 (best similarity 0.66).",
+    "payload": {
+      "fact": {
+        "subject": "India National Accounts statistics",
+        "predicate": "Data Adequacy Assessment Rating",
+        "value": "C",
+        "unit": null,
+        "time_scope": null,
+        "qualifiers": [
+          "National Accounts"
+        ],
+        "basis": "actual",
+        "fact_type": "categorical",
+        "quote": "Assessment\nNational Accounts 4/\nC",
+        "page": 71,
+        "confidence": 0.95
+      },
+      "best_score": 0.656
+    },
+    "created_at": "2026-09-07T12:17:05+00:00",
+    "filename": "03-imf-india-2025-article-iv-excerpt.pdf"
+  },
+  {
+    "id": "iss_d8e0bc24ede54a0e",
+    "doc_id": "d_f0157b08af9248ba",
+    "chunk_id": "c_0bd67a3166ee4a14",
+    "kind": "quote_not_found",
+    "severity": "warning",
+    "detail": "rejected fact 'India Prices statistics — Data Adequacy Assessment Rating': its quote does not appear in pages 71–72 (best similarity 0.00).",
+    "payload": {
+      "fact": {
+        "subject": "India Prices statistics",
+        "predicate": "Data Adequacy Assessment Rating",
+        "value": "B",
+        "unit": null,
+        "time_scope": null,
+        "qualifiers": [
+          "Prices"
+        ],
+        "basis": "actual",
+        "fact_type": "categorical",
+        "quote": "Prices\nB",
+        "page": 71,
+        "confidence": 0.95
+      },
+      "best_score": 0.0
+    },
+    "created_at": "2026-09-07T12:17:05+00:00",
+    "filename": "03-imf-india-2025-article-iv-excerpt.pdf"
+  },
+  {
+    "id": "iss_b39308f8302d4069",
+    "doc_id": "d_f0157b08af9248ba",
+    "chunk_id": null,
+    "kind": "judgment_inconsistent",
+    "severity": "warning",
+    "detail": "'Reserve Bank of India — policy rate' vs 'Reserve Bank of India policy repo rate — policy repo rate': labelled contradicts, but the facts describe different periods, so both can be true. Confidence was halved and the verdict flagged for review.",
+    "payload": {
+      "relation": "contradicts",
+      "reasoning": "Fact A states the policy rate is 5.5% as of June 2025, while Fact B states the policy repo rate was reduced to 6.0% in April 2025. These figures are contradictory for the same year.",
+      "a": {
+        "value": "5.5",
+        "period": "@2025-06-01",
+        "quote": "to 5.5 percent as of June 2025"
+      },
+      "b": {
+        "value": "6.0",
+        "period": "2025-04",
+        "quote": "Accordingly, the MPC in its April 2025 meeting unanimously voted to reduce the policy repo rate by 25 bps to 6.0 per cent."
+      }
+    },
+    "created_at": "2026-09-07T12:22:05+00:00",
+    "filename": "03-imf-india-2025-article-iv-excerpt.pdf"
+  },
+  {
+    "id": "iss_b1ad22649b0949c3",
+    "doc_id": "d_b6e2fdf784a04e42",
+    "chunk_id": "c_4d06ee18e00a4acc",
+    "kind": "quote_not_found",
+    "severity": "warning",
+    "detail": "rejected fact 'Delhivery Limited — Borrowings (Current liabilities)': its quote does not appear in pages 16–19 (best similarity 0.00).",
+    "payload": {
+      "fact": {
+        "subject": "Delhivery Limited",
+        "predicate": "Borrowings (Current liabilities)",
+        "value": "2,702.53",
+        "unit": "INR million",
+        "time_scope": "As at December 31, 2021",
+        "qualifiers": [
+          "Current liabilities",
+          "Financial liabilities",
+          "Borrowings",
+          "Consolidated"
+        ],
+        "basis": "actual",
+        "fact_type": "monetary",
+        "quote": "i) Borrowings 2,702.53 2,064.74",
+        "page": 16,
+        "confidence": 0.9
+      },
+      "best_score": 0.0
+    },
+    "created_at": "2026-09-07T12:23:53+00:00",
+    "filename": "01-delhivery-prospectus-2022-excerpt.pdf"
+  },
+  {
+    "id": "iss_1bb994fbd5744cad",
+    "doc_id": "d_b6e2fdf784a04e42",
+    "chunk_id": "c_4d06ee18e00a4acc",
+    "kind": "quote_not_found",
+    "severity": "warning",
+    "detail": "rejected fact 'Delhivery Limited — Restated loss for the period / year': its quote does not appear in pages 16–19 (best similarity 0.64).",
+    "payload": {
+      "fact": {
+        "subject": "Delhivery Limited",
+        "predicate": "Restated loss for the period / year",
+        "value": "(8,911.39)",
+        "unit": "INR million",
+        "time_scope": "For the nine months period ended December 31, 2021",
+        "qualifiers": [
+          "Restated loss for the period / year (VII= V+VI)",
+          "Consolidated"
+        ],
+        "basis": "actual",
+        "fact_type": "monetary",
+        "quote": "Restated loss for the period / year (VII= V+VI) (8,911.39) (2,974.92)",
+        "page": 17,
+        "confidence": 0.9
+      },
+      "best_score": 0.639
+    },
+    "created_at": "2026-09-07T12:23:53+00:00",
+    "filename": "01-delhivery-prospectus-2022-excerpt.pdf"
+  },
+  {
+    "id": "iss_4d81f7e0604641d9",
+    "doc_id": "d_b6e2fdf784a04e42",
+    "chunk_id": "c_d81852fa297c4090",
+    "kind": "quote_not_found",
+    "severity": "warning",
+    "detail": "rejected fact 'Deli CMF Pte. Ltd. — Weighted average cost of acquisition per Equity Share': its quote does not appear in pages 1–1 (best similarity 0.00).",
+    "payload": {
+      "fact": {
+        "subject": "Deli CMF Pte. Ltd.",
+        "predicate": "Weighted average cost of acquisition per Equity Share",
+        "value": "142.91",
+        "unit": "INR",
+        "time_scope": null,
+        "qualifiers": [
+          "fully diluted basis"
+        ],
+        "basis": "actual",
+        "fact_type": "monetary",
+        "quote": "Deli CMF Pte. Ltd. Investor Selling Shareholder ... 142.91",
+        "page": 1,
+        "confidence": 1.0
+      },
+      "best_score": 0.0
+    },
+    "created_at": "2026-09-07T12:23:55+00:00",
+    "filename": "01-delhivery-prospectus-2022-excerpt.pdf"
+  },
+  {
+    "id": "iss_d1c04ab7b0a14011",
+    "doc_id": "d_b6e2fdf784a04e42",
+    "chunk_id": "c_42dfb6aac32e4a43",
+    "kind": "quote_not_found",
+    "severity": "warning",
+    "detail": "rejected fact 'Delhivery Limited — Restated loss for the period/year': its quote does not appear in pages 4–8 (best similarity 0.00).",
+    "payload": {
+      "fact": {
+        "subject": "Delhivery Limited",
+        "predicate": "Restated loss for the period/year",
+        "value": "(12,657.72)",
+        "unit": "INR million",
+        "time_scope": "Nine months period ended December 31, 2021",
+        "qualifiers": [
+          "Consolidated",
+          "As at and for the nine months period ended December 31, 2021"
+        ],
+        "basis": "actual",
+        "fact_type": "monetary",
+        "quote": "(12,657.72)",
+        "page": 5,
+        "confidence": 0.8
+      },
+      "best_score": 0.0
+    },
+    "created_at": "2026-09-07T12:23:56+00:00",
+    "filename": "01-delhivery-prospectus-2022-excerpt.pdf"
+  },
+  {
+    "id": "iss_8fb79f527dfc475d",
+    "doc_id": "d_b6e2fdf784a04e42",
+    "chunk_id": "c_5394e6e7b0294e6c",
+    "kind": "quote_not_found",
+    "severity": "warning",
+    "detail": "rejected fact 'Delhivery Limited — Other income': its quote does not appear in pages 26–30 (best similarity 0.00).",
+    "payload": {
+      "fact": {
+        "subject": "Delhivery Limited",
+        "predicate": "Other income",
+        "value": "1,008.76",
+        "unit": "₹ million",
+        "time_scope": "nine months period ended December 31, 2021",
+        "qualifiers": [
+          "Restated Consolidated Summary Statement of Profit and Loss of Delhivery Limited for nine months period ended December 31, 2021"
+        ],
+        "basis": "actual",
+        "fact_type": "monetary",
+        "quote": "1,008.76 Other income",
+        "page": 27,
+        "confidence": 0.9
+      },
+      "best_score": 0.0
+    },
+    "created_at": "2026-09-07T12:24:00+00:00",
+    "filename": "01-delhivery-prospectus-2022-excerpt.pdf"
+  },
+  {
+    "id": "iss_97af97585eba4b04",
+    "doc_id": "d_b6e2fdf784a04e42",
+    "chunk_id": "c_5394e6e7b0294e6c",
+    "kind": "quote_not_found",
+    "severity": "warning",
+    "detail": "rejected fact 'Delhivery Limited — Total income': its quote does not appear in pages 26–30 (best similarity 0.00).",
+    "payload": {
+      "fact": {
+        "subject": "Delhivery Limited",
+        "predicate": "Total income",
+        "value": "49,114.06",
+        "unit": "₹ million",
+        "time_scope": "nine months period ended December 31, 2021",
+        "qualifiers": [
+          "Restated Consolidated Summary Statement of Profit and Loss of Delhivery Limited for nine months period ended December 31, 2021"
+        ],
+        "basis": "actual",
+        "fact_type": "monetary",
+        "quote": "49,114.06 Total income (I)",
+        "page": 27,
+        "confidence": 0.9
+      },
+      "best_score": 0.0
+    },
+    "created_at": "2026-09-07T12:24:00+00:00",
+    "filename": "01-delhivery-prospectus-2022-excerpt.pdf"
+  },
+  {
+    "id": "iss_45cc8e9ec2204b19",
+    "doc_id": "d_b6e2fdf784a04e42",
+    "chunk_id": "c_af3c12e334e14ae6",
+    "kind": "quote_not_found",
+    "severity": "warning",
+    "detail": "rejected fact 'Delhivery Limited — Proforma Consolidated Other income': its quote does not appear in pages 20–25 (best similarity 0.00).",
+    "payload": {
+      "fact": {
+        "subject": "Delhivery Limited",
+        "predicate": "Proforma Consolidated Other income",
+        "value": "1,944.53",
+        "unit": "INR million",
+        "time_scope": "year ended March 31, 2021",
+        "qualifiers": [
+          "Proforma Consolidated statement of Profit and Loss of Delhivery Limited for the year ended March 31, 2021"
+        ],
+        "basis": "actual",
+        "fact_type": "monetary",
+        "quote": "Other income ... 1,944.53",
+        "page": 22,
+        "confidence": 0.95
+      },
+      "best_score": 0.0
+    },
+    "created_at": "2026-09-07T12:24:05+00:00",
+    "filename": "01-delhivery-prospectus-2022-excerpt.pdf"
+  },
+  {
+    "id": "iss_8f85f3ef994d4914",
+    "doc_id": "d_b6e2fdf784a04e42",
+    "chunk_id": "c_af3c12e334e14ae6",
+    "kind": "quote_not_found",
+    "severity": "warning",
+    "detail": "rejected fact 'Spoton Logistics Private Limited — Total income': its quote does not appear in pages 20–25 (best similarity 0.00).",
+    "payload": {
+      "fact": {
+        "subject": "Spoton Logistics Private Limited",
+        "predicate": "Total income",
+        "value": "8,062.77",
+        "unit": "INR million",
+        "time_scope": "year ended March 31, 2021",
+        "qualifiers": [
+          "Special Purpose Consolidated Statement of Profit and Loss for the year ended March 31, 2021"
+        ],
+        "basis": "actual",
+        "fact_type": "monetary",
+        "quote": "Total income (I) ... 8,062.77",
+        "page": 22,
+        "confidence": 0.95
+      },
+      "best_score": 0.0
+    },
+    "created_at": "2026-09-07T12:24:05+00:00",
+    "filename": "01-delhivery-prospectus-2022-excerpt.pdf"
+  },
+  {
+    "id": "iss_8fc7ddeec82344ab",
+    "doc_id": "d_b6e2fdf784a04e42",
+    "chunk_id": "c_af3c12e334e14ae6",
+    "kind": "quote_not_found",
+    "severity": "warning",
+    "detail": "rejected fact 'Delhivery Limited — Proforma Consolidated Total income': its quote does not appear in pages 20–25 (best similarity 0.00).",
+    "payload": {
+      "fact": {
+        "subject": "Delhivery Limited",
+        "predicate": "Proforma Consolidated Total income",
+        "value": "46,445.68",
+        "unit": "INR million",
+        "time_scope": "year ended March 31, 2021",
+        "qualifiers": [
+          "Proforma Consolidated statement of Profit and Loss of Delhivery Limited for the year ended March 31, 2021"
+        ],
+        "basis": "actual",
+        "fact_type": "monetary",
+        "quote": "Total income (I) ... 46,445.68",
+        "page": 22,
+        "confidence": 0.95
+      },
+      "best_score": 0.0
+    },
+    "created_at": "2026-09-07T12:24:05+00:00",
+    "filename": "01-delhivery-prospectus-2022-excerpt.pdf"
+  },
+  {
+    "id": "iss_01d696b83f79444d",
+    "doc_id": "d_b6e2fdf784a04e42",
+    "chunk_id": "c_af3c12e334e14ae6",
+    "kind": "quote_not_found",
+    "severity": "warning",
+    "detail": "rejected fact 'Delhivery Limited — Proforma Consolidated Loss for the year': its quote does not appear in pages 20–25 (best similarity 0.70).",
+    "payload": {
+      "fact": {
+        "subject": "Delhivery Limited",
+        "predicate": "Proforma Consolidated Loss for the year",
+        "value": "(5,961.38)",
+        "unit": "INR million",
+        "time_scope": "year ended March 31, 2021",
+        "qualifiers": [
+          "Proforma Consolidated statement of Profit and Loss of Delhivery Limited for the year ended March 31, 2021"
+        ],
+        "basis": "actual",
+        "fact_type": "monetary",
+        "quote": "Loss for the year (III-IV) ... (5,961.38)",
+        "page": 23,
+        "confidence": 0.95
+      },
+      "best_score": 0.697
+    },
+    "created_at": "2026-09-07T12:24:05+00:00",
+    "filename": "01-delhivery-prospectus-2022-excerpt.pdf"
+  },
+  {
+    "id": "iss_cc2e89750593406d",
+    "doc_id": "d_b6e2fdf784a04e42",
+    "chunk_id": "c_af3c12e334e14ae6",
+    "kind": "quote_not_found",
+    "severity": "warning",
+    "detail": "rejected fact 'Delhivery Limited — Goodwill': its quote does not appear in pages 20–25 (best similarity 0.00).",
+    "payload": {
+      "fact": {
+        "subject": "Delhivery Limited",
+        "predicate": "Goodwill",
+        "value": "11,800.15",
+        "unit": "INR million",
+        "time_scope": "as at March 31, 2021",
+        "qualifiers": [
+          "Proforma Consolidated Balance Sheet of Delhivery Limited as at March 31, 2021"
+        ],
+        "basis": "actual",
+        "fact_type": "monetary",
+        "quote": "Goodwill ... 11,800.15",
+        "page": 25,
+        "confidence": 0.95
+      },
+      "best_score": 0.0
+    },
+    "created_at": "2026-09-07T12:24:05+00:00",
+    "filename": "01-delhivery-prospectus-2022-excerpt.pdf"
+  },
+  {
+    "id": "iss_3697d3dd2dbf41d7",
+    "doc_id": "d_b6e2fdf784a04e42",
+    "chunk_id": "c_af3c12e334e14ae6",
+    "kind": "quote_not_found",
+    "severity": "warning",
+    "detail": "rejected fact 'Spoton Logistics Private Limited — Total non-current assets': its quote does not appear in pages 20–25 (best similarity 0.00).",
+    "payload": {
+      "fact": {
+        "subject": "Spoton Logistics Private Limited",
+        "predicate": "Total non-current assets",
+        "value": "2,422.41",
+        "unit": "INR million",
+        "time_scope": "as at March 31, 2021",
+        "qualifiers": [
+          "Special Purpose Consolidated Balance Sheet as at March 31, 2021"
+        ],
+        "basis": "actual",
+        "fact_type": "monetary",
+        "quote": "Total non-current assets ... 2,422.41",
+        "page": 25,
+        "confidence": 0.95
+      },
+      "best_score": 0.0
+    },
+    "created_at": "2026-09-07T12:24:05+00:00",
+    "filename": "01-delhivery-prospectus-2022-excerpt.pdf"
+  },
+  {
+    "id": "iss_fef52f4fe3d34595",
+    "doc_id": "d_b6e2fdf784a04e42",
+    "chunk_id": "c_af3c12e334e14ae6",
+    "kind": "quote_not_found",
+    "severity": "warning",
+    "detail": "rejected fact 'Delhivery Limited — Proforma Consolidated Total non-current assets': its quote does not appear in pages 20–25 (best similarity 0.00).",
+    "payload": {
+      "fact": {
+        "subject": "Delhivery Limited",
+        "predicate": "Proforma Consolidated Total non-current assets",
+        "value": "34,824.76",
+        "unit": "INR million",
+        "time_scope": "as at March 31, 2021",
+        "qualifiers": [
+          "Proforma Consolidated Balance Sheet of Delhivery Limited as at March 31, 2021"
+        ],
+        "basis": "actual",
+        "fact_type": "monetary",
+        "quote": "Total non-current assets ... 34,824.76",
+        "page": 25,
+        "confidence": 0.95
+      },
+      "best_score": 0.0
+    },
+    "created_at": "2026-09-07T12:24:05+00:00",
+    "filename": "01-delhivery-prospectus-2022-excerpt.pdf"
+  },
+  {
+    "id": "iss_71094ed7b8164375",
+    "doc_id": "d_b6e2fdf784a04e42",
+    "chunk_id": "c_b381c3eafbc645b6",
+    "kind": "quote_not_found",
+    "severity": "warning",
+    "detail": "rejected fact 'BofA Securities India Limited — amount underwritten': its quote does not appear in pages 37–41 (best similarity 0.42).",
+    "payload": {
+      "fact": {
+        "subject": "BofA Securities India Limited",
+        "predicate": "amount underwritten",
+        "value": "3,309.37",
+        "unit": "₹ in million",
+        "time_scope": null,
+        "qualifiers": [
+          "Amount underwritten"
+        ],
+        "basis": "projection",
+        "fact_type": "monetary",
+        "quote": "BofA Securities India Limited ... 3,309.37",
+        "page": 40,
+        "confidence": 1.0
+      },
+      "best_score": 0.421
+    },
+    "created_at": "2026-09-07T12:24:05+00:00",
+    "filename": "01-delhivery-prospectus-2022-excerpt.pdf"
+  },
+  {
+    "id": "iss_95efbf47ff6c45d9",
+    "doc_id": "d_b6e2fdf784a04e42",
+    "chunk_id": "c_6cc9091d037e42e9",
+    "kind": "quote_not_found",
+    "severity": "warning",
+    "detail": "rejected fact 'Delhivery Limited — Active Customers': its quote does not appear in pages 42–45 (best similarity 0.00).",
+    "payload": {
+      "fact": {
+        "subject": "Delhivery Limited",
+        "predicate": "Active Customers",
+        "value": "23,113",
+        "unit": null,
+        "time_scope": "nine months period ended December 31, 2021",
+        "qualifiers": [
+          "excluding those serviced by Spoton"
+        ],
+        "basis": "actual",
+        "fact_type": "count",
+        "quote": "We provided supply chain solutions to a diverse base of 23,113 Active Customers (excluding those serviced by Spoton) such as e-commerce marketplaces, direct-to-consumer e-tailers and enterprises and SMEs across several verticals such as FMCG, consumer durables, consumer electronics, lifestyle, retail, automotive and manufacturing, for the nine months period ended December 31, 2021.",
+        "page": 42,
+        "confidence": 1.0
+      },
+      "best_score": 0.0
+    },
+    "created_at": "2026-09-07T12:24:11+00:00",
+    "filename": "01-delhivery-prospectus-2022-excerpt.pdf"
+  },
+  {
+    "id": "iss_c6d2e4f9ceab4c73",
+    "doc_id": "d_b6e2fdf784a04e42",
+    "chunk_id": "c_6cc9091d037e42e9",
+    "kind": "quote_relocated",
+    "severity": "info",
+    "detail": "model cited page 44 but the quote for 'Delhivery Limited — PIN code reach' is on page 45; citation corrected.",
+    "payload": {
+      "claimed": 44,
+      "actual": 45
+    },
+    "created_at": "2026-09-07T12:24:11+00:00",
+    "filename": "01-delhivery-prospectus-2022-excerpt.pdf"
+  },
+  {
+    "id": "iss_ceaa37879f6a4427",
+    "doc_id": "d_b6e2fdf784a04e42",
+    "chunk_id": "c_a291364af1724248",
+    "kind": "quote_not_found",
+    "severity": "warning",
+    "detail": "rejected fact 'Delhivery Limited — restated loss for the year': its quote does not appear in pages 53–56 (best similarity 0.58).",
+    "payload": {
+      "fact": {
+        "subject": "Delhivery Limited",
+        "predicate": "restated loss for the year",
+        "value": "17,833.04",
+        "unit": "INR million",
+        "time_scope": "Fiscal 2019",
+        "qualifiers": [
+          "restated"
+        ],
+        "basis": "actual",
+        "fact_type": "monetary",
+        "quote": "For example, our restated loss for the year has improved from ₹17,833.04 million in Fiscal 2019 to ₹2,689.26 million in Fiscal 2020 and to ₹4,157.43 million in Fiscal 2021",
+        "page": 55,
+        "confidence": 1.0
+      },
+      "best_score": 0.576
+    },
+    "created_at": "2026-09-07T12:24:19+00:00",
+    "filename": "01-delhivery-prospectus-2022-excerpt.pdf"
+  },
+  {
+    "id": "iss_75b9e1d277704fb1",
+    "doc_id": "d_b6e2fdf784a04e42",
+    "chunk_id": "c_a291364af1724248",
+    "kind": "quote_not_found",
+    "severity": "warning",
+    "detail": "rejected fact 'Delhivery Limited — restated loss for the year': its quote does not appear in pages 53–56 (best similarity 0.58).",
+    "payload": {
+      "fact": {
+        "subject": "Delhivery Limited",
+        "predicate": "restated loss for the year",
+        "value": "2,689.26",
+        "unit": "INR million",
+        "time_scope": "Fiscal 2020",
+        "qualifiers": [
+          "restated"
+        ],
+        "basis": "actual",
+        "fact_type": "monetary",
+        "quote": "For example, our restated loss for the year has improved from ₹17,833.04 million in Fiscal 2019 to ₹2,689.26 million in Fiscal 2020 and to ₹4,157.43 million in Fiscal 2021",
+        "page": 55,
+        "confidence": 1.0
+      },
+      "best_score": 0.576
+    },
+    "created_at": "2026-09-07T12:24:19+00:00",
+    "filename": "01-delhivery-prospectus-2022-excerpt.pdf"
+  },
+  {
+    "id": "iss_5b67348556374bfe",
+    "doc_id": "d_b6e2fdf784a04e42",
+    "chunk_id": "c_a291364af1724248",
+    "kind": "quote_not_found",
+    "severity": "warning",
+    "detail": "rejected fact 'Delhivery Limited — restated loss for the year': its quote does not appear in pages 53–56 (best similarity 0.58).",
+    "payload": {
+      "fact": {
+        "subject": "Delhivery Limited",
+        "predicate": "restated loss for the year",
+        "value": "4,157.43",
+        "unit": "INR million",
+        "time_scope": "Fiscal 2021",
+        "qualifiers": [
+          "restated"
+        ],
+        "basis": "actual",
+        "fact_type": "monetary",
+        "quote": "For example, our restated loss for the year has improved from ₹17,833.04 million in Fiscal 2019 to ₹2,689.26 million in Fiscal 2020 and to ₹4,157.43 million in Fiscal 2021",
+        "page": 55,
+        "confidence": 1.0
+      },
+      "best_score": 0.576
+    },
+    "created_at": "2026-09-07T12:24:19+00:00",
+    "filename": "01-delhivery-prospectus-2022-excerpt.pdf"
+  },
+  {
+    "id": "iss_b827a676387c4713",
+    "doc_id": "d_b6e2fdf784a04e42",
+    "chunk_id": "c_50066ecb261947b8",
+    "kind": "quote_not_found",
+    "severity": "warning",
+    "detail": "rejected fact 'Delhivery Limited — investments in technology': its quote does not appear in pages 57–59 (best similarity 0.00).",
+    "payload": {
+      "fact": {
+        "subject": "Delhivery Limited",
+        "predicate": "investments in technology",
+        "value": "943.61",
+        "unit": "INR million",
+        "time_scope": "Fiscal 2019",
+        "qualifiers": [],
+        "basis": "actual",
+        "fact_type": "monetary",
+        "quote": "our investments in technology which comprised investments in team and other infrastructure for data Intelligence, proprietary logistics operating system, cyber security, hardware, software, cloud infrastructure were ₹943.61 million, ₹1,377.34 million, ₹1,701.66 million, ₹1,288.17 million and ₹2,418.03 million, respectively.",
+        "page": 57,
+        "confidence": 0.95
+      },
+      "best_score": 0.0
+    },
+    "created_at": "2026-09-07T12:24:22+00:00",
+    "filename": "01-delhivery-prospectus-2022-excerpt.pdf"
+  },
+  {
+    "id": "iss_f8c5f34d7aae4075",
+    "doc_id": "d_b6e2fdf784a04e42",
+    "chunk_id": "c_50066ecb261947b8",
+    "kind": "quote_not_found",
+    "severity": "warning",
+    "detail": "rejected fact 'Delhivery Limited — investments in technology': its quote does not appear in pages 57–59 (best similarity 0.00).",
+    "payload": {
+      "fact": {
+        "subject": "Delhivery Limited",
+        "predicate": "investments in technology",
+        "value": "1,377.34",
+        "unit": "INR million",
+        "time_scope": "Fiscal 2020",
+        "qualifiers": [],
+        "basis": "actual",
+        "fact_type": "monetary",
+        "quote": "our investments in technology which comprised investments in team and other infrastructure for data Intelligence, proprietary logistics operating system, cyber security, hardware, software, cloud infrastructure were ₹943.61 million, ₹1,377.34 million, ₹1,701.66 million, ₹1,288.17 million and ₹2,418.03 million, respectively.",
+        "page": 57,
+        "confidence": 0.95
+      },
+      "best_score": 0.0
+    },
+    "created_at": "2026-09-07T12:24:22+00:00",
+    "filename": "01-delhivery-prospectus-2022-excerpt.pdf"
+  },
+  {
+    "id": "iss_2a9818eebf4e4896",
+    "doc_id": "d_b6e2fdf784a04e42",
+    "chunk_id": "c_50066ecb261947b8",
+    "kind": "quote_not_found",
+    "severity": "warning",
+    "detail": "rejected fact 'Delhivery Limited — investments in technology': its quote does not appear in pages 57–59 (best similarity 0.00).",
+    "payload": {
+      "fact": {
+        "subject": "Delhivery Limited",
+        "predicate": "investments in technology",
+        "value": "1,701.66",
+        "unit": "INR million",
+        "time_scope": "Fiscal 2021",
+        "qualifiers": [],
+        "basis": "actual",
+        "fact_type": "monetary",
+        "quote": "our investments in technology which comprised investments in team and other infrastructure for data Intelligence, proprietary logistics operating system, cyber security, hardware, software, cloud infrastructure were ₹943.61 million, ₹1,377.34 million, ₹1,701.66 million, ₹1,288.17 million and ₹2,418.03 million, respectively.",
+        "page": 57,
+        "confidence": 0.95
+      },
+      "best_score": 0.0
+    },
+    "created_at": "2026-09-07T12:24:22+00:00",
+    "filename": "01-delhivery-prospectus-2022-excerpt.pdf"
+  },
+  {
+    "id": "iss_32196a01be8941c4",
+    "doc_id": "d_b6e2fdf784a04e42",
+    "chunk_id": "c_50066ecb261947b8",
+    "kind": "quote_not_found",
+    "severity": "warning",
+    "detail": "rejected fact 'Delhivery Limited — investments in technology': its quote does not appear in pages 57–59 (best similarity 0.00).",
+    "payload": {
+      "fact": {
+        "subject": "Delhivery Limited",
+        "predicate": "investments in technology",
+        "value": "1,288.17",
+        "unit": "INR million",
+        "time_scope": "nine months period ended December 31, 2020",
+        "qualifiers": [],
+        "basis": "actual",
+        "fact_type": "monetary",
+        "quote": "our investments in technology which comprised investments in team and other infrastructure for data Intelligence, proprietary logistics operating system, cyber security, hardware, software, cloud infrastructure were ₹943.61 million, ₹1,377.34 million, ₹1,701.66 million, ₹1,288.17 million and ₹2,418.03 million, respectively.",
+        "page": 57,
+        "confidence": 0.95
+      },
+      "best_score": 0.0
+    },
+    "created_at": "2026-09-07T12:24:22+00:00",
+    "filename": "01-delhivery-prospectus-2022-excerpt.pdf"
+  },
+  {
+    "id": "iss_c1a9d524c3f6444d",
+    "doc_id": "d_b6e2fdf784a04e42",
+    "chunk_id": "c_50066ecb261947b8",
+    "kind": "quote_not_found",
+    "severity": "warning",
+    "detail": "rejected fact 'Delhivery Limited — investments in technology': its quote does not appear in pages 57–59 (best similarity 0.49).",
+    "payload": {
+      "fact": {
+        "subject": "Delhivery Limited",
+        "predicate": "investments in technology",
+        "value": "2,418.03",
+        "unit": "INR million",
+        "time_scope": "nine months period ended December 31, 2021",
+        "qualifiers": [],
+        "basis": "actual",
+        "fact_type": "monetary",
+        "quote": "our investments in technology which comprised investments in team and other infrastructure for data Intelligence, proprietary logistics operating system, cyber security, hardware, software, cloud infrastructure were ₹943.61 million, ₹1,377.34 million, ₹1,701.66 million, ₹1,288.17 million and ₹2,418.03 million, respectively.",
+        "page": 58,
+        "confidence": 0.95
+      },
+      "best_score": 0.488
+    },
+    "created_at": "2026-09-07T12:24:22+00:00",
+    "filename": "01-delhivery-prospectus-2022-excerpt.pdf"
+  },
+  {
+    "id": "iss_dcca82b2c1934498",
+    "doc_id": "d_b6e2fdf784a04e42",
+    "chunk_id": "c_17fc4f8f762f4ebe",
+    "kind": "quote_relocated",
+    "severity": "info",
+    "detail": "model cited page 78 but the quote for 'Delhivery Limited — maximum number of directors on the Board from the Management Team' is on page 77; citation corrected.",
+    "payload": {
+      "claimed": 78,
+      "actual": 77
+    },
+    "created_at": "2026-09-07T12:24:22+00:00",
+    "filename": "01-delhivery-prospectus-2022-excerpt.pdf"
+  },
+  {
+    "id": "iss_04364da171ef4818",
+    "doc_id": "d_b6e2fdf784a04e42",
+    "chunk_id": "c_05bdca1008334d68",
+    "kind": "quote_not_found",
+    "severity": "warning",
+    "detail": "rejected fact 'Saugata Gupta — age': its quote does not appear in pages 83–87 (best similarity 0.73).",
+    "payload": {
+      "fact": {
+        "subject": "Saugata Gupta",
+        "predicate": "age",
+        "value": "57",
+        "unit": "years",
+        "time_scope": "as on May 14, 2022",
+        "qualifiers": [],
+        "basis": "actual",
+        "fact_type": "count",
+        "quote": "Saugata Gupta 57 Indian companies",
+        "page": 86,
+        "confidence": 0.8
+      },
+      "best_score": 0.727
+    },
+    "created_at": "2026-09-07T12:24:31+00:00",
+    "filename": "01-delhivery-prospectus-2022-excerpt.pdf"
+  },
+  {
+    "id": "iss_7f93807f27a5410e",
+    "doc_id": "d_b6e2fdf784a04e42",
+    "chunk_id": "c_09b9e5cfa1794b49",
+    "kind": "quote_relocated",
+    "severity": "info",
+    "detail": "model cited page 97 but the quote for 'Pooja Gupta — aggregate compensation' is on page 98; citation corrected.",
+    "payload": {
+      "claimed": 97,
+      "actual": 98
+    },
+    "created_at": "2026-09-07T12:24:31+00:00",
+    "filename": "01-delhivery-prospectus-2022-excerpt.pdf"
+  },
+  {
+    "id": "iss_a9fd4fdd1b624918",
+    "doc_id": "d_57bf6a8eb66e413b",
+    "chunk_id": "c_9a6589a24e3d45c8",
+    "kind": "quote_not_found",
+    "severity": "warning",
+    "detail": "rejected fact 'Delhivery Limited — increase in total headcount': its quote does not appear in pages 14–17 (best similarity 0.00).",
+    "payload": {
+      "fact": {
+        "subject": "Delhivery Limited",
+        "predicate": "increase in total headcount",
+        "value": "11",
+        "unit": "%",
+        "time_scope": null,
+        "qualifiers": [
+          "total headcount"
+        ],
+        "basis": "actual",
+        "fact_type": "percentage",
+        "quote": "This addition is against an increase of 11% in the total headcount over the same period.",
+        "page": 17,
+        "confidence": 1.0
+      },
+      "best_score": 0.0
+    },
+    "created_at": "2026-09-07T12:31:21+00:00",
+    "filename": "02-delhivery-annual-report-fy24-excerpt.pdf"
+  },
+  {
+    "id": "iss_8c212975a46d47aa",
+    "doc_id": "d_57bf6a8eb66e413b",
+    "chunk_id": "c_35f223630dd342e7",
+    "kind": "quote_not_found",
+    "severity": "warning",
+    "detail": "rejected fact 'Delhivery Limited — Count of 46-ft tractors': its quote does not appear in pages 1–7 (best similarity 0.54).",
+    "payload": {
+      "fact": {
+        "subject": "Delhivery Limited",
+        "predicate": "Count of 46-ft tractors",
+        "value": ">33,200",
+        "unit": null,
+        "time_scope": "as of March 31, 2024",
+        "qualifiers": [],
+        "basis": "actual",
+        "fact_type": "count",
+        "quote": ">33,200 (3,4)\nCount of 46-ft tractors",
+        "page": 2,
+        "confidence": 0.9
+      },
+      "best_score": 0.543
+    },
+    "created_at": "2026-09-07T12:31:34+00:00",
+    "filename": "02-delhivery-annual-report-fy24-excerpt.pdf"
+  },
+  {
+    "id": "iss_b97ad7262c294708",
+    "doc_id": "d_57bf6a8eb66e413b",
+    "chunk_id": "c_35f223630dd342e7",
+    "kind": "quote_not_found",
+    "severity": "warning",
+    "detail": "rejected fact 'Delhivery Limited — Pin codes covered': its quote does not appear in pages 1–7 (best similarity 0.00).",
+    "payload": {
+      "fact": {
+        "subject": "Delhivery Limited",
+        "predicate": "Pin codes covered",
+        "value": "18,793",
+        "unit": null,
+        "time_scope": "as of March 31, 2024",
+        "qualifiers": [],
+        "basis": "actual",
+        "fact_type": "count",
+        "quote": "18,793 (1)\nPin codes covered",
+        "page": 2,
+        "confidence": 0.95
+      },
+      "best_score": 0.0
+    },
+    "created_at": "2026-09-07T12:31:34+00:00",
+    "filename": "02-delhivery-annual-report-fy24-excerpt.pdf"
+  },
+  {
+    "id": "iss_ea9279d425644d44",
+    "doc_id": "d_57bf6a8eb66e413b",
+    "chunk_id": "c_35f223630dd342e7",
+    "kind": "quote_not_found",
+    "severity": "warning",
+    "detail": "rejected fact 'Delhivery Limited — Active customers': its quote does not appear in pages 1–7 (best similarity 0.67).",
+    "payload": {
+      "fact": {
+        "subject": "Delhivery Limited",
+        "predicate": "Active customers",
+        "value": "4,445",
+        "unit": null,
+        "time_scope": "Q4 FY24",
+        "qualifiers": [],
+        "basis": "actual",
+        "fact_type": "count",
+        "quote": "4,445 (1)\nActive customers",
+        "page": 2,
+        "confidence": 0.95
+      },
+      "best_score": 0.667
+    },
+    "created_at": "2026-09-07T12:31:34+00:00",
+    "filename": "02-delhivery-annual-report-fy24-excerpt.pdf"
+  },
+  {
+    "id": "iss_9bfea536f4e04776",
+    "doc_id": "d_57bf6a8eb66e413b",
+    "chunk_id": "c_35f223630dd342e7",
+    "kind": "quote_not_found",
+    "severity": "warning",
+    "detail": "rejected fact 'Delhivery Limited — Workforce strength': its quote does not appear in pages 1–7 (best similarity 0.00).",
+    "payload": {
+      "fact": {
+        "subject": "Delhivery Limited",
+        "predicate": "Workforce strength",
+        "value": "98,135",
+        "unit": null,
+        "time_scope": "as of March 31, 2024",
+        "qualifiers": [
+          "Includes permanent employees, contractual workers and last mile deliver partner agents"
+        ],
+        "basis": "actual",
+        "fact_type": "count",
+        "quote": "98,135 (1,5)\nWorkforce strength",
+        "page": 2,
+        "confidence": 0.95
+      },
+      "best_score": 0.0
+    },
+    "created_at": "2026-09-07T12:31:34+00:00",
+    "filename": "02-delhivery-annual-report-fy24-excerpt.pdf"
+  },
+  {
+    "id": "iss_468b63279d65485a",
+    "doc_id": "d_57bf6a8eb66e413b",
+    "chunk_id": "c_35f223630dd342e7",
+    "kind": "quote_not_found",
+    "severity": "warning",
+    "detail": "rejected fact 'Delhivery Limited — PTL freight delivered': its quote does not appear in pages 1–7 (best similarity 0.69).",
+    "payload": {
+      "fact": {
+        "subject": "Delhivery Limited",
+        "predicate": "PTL freight delivered",
+        "value": "1,429",
+        "unit": "K tonnes",
+        "time_scope": "FY24",
+        "qualifiers": [],
+        "basis": "actual",
+        "fact_type": "numeric",
+        "quote": "1,429K tonnes\nPTL freight delivered",
+        "page": 4,
+        "confidence": 0.95
+      },
+      "best_score": 0.686
+    },
+    "created_at": "2026-09-07T12:31:34+00:00",
+    "filename": "02-delhivery-annual-report-fy24-excerpt.pdf"
+  },
+  {
+    "id": "iss_b5e08a4713be4534",
+    "doc_id": "d_57bf6a8eb66e413b",
+    "chunk_id": "c_35f223630dd342e7",
+    "kind": "quote_not_found",
+    "severity": "warning",
+    "detail": "rejected fact 'Delhivery Limited — Revenue from services': its quote does not appear in pages 1–7 (best similarity 0.77).",
+    "payload": {
+      "fact": {
+        "subject": "Delhivery Limited",
+        "predicate": "Revenue from services",
+        "value": "81,415",
+        "unit": "INR million",
+        "time_scope": "FY24",
+        "qualifiers": [],
+        "basis": "actual",
+        "fact_type": "monetary",
+        "quote": "₹81,415Mn\nRevenue from services",
+        "page": 4,
+        "confidence": 0.95
+      },
+      "best_score": 0.774
+    },
+    "created_at": "2026-09-07T12:31:34+00:00",
+    "filename": "02-delhivery-annual-report-fy24-excerpt.pdf"
+  },
+  {
+    "id": "iss_9ed82bc1503d46b1",
+    "doc_id": "d_57bf6a8eb66e413b",
+    "chunk_id": "c_35f223630dd342e7",
+    "kind": "quote_not_found",
+    "severity": "warning",
+    "detail": "rejected fact 'Delhivery Limited — EBITDA': its quote does not appear in pages 1–7 (best similarity 0.00).",
+    "payload": {
+      "fact": {
+        "subject": "Delhivery Limited",
+        "predicate": "EBITDA",
+        "value": "1,266",
+        "unit": "INR million",
+        "time_scope": "FY24",
+        "qualifiers": [],
+        "basis": "actual",
+        "fact_type": "monetary",
+        "quote": "₹1,266Mn\nEBITDA",
+        "page": 4,
+        "confidence": 0.95
+      },
+      "best_score": 0.0
+    },
+    "created_at": "2026-09-07T12:31:34+00:00",
+    "filename": "02-delhivery-annual-report-fy24-excerpt.pdf"
+  },
+  {
+    "id": "iss_5b249f3741bc4483",
+    "doc_id": "d_57bf6a8eb66e413b",
+    "chunk_id": "c_35f223630dd342e7",
+    "kind": "quote_not_found",
+    "severity": "warning",
+    "detail": "rejected fact 'Delhivery Limited — Adjusted EBITDA': its quote does not appear in pages 1–7 (best similarity 0.82).",
+    "payload": {
+      "fact": {
+        "subject": "Delhivery Limited",
+        "predicate": "Adjusted EBITDA",
+        "value": "758",
+        "unit": "INR million",
+        "time_scope": "FY24",
+        "qualifiers": [],
+        "basis": "actual",
+        "fact_type": "monetary",
+        "quote": "₹758Mn\nAdjusted EBITDA",
+        "page": 4,
+        "confidence": 0.95
+      },
+      "best_score": 0.818
+    },
+    "created_at": "2026-09-07T12:31:34+00:00",
+    "filename": "02-delhivery-annual-report-fy24-excerpt.pdf"
+  },
+  {
+    "id": "iss_c757f8d75c6046ce",
+    "doc_id": "d_57bf6a8eb66e413b",
+    "chunk_id": "c_35f223630dd342e7",
+    "kind": "quote_relocated",
+    "severity": "info",
+    "detail": "model cited page 13 but the quote for 'Indian logistics sector — Estimated market size' is on page 7; citation corrected.",
+    "payload": {
+      "claimed": 13,
+      "actual": 7
+    },
+    "created_at": "2026-09-07T12:31:34+00:00",
+    "filename": "02-delhivery-annual-report-fy24-excerpt.pdf"
+  },
+  {
+    "id": "iss_33738ed7b0454e6c",
+    "doc_id": "d_57bf6a8eb66e413b",
+    "chunk_id": "c_54914dcf9fd64bb1",
+    "kind": "quote_relocated",
+    "severity": "info",
+    "detail": "model cited page 83 but the quote for 'Delhivery Limited Nomination and Remuneration Committee — number of members' is on page 42; citation corrected.",
+    "payload": {
+      "claimed": 83,
+      "actual": 42
+    },
+    "created_at": "2026-09-07T12:31:59+00:00",
+    "filename": "02-delhivery-annual-report-fy24-excerpt.pdf"
+  },
+  {
+    "id": "iss_95340f6016584ea2",
+    "doc_id": "d_57bf6a8eb66e413b",
+    "chunk_id": "c_54914dcf9fd64bb1",
+    "kind": "quote_relocated",
+    "severity": "info",
+    "detail": "model cited page 83 but the quote for 'Delhivery Limited Nomination and Remuneration Committee — number of meetings held' is on page 42; citation corrected.",
+    "payload": {
+      "claimed": 83,
+      "actual": 42
+    },
+    "created_at": "2026-09-07T12:31:59+00:00",
+    "filename": "02-delhivery-annual-report-fy24-excerpt.pdf"
+  },
+  {
+    "id": "iss_24d682e79cd74d94",
+    "doc_id": "d_57bf6a8eb66e413b",
+    "chunk_id": "c_54914dcf9fd64bb1",
+    "kind": "quote_relocated",
+    "severity": "info",
+    "detail": "model cited page 83 but the quote for 'Mr. Saugata Gupta — number of Nomination and Remuneration Committee meetings held during tenure' is on page 42; citation corrected.",
+    "payload": {
+      "claimed": 83,
+      "actual": 42
+    },
+    "created_at": "2026-09-07T12:31:59+00:00",
+    "filename": "02-delhivery-annual-report-fy24-excerpt.pdf"
+  },
+  {
+    "id": "iss_9fd8a78051c84a56",
+    "doc_id": "d_57bf6a8eb66e413b",
+    "chunk_id": "c_54914dcf9fd64bb1",
+    "kind": "quote_relocated",
+    "severity": "info",
+    "detail": "model cited page 83 but the quote for 'Mr. Saugata Gupta — number of Nomination and Remuneration Committee meetings attended' is on page 42; citation corrected.",
+    "payload": {
+      "claimed": 83,
+      "actual": 42
+    },
+    "created_at": "2026-09-07T12:31:59+00:00",
+    "filename": "02-delhivery-annual-report-fy24-excerpt.pdf"
+  },
+  {
+    "id": "iss_040c74186df54c99",
+    "doc_id": "d_57bf6a8eb66e413b",
+    "chunk_id": "c_54914dcf9fd64bb1",
+    "kind": "quote_relocated",
+    "severity": "info",
+    "detail": "model cited page 83 but the quote for 'Mr. Deepak Kapoor — number of Nomination and Remuneration Committee meetings held during tenure' is on page 42; citation corrected.",
+    "payload": {
+      "claimed": 83,
+      "actual": 42
+    },
+    "created_at": "2026-09-07T12:31:59+00:00",
+    "filename": "02-delhivery-annual-report-fy24-excerpt.pdf"
+  },
+  {
+    "id": "iss_5e748214a171446d",
+    "doc_id": "d_57bf6a8eb66e413b",
+    "chunk_id": "c_54914dcf9fd64bb1",
+    "kind": "quote_relocated",
+    "severity": "info",
+    "detail": "model cited page 83 but the quote for 'Mr. Deepak Kapoor — number of Nomination and Remuneration Committee meetings attended' is on page 42; citation corrected.",
+    "payload": {
+      "claimed": 83,
+      "actual": 42
+    },
+    "created_at": "2026-09-07T12:31:59+00:00",
+    "filename": "02-delhivery-annual-report-fy24-excerpt.pdf"
+  },
+  {
+    "id": "iss_41b9404812044fad",
+    "doc_id": "d_57bf6a8eb66e413b",
+    "chunk_id": "c_54914dcf9fd64bb1",
+    "kind": "quote_relocated",
+    "severity": "info",
+    "detail": "model cited page 83 but the quote for 'Mr. Srivatsan Rajan — number of Nomination and Remuneration Committee meetings held during tenure' is on page 42; citation corrected.",
+    "payload": {
+      "claimed": 83,
+      "actual": 42
+    },
+    "created_at": "2026-09-07T12:31:59+00:00",
+    "filename": "02-delhivery-annual-report-fy24-excerpt.pdf"
+  },
+  {
+    "id": "iss_121126dfb90b45e1",
+    "doc_id": "d_57bf6a8eb66e413b",
+    "chunk_id": "c_54914dcf9fd64bb1",
+    "kind": "quote_relocated",
+    "severity": "info",
+    "detail": "model cited page 83 but the quote for 'Mr. Srivatsan Rajan — number of Nomination and Remuneration Committee meetings attended' is on page 42; citation corrected.",
+    "payload": {
+      "claimed": 83,
+      "actual": 42
+    },
+    "created_at": "2026-09-07T12:31:59+00:00",
+    "filename": "02-delhivery-annual-report-fy24-excerpt.pdf"
+  },
+  {
+    "id": "iss_7802fa9e296f426a",
+    "doc_id": "d_57bf6a8eb66e413b",
+    "chunk_id": "c_54914dcf9fd64bb1",
+    "kind": "quote_relocated",
+    "severity": "info",
+    "detail": "model cited page 83 but the quote for 'Mr. Suvir Suren Sujan — number of Nomination and Remuneration Committee meetings held during tenure' is on page 42; citation corrected.",
+    "payload": {
+      "claimed": 83,
+      "actual": 42
+    },
+    "created_at": "2026-09-07T12:31:59+00:00",
+    "filename": "02-delhivery-annual-report-fy24-excerpt.pdf"
+  },
+  {
+    "id": "iss_24158372621d4c2b",
+    "doc_id": "d_57bf6a8eb66e413b",
+    "chunk_id": "c_54914dcf9fd64bb1",
+    "kind": "quote_relocated",
+    "severity": "info",
+    "detail": "model cited page 83 but the quote for 'Mr. Suvir Suren Sujan — number of Nomination and Remuneration Committee meetings attended' is on page 42; citation corrected.",
+    "payload": {
+      "claimed": 83,
+      "actual": 42
+    },
+    "created_at": "2026-09-07T12:31:59+00:00",
+    "filename": "02-delhivery-annual-report-fy24-excerpt.pdf"
+  },
+  {
+    "id": "iss_6e08e3824d8744e4",
+    "doc_id": "d_57bf6a8eb66e413b",
+    "chunk_id": "c_9bee9c59b2574c4a",
+    "kind": "quote_not_found",
+    "severity": "warning",
+    "detail": "rejected fact 'Delhivery Singapore Pte. Ltd. — Share in profit and loss': its quote does not appear in pages 100–100 (best similarity 0.00).",
+    "payload": {
+      "fact": {
+        "subject": "Delhivery Singapore Pte. Ltd.",
+        "predicate": "Share in profit and loss",
+        "value": "(200.66)",
+        "unit": "INR million",
+        "time_scope": "for the year ended March 31, 2024",
+        "qualifiers": [
+          "Foreign subsidiaries",
+          "consolidated"
+        ],
+        "basis": "actual",
+        "fact_type": "monetary",
+        "quote": "Delhivery Singapore Pte. Ltd. Balance as at March 31, 2024 ... 8.05% (200.66)",
+        "page": 100,
+        "confidence": 0.95
+      },
+      "best_score": 0.0
+    },
+    "created_at": "2026-09-07T12:34:04+00:00",
+    "filename": "02-delhivery-annual-report-fy24-excerpt.pdf"
+  },
+  {
+    "id": "iss_f7e4cf56084f4789",
+    "doc_id": "d_57bf6a8eb66e413b",
+    "chunk_id": "c_9bee9c59b2574c4a",
+    "kind": "quote_not_found",
+    "severity": "warning",
+    "detail": "rejected fact 'Delhivery HK Pte Ltd. — Share in profit and loss': its quote does not appear in pages 100–100 (best similarity 0.00).",
+    "payload": {
+      "fact": {
+        "subject": "Delhivery HK Pte Ltd.",
+        "predicate": "Share in profit and loss",
+        "value": "0.61",
+        "unit": "INR million",
+        "time_scope": "for the year ended March 31, 2024",
+        "qualifiers": [
+          "Foreign subsidiaries",
+          "consolidated"
+        ],
+        "basis": "actual",
+        "fact_type": "monetary",
+        "quote": "Delhivery HK Pte Ltd. Balance as at March 31, 2024 ... -0.02% 0.61",
+        "page": 100,
+        "confidence": 0.95
+      },
+      "best_score": 0.0
+    },
+    "created_at": "2026-09-07T12:34:04+00:00",
+    "filename": "02-delhivery-annual-report-fy24-excerpt.pdf"
+  },
+  {
+    "id": "iss_01290ad4fdc74321",
+    "doc_id": "d_57bf6a8eb66e413b",
+    "chunk_id": "c_9bee9c59b2574c4a",
+    "kind": "quote_not_found",
+    "severity": "warning",
+    "detail": "rejected fact 'Delhivery Limited Group — Share in profit and loss': its quote does not appear in pages 100–100 (best similarity 0.00).",
+    "payload": {
+      "fact": {
+        "subject": "Delhivery Limited Group",
+        "predicate": "Share in profit and loss",
+        "value": "(10,077.79)",
+        "unit": "INR million",
+        "time_scope": "for the year ended March 31, 2023",
+        "qualifiers": [
+          "Total",
+          "consolidated"
+        ],
+        "basis": "actual",
+        "fact_type": "monetary",
+        "quote": "Balance as at March 31, 2023 ... 100.00% (10,077.79)",
+        "page": 100,
+        "confidence": 0.95
+      },
+      "best_score": 0.0
+    },
+    "created_at": "2026-09-07T12:34:04+00:00",
+    "filename": "02-delhivery-annual-report-fy24-excerpt.pdf"
+  },
+  {
+    "id": "iss_e3447d526af04eb1",
+    "doc_id": "d_57bf6a8eb66e413b",
+    "chunk_id": null,
+    "kind": "pairs_over_budget",
+    "severity": "info",
+    "detail": "1072 candidate pairs were generated; the top 420 by priority were judged and 341 lower-priority pairs were skipped to stay within MAX_PAIRS_PER_INGEST=420.",
+    "payload": null,
+    "created_at": "2026-09-07T12:34:12+00:00",
+    "filename": "02-delhivery-annual-report-fy24-excerpt.pdf"
+  },
+  {
+    "id": "iss_fc772bc9d64a48ec",
+    "doc_id": "d_57bf6a8eb66e413b",
+    "chunk_id": null,
+    "kind": "judgment_inconsistent",
+    "severity": "warning",
+    "detail": "'Delhivery Limited — Exceptional items' vs 'Delhivery Limited — Total exceptional items': labelled corroborates, but the normalised values differ by 200.0%. Confidence was halved and the verdict flagged for review.",
+    "payload": {
+      "relation": "corroborates",
+      "reasoning": "Fact A reports (224.10) INR million as an exceptional item (a loss), and Fact B reports 224.10 INR million as the total exceptional item. The values represent the same magnitude, with the parentheses in A indicating the negative nature of the item.",
+      "a": {
+        "value": "(224.10)",
+        "period": "@2024-03-31",
+        "quote": "Exceptional items (224.10) -"
+      },
+      "b": {
+        "value": "224.10",
+        "period": "@2024-03-31",
+        "quote": "224.10 -"
+      }
+    },
+    "created_at": "2026-09-07T12:39:05+00:00",
+    "filename": "02-delhivery-annual-report-fy24-excerpt.pdf"
+  },
+  {
+    "id": "iss_6326da04ce664e7c",
+    "doc_id": "d_57bf6a8eb66e413b",
+    "chunk_id": null,
+    "kind": "judgment_inconsistent",
+    "severity": "warning",
+    "detail": "'Orion Supply Chain Private Limited — Share percentage held by Delhivery Limited' vs 'Orion Supply Chain Private Limited — equity holding by Delhivery Limited': labelled corroborates, but the two facts carry different normalised periods. Confidence was halved and the verdict flagged for review.",
+    "payload": {
+      "relation": "corroborates",
+      "reasoning": "Both documents confirm that Delhivery Limited holds 100% of the equity in Orion Supply Chain Private Limited. The difference in period (FY2024 vs May 2022) does not change the fact of full ownership.",
+      "a": {
+        "value": "100.00",
+        "period": "FY2024",
+        "quote": "3. Orion Supply Chain Private Limited Subsidiary 100.00% Yes"
+      },
+      "b": {
+        "value": "100",
+        "period": "@2022-05-14",
+        "quote": "Our Company holds 10,000 equity shares of OSCPL (including 1 equity share held by its nominee shareholder, Sahil Barua) aggregating to 100% of the total equity holding of OSCPL."
+      }
+    },
+    "created_at": "2026-09-07T12:41:04+00:00",
+    "filename": "02-delhivery-annual-report-fy24-excerpt.pdf"
+  },
+  {
+    "id": "iss_8493c22977a4454d",
+    "doc_id": "d_57bf6a8eb66e413b",
+    "chunk_id": null,
+    "kind": "judgment_inconsistent",
+    "severity": "warning",
+    "detail": "'Delhivery Cross Border Services Private Limited — Share percentage held by Delhivery Limited' vs 'Delhivery Cross Border Services Private Limited — equity holding by Delhivery Limited': labelled corroborates, but the two facts carry different normalised periods. Confidence was halved and the verdict flagged for review.",
+    "payload": {
+      "relation": "corroborates",
+      "reasoning": "Both documents confirm that Delhivery Limited holds 100% of the equity in Delhivery Cross Border Services Private Limited. The difference in period does not change the fact of full ownership.",
+      "a": {
+        "value": "100.00",
+        "period": "FY2024",
+        "quote": "4. Delhivery Cross Border Services Private Limited Subsidiary 100.00% Yes"
+      },
+      "b": {
+        "value": "100",
+        "period": "@2022-05-14",
+        "quote": "Our Company holds 5,510,000 equity shares of DCBSPL (including 1 equity share held by its nominee shareholder, Sahil Barua) aggregating to 100% of the total equity holding of DCBSPL."
+      }
+    },
+    "created_at": "2026-09-07T12:41:04+00:00",
+    "filename": "02-delhivery-annual-report-fy24-excerpt.pdf"
+  },
+  {
+    "id": "iss_773d05d218ab476d",
+    "doc_id": "d_57bf6a8eb66e413b",
+    "chunk_id": null,
+    "kind": "judgment_inconsistent",
+    "severity": "warning",
+    "detail": "'Delhivery Freight Services Private Limited — Share percentage held by Delhivery Limited' vs 'Delhivery Freight Services Private Limited — equity holding by Delhivery Limited': labelled corroborates, but the two facts carry different normalised periods. Confidence was halved and the verdict flagged for review.",
+    "payload": {
+      "relation": "corroborates",
+      "reasoning": "Both documents confirm that Delhivery Limited holds 100% of the equity in Delhivery Freight Services Private Limited. The difference in period does not change the fact of full ownership.",
+      "a": {
+        "value": "100.00",
+        "period": "FY2024",
+        "quote": "2. Delhivery Freight Services Private Limited Subsidiary 100.00% Yes"
+      },
+      "b": {
+        "value": "100",
+        "period": "@2022-05-14",
+        "quote": "Our Company holds 10,000 equity shares of DFSPL (including 1 equity share held by its nominee shareholder, Sahil Barua) aggregating to 100% of the total equity holding of DFSPL."
+      }
+    },
+    "created_at": "2026-09-07T12:41:04+00:00",
+    "filename": "02-delhivery-annual-report-fy24-excerpt.pdf"
+  },
+  {
+    "id": "iss_7a0df1cb97c043ba",
+    "doc_id": "d_57bf6a8eb66e413b",
+    "chunk_id": null,
+    "kind": "judgment_inconsistent",
+    "severity": "warning",
+    "detail": "'Spoton Logistics Private Limited — Share percentage held by Delhivery Limited' vs 'Spoton Logistics Private Limited — equity holding by Delhivery Limited': labelled corroborates, but the two facts carry different normalised periods. Confidence was halved and the verdict flagged for review.",
+    "payload": {
+      "relation": "corroborates",
+      "reasoning": "Both documents confirm that Delhivery Limited holds 100% of the equity in Spoton Logistics Private Limited. The difference in period does not change the fact of full ownership.",
+      "a": {
+        "value": "100.00",
+        "period": "FY2024",
+        "quote": "1. Spoton Logistics Private Limited Subsidiary 100.00% Yes"
+      },
+      "b": {
+        "value": "100",
+        "period": "@2022-05-14",
+        "quote": "Our Company holds 20,641,094 equity shares of Spoton (including one equity share held by its nominee shareholder, Sahil Barua) aggregating to 100% of the total equity holding of Spoton."
+      }
+    },
+    "created_at": "2026-09-07T12:41:04+00:00",
+    "filename": "02-delhivery-annual-report-fy24-excerpt.pdf"
+  },
+  {
+    "id": "iss_e8d1163ff22a42f1",
+    "doc_id": "d_57bf6a8eb66e413b",
+    "chunk_id": null,
+    "kind": "judgment_inconsistent",
+    "severity": "warning",
+    "detail": "'Delhivery Corp Limited, United Kingdom — Share percentage held by Delhivery Limited' vs 'Delhivery Corp Limited — share holding by Delhivery Limited': labelled corroborates, but the two facts carry different normalised periods. Confidence was halved and the verdict flagged for review.",
+    "payload": {
+      "relation": "corroborates",
+      "reasoning": "Both documents confirm that Delhivery Limited holds 100% of the equity in Delhivery Corp Limited. The difference in period does not change the fact of full ownership.",
+      "a": {
+        "value": "100.00",
+        "period": "FY2024",
+        "quote": "7. Delhivery Corp Limited, United Kingdom Subsidiary 100.00% Yes"
+      },
+      "b": {
+        "value": "100",
+        "period": "@2022-05-14",
+        "quote": "Our Company holds 2,269,165 ordinary shares of DCL aggregating to 100% of the total holding of DCL."
+      }
+    },
+    "created_at": "2026-09-07T12:41:04+00:00",
+    "filename": "02-delhivery-annual-report-fy24-excerpt.pdf"
+  },
+  {
+    "id": "iss_62d3985687e04e4e",
+    "doc_id": "d_57bf6a8eb66e413b",
+    "chunk_id": null,
+    "kind": "judgment_inconsistent",
+    "severity": "warning",
+    "detail": "'Spoton Supply Chain Solutions Private Limited — Share percentage held by Delhivery Limited' vs 'Spoton Supply Chain Solutions Private Limited — equity holding by Spoton Logistics Private Limited': labelled corroborates, but the two facts carry different normalised periods. Confidence was halved and the verdict flagged for review.",
+    "payload": {
+      "relation": "corroborates",
+      "reasoning": "Both documents confirm that Spoton Supply Chain Solutions Private Limited is a 100% subsidiary (held via Spoton Logistics). The difference in period does not change the fact of full ownership.",
+      "a": {
+        "value": "100.00",
+        "period": "FY2024",
+        "quote": "5. Spoton Supply Chain Solutions Private Limited Subsidiary 100.00% Yes"
+      },
+      "b": {
+        "value": "100",
+        "period": "@2022-05-14",
+        "quote": "Our Subsidiary, Spoton holds 5,000 equity shares of SSCPL (including one equity share held by its nominee shareholder, Abhik Mitra) aggregating to 100% of the total equity holding of SSCPL."
+      }
+    },
+    "created_at": "2026-09-07T12:41:04+00:00",
+    "filename": "02-delhivery-annual-report-fy24-excerpt.pdf"
+  },
+  {
+    "id": "iss_dcb8d61088ac4061",
+    "doc_id": "d_57bf6a8eb66e413b",
+    "chunk_id": null,
+    "kind": "judgment_inconsistent",
+    "severity": "warning",
+    "detail": "'Delhivery Singapore Pte. Ltd. — Share percentage held by Delhivery Limited' vs 'Delhivery Limited — equity shareholding percentage in Delhivery Singapore Pte. Ltd.': labelled corroborates, but the two facts carry different normalised periods. Confidence was halved and the verdict flagged for review.",
+    "payload": {
+      "relation": "corroborates",
+      "reasoning": "Both documents confirm that Delhivery Limited holds 100% of the equity in Delhivery Singapore Pte. Ltd. The difference in period does not change the fact of full ownership.",
+      "a": {
+        "value": "100.00",
+        "period": "FY2024",
+        "quote": "10. Delhivery Singapore Pte. Ltd. Subsidiary 100.00% Yes"
+      },
+      "b": {
+        "value": "100",
+        "period": "@2022-05-14",
+        "quote": "Our Company holds 2,000,000 equity shares aggregating to 100% of the total equity shareholding of Delhivery Singapore."
+      }
+    },
+    "created_at": "2026-09-07T12:41:04+00:00",
+    "filename": "02-delhivery-annual-report-fy24-excerpt.pdf"
+  },
+  {
+    "id": "iss_2d377156e34b41e4",
+    "doc_id": "d_57bf6a8eb66e413b",
+    "chunk_id": null,
+    "kind": "judgment_inconsistent",
+    "severity": "warning",
+    "detail": "'Mr. Kapil Bharati — Date of Appointment in Company' vs 'Kapil Bharati — Board appointment date': labelled corroborates, but the two facts carry different normalised periods. Confidence was halved and the verdict flagged for review.",
+    "payload": {
+      "relation": "corroborates",
+      "reasoning": "Both documents confirm the appointment date of Mr. Kapil Bharati as August 19, 2021. The difference in format (19/08/2021 vs August 19, 2021) is purely stylistic.",
+      "a": {
+        "value": "19/08/2021",
+        "period": "FY2024",
+        "quote": "9. Mr. Kapil Bharati 02227607 19/08/2021"
+      },
+      "b": {
+        "value": "August 19, 2021",
+        "period": "@2021-08-19",
+        "quote": "Kapil Bharati August 19, 2021\nAppointment as additional executive director"
+      }
+    },
+    "created_at": "2026-09-07T12:41:04+00:00",
+    "filename": "02-delhivery-annual-report-fy24-excerpt.pdf"
+  },
+  {
+    "id": "iss_96b2908c511043c0",
+    "doc_id": "d_57bf6a8eb66e413b",
+    "chunk_id": null,
+    "kind": "judgment_inconsistent",
+    "severity": "warning",
+    "detail": "'Mr. Saugata Gupta — Date of Appointment in Company' vs 'Saugata Gupta — Board appointment date': labelled corroborates, but the two facts carry different normalised periods. Confidence was halved and the verdict flagged for review.",
+    "payload": {
+      "relation": "corroborates",
+      "reasoning": "Both facts confirm the appointment date of Mr. Saugata Gupta as October 1, 2021. The difference in period is irrelevant as the date of appointment is a static fact.",
+      "a": {
+        "value": "01/10/2021",
+        "period": "FY2024",
+        "quote": "3. Mr. Saugata Gupta 05251806 01/10/2021"
+      },
+      "b": {
+        "value": "October 1, 2021",
+        "period": "@2021-10-01",
+        "quote": "Saugata Gupta October 1, 2021\nAppointment as non-executive additional director"
+      }
+    },
+    "created_at": "2026-09-07T12:41:05+00:00",
+    "filename": "02-delhivery-annual-report-fy24-excerpt.pdf"
+  },
+  {
+    "id": "iss_e97c49d6cb8a4c9a",
+    "doc_id": "d_57bf6a8eb66e413b",
+    "chunk_id": null,
+    "kind": "judgment_inconsistent",
+    "severity": "warning",
+    "detail": "'Spoton Supply Chain Solutions Private Limited — Share percentage held by Delhivery Limited' vs 'Spoton Logistics Private Limited — equity holding by Delhivery Limited': labelled corroborates, but the two facts carry different normalised periods. Confidence was halved and the verdict flagged for review.",
+    "payload": {
+      "relation": "corroborates",
+      "reasoning": "Both facts state that Delhivery Limited holds 100% of the equity of Spoton. The difference in period is irrelevant as the ownership percentage is a static fact.",
+      "a": {
+        "value": "100.00",
+        "period": "FY2024",
+        "quote": "5. Spoton Supply Chain Solutions Private Limited Subsidiary 100.00% Yes"
+      },
+      "b": {
+        "value": "100",
+        "period": "@2022-05-14",
+        "quote": "Our Company holds 20,641,094 equity shares of Spoton (including one equity share held by its nominee shareholder, Sahil Barua) aggregating to 100% of the total equity holding of Spoton."
+      }
+    },
+    "created_at": "2026-09-07T12:41:05+00:00",
+    "filename": "02-delhivery-annual-report-fy24-excerpt.pdf"
+  },
+  {
+    "id": "iss_c0edc792c5be4f67",
+    "doc_id": "d_57bf6a8eb66e413b",
+    "chunk_id": null,
+    "kind": "judgment_inconsistent",
+    "severity": "warning",
+    "detail": "'Mr. Romesh Sobti — Date of Appointment in Company' vs 'Romesh Sobti — Board appointment date': labelled corroborates, but the two facts carry different normalised periods. Confidence was halved and the verdict flagged for review.",
+    "payload": {
+      "relation": "corroborates",
+      "reasoning": "Both facts confirm the appointment date of Mr. Romesh Sobti as October 1, 2021.",
+      "a": {
+        "value": "01/10/2021",
+        "period": "FY2024",
+        "quote": "2. Mr. Romesh Sobti 00031034 01/10/2021"
+      },
+      "b": {
+        "value": "October 1, 2021",
+        "period": "@2021-10-01",
+        "quote": "Romesh Sobti October 1, 2021\nAppointment as non-executive additional director"
+      }
+    },
+    "created_at": "2026-09-07T12:41:05+00:00",
+    "filename": "02-delhivery-annual-report-fy24-excerpt.pdf"
+  },
+  {
+    "id": "iss_743d3c31f07a4198",
+    "doc_id": "d_57bf6a8eb66e413b",
+    "chunk_id": null,
+    "kind": "judgment_inconsistent",
+    "severity": "warning",
+    "detail": "'Delhivery HK Pte. Limited — Share percentage held by Delhivery Limited' vs 'Delhivery HK Pte Limited — share holding by Delhivery Limited': labelled corroborates, but the two facts carry different normalised periods. Confidence was halved and the verdict flagged for review.",
+    "payload": {
+      "relation": "corroborates",
+      "reasoning": "Both facts confirm that Delhivery Limited holds 100% of the shares in Delhivery HK Pte. Limited. The difference in reporting dates (FY2024 vs May 2022) does not change the ownership percentage.",
+      "a": {
+        "value": "100.00",
+        "period": "FY2024",
+        "quote": "9. Delhivery HK Pte. Limited Subsidiary 100.00% Yes"
+      },
+      "b": {
+        "value": "100",
+        "period": "@2022-05-14",
+        "quote": "Our Company holds 2,209,446 ordinary shares of DHPL aggregating to 100% of the total holding of DHPL."
+      }
+    },
+    "created_at": "2026-09-07T12:41:05+00:00",
+    "filename": "02-delhivery-annual-report-fy24-excerpt.pdf"
+  },
+  {
+    "id": "iss_114fb94b1c7b4241",
+    "doc_id": "d_7515a2a190534d1e",
+    "chunk_id": "c_31742cd1dd264a94",
+    "kind": "quote_relocated",
+    "severity": "info",
+    "detail": "model cited page 4 but the quote for 'Delhivery Limited — FY24 EBITDA' is on page 5; citation corrected.",
+    "payload": {
+      "claimed": 4,
+      "actual": 5
+    },
+    "created_at": "2026-09-07T12:41:20+00:00",
+    "filename": "03-delhivery-q4-fy24-earnings-presentation.pdf"
+  },
+  {
+    "id": "iss_fcdf13b3b363456b",
+    "doc_id": "d_7515a2a190534d1e",
+    "chunk_id": "c_31742cd1dd264a94",
+    "kind": "quote_relocated",
+    "severity": "info",
+    "detail": "model cited page 4 but the quote for 'Delhivery Limited — FY23 EBITDA' is on page 5; citation corrected.",
+    "payload": {
+      "claimed": 4,
+      "actual": 5
+    },
+    "created_at": "2026-09-07T12:41:20+00:00",
+    "filename": "03-delhivery-q4-fy24-earnings-presentation.pdf"
+  },
+  {
+    "id": "iss_77d7694dd5f44178",
+    "doc_id": "d_7515a2a190534d1e",
+    "chunk_id": "c_31742cd1dd264a94",
+    "kind": "quote_relocated",
+    "severity": "info",
+    "detail": "model cited page 4 but the quote for 'Delhivery Limited — PAT loss reduction' is on page 5; citation corrected.",
+    "payload": {
+      "claimed": 4,
+      "actual": 5
+    },
+    "created_at": "2026-09-07T12:41:20+00:00",
+    "filename": "03-delhivery-q4-fy24-earnings-presentation.pdf"
+  },
+  {
+    "id": "iss_01602112340d4e52",
+    "doc_id": "d_7515a2a190534d1e",
+    "chunk_id": "c_31742cd1dd264a94",
+    "kind": "quote_relocated",
+    "severity": "info",
+    "detail": "model cited page 4 but the quote for 'Delhivery Limited — FY23 PAT loss' is on page 5; citation corrected.",
+    "payload": {
+      "claimed": 4,
+      "actual": 5
+    },
+    "created_at": "2026-09-07T12:41:20+00:00",
+    "filename": "03-delhivery-q4-fy24-earnings-presentation.pdf"
+  },
+  {
+    "id": "iss_aa761da8334346c4",
+    "doc_id": "d_7515a2a190534d1e",
+    "chunk_id": "c_31742cd1dd264a94",
+    "kind": "quote_not_found",
+    "severity": "warning",
+    "detail": "rejected fact 'Delhivery Limited — EBITDA': its quote does not appear in pages 1–14 (best similarity 0.82).",
+    "payload": {
+      "fact": {
+        "subject": "Delhivery Limited",
+        "predicate": "EBITDA",
+        "value": "127",
+        "unit": "INR crore",
+        "time_scope": "FY24",
+        "qualifiers": [
+          "consolidated"
+        ],
+        "basis": "actual",
+        "fact_type": "monetary",
+        "quote": "₹127Cr / 1.6%\nEBITDA / EBITDA margin FY23: ₹(452) Cr / (6.3%)",
+        "page": 5,
+        "confidence": 1.0
+      },
+      "best_score": 0.816
+    },
+    "created_at": "2026-09-07T12:41:20+00:00",
+    "filename": "03-delhivery-q4-fy24-earnings-presentation.pdf"
+  },
+  {
+    "id": "iss_38860b6c6a884d35",
+    "doc_id": "d_7515a2a190534d1e",
+    "chunk_id": "c_31742cd1dd264a94",
+    "kind": "quote_not_found",
+    "severity": "warning",
+    "detail": "rejected fact 'Delhivery Limited — EBITDA margin': its quote does not appear in pages 1–14 (best similarity 0.82).",
+    "payload": {
+      "fact": {
+        "subject": "Delhivery Limited",
+        "predicate": "EBITDA margin",
+        "value": "1.6",
+        "unit": "%",
+        "time_scope": "FY24",
+        "qualifiers": [
+          "consolidated"
+        ],
+        "basis": "actual",
+        "fact_type": "percentage",
+        "quote": "₹127Cr / 1.6%\nEBITDA / EBITDA margin FY23: ₹(452) Cr / (6.3%)",
+        "page": 5,
+        "confidence": 1.0
+      },
+      "best_score": 0.816
+    },
+    "created_at": "2026-09-07T12:41:20+00:00",
+    "filename": "03-delhivery-q4-fy24-earnings-presentation.pdf"
+  },
+  {
+    "id": "iss_d90751984c2d471a",
+    "doc_id": "d_7515a2a190534d1e",
+    "chunk_id": "c_31742cd1dd264a94",
+    "kind": "quote_relocated",
+    "severity": "info",
+    "detail": "model cited page 5 but the quote for 'Delhivery Limited — revenue from services' is on page 6; citation corrected.",
+    "payload": {
+      "claimed": 5,
+      "actual": 6
+    },
+    "created_at": "2026-09-07T12:41:20+00:00",
+    "filename": "03-delhivery-q4-fy24-earnings-presentation.pdf"
+  },
+  {
+    "id": "iss_a92e81076186499b",
+    "doc_id": "d_7515a2a190534d1e",
+    "chunk_id": "c_31742cd1dd264a94",
+    "kind": "quote_relocated",
+    "severity": "info",
+    "detail": "model cited page 5 but the quote for 'Delhivery Limited — express parcel shipments' is on page 6; citation corrected.",
+    "payload": {
+      "claimed": 5,
+      "actual": 6
+    },
+    "created_at": "2026-09-07T12:41:20+00:00",
+    "filename": "03-delhivery-q4-fy24-earnings-presentation.pdf"
+  },
+  {
+    "id": "iss_716dff4e00ff44be",
+    "doc_id": "d_7515a2a190534d1e",
+    "chunk_id": "c_31742cd1dd264a94",
+    "kind": "quote_relocated",
+    "severity": "info",
+    "detail": "model cited page 5 but the quote for 'Delhivery Limited — Adjusted EBITDA' is on page 6; citation corrected.",
+    "payload": {
+      "claimed": 5,
+      "actual": 6
+    },
+    "created_at": "2026-09-07T12:41:20+00:00",
+    "filename": "03-delhivery-q4-fy24-earnings-presentation.pdf"
+  },
+  {
+    "id": "iss_38dd35e7e0734882",
+    "doc_id": "d_7515a2a190534d1e",
+    "chunk_id": "c_31742cd1dd264a94",
+    "kind": "quote_relocated",
+    "severity": "info",
+    "detail": "model cited page 5 but the quote for 'Delhivery Limited — Adjusted EBITDA margin' is on page 6; citation corrected.",
+    "payload": {
+      "claimed": 5,
+      "actual": 6
+    },
+    "created_at": "2026-09-07T12:41:20+00:00",
+    "filename": "03-delhivery-q4-fy24-earnings-presentation.pdf"
+  },
+  {
+    "id": "iss_bc349ead089d4e9b",
+    "doc_id": "d_7515a2a190534d1e",
+    "chunk_id": "c_31742cd1dd264a94",
+    "kind": "quote_relocated",
+    "severity": "info",
+    "detail": "model cited page 5 but the quote for 'Delhivery Limited — PTL freight tonnage' is on page 6; citation corrected.",
+    "payload": {
+      "claimed": 5,
+      "actual": 6
+    },
+    "created_at": "2026-09-07T12:41:20+00:00",
+    "filename": "03-delhivery-q4-fy24-earnings-presentation.pdf"
+  },
+  {
+    "id": "iss_1fcc0270de2a4c82",
+    "doc_id": "d_7515a2a190534d1e",
+    "chunk_id": "c_31742cd1dd264a94",
+    "kind": "quote_relocated",
+    "severity": "info",
+    "detail": "model cited page 5 but the quote for 'Delhivery Limited — express parcel shipments since inception' is on page 6; citation corrected.",
+    "payload": {
+      "claimed": 5,
+      "actual": 6
+    },
+    "created_at": "2026-09-07T12:41:20+00:00",
+    "filename": "03-delhivery-q4-fy24-earnings-presentation.pdf"
+  },
+  {
+    "id": "iss_330831952c044fda",
+    "doc_id": "d_7515a2a190534d1e",
+    "chunk_id": "c_31742cd1dd264a94",
+    "kind": "quote_relocated",
+    "severity": "info",
+    "detail": "model cited page 5 but the quote for 'Delhivery Limited — PTL freight tonnage since inception' is on page 6; citation corrected.",
+    "payload": {
+      "claimed": 5,
+      "actual": 6
+    },
+    "created_at": "2026-09-07T12:41:20+00:00",
+    "filename": "03-delhivery-q4-fy24-earnings-presentation.pdf"
+  },
+  {
+    "id": "iss_06ccd3c00ae940e7",
+    "doc_id": "d_7515a2a190534d1e",
+    "chunk_id": "c_31742cd1dd264a94",
+    "kind": "quote_relocated",
+    "severity": "info",
+    "detail": "model cited page 6 but the quote for 'Delhivery Limited — EBITDA' is on page 7; citation corrected.",
+    "payload": {
+      "claimed": 6,
+      "actual": 7
+    },
+    "created_at": "2026-09-07T12:41:20+00:00",
+    "filename": "03-delhivery-q4-fy24-earnings-presentation.pdf"
+  },
+  {
+    "id": "iss_ef358361da4c4216",
+    "doc_id": "d_7515a2a190534d1e",
+    "chunk_id": "c_31742cd1dd264a94",
+    "kind": "quote_relocated",
+    "severity": "info",
+    "detail": "model cited page 6 but the quote for 'Delhivery Limited — EBITDA margin' is on page 7; citation corrected.",
+    "payload": {
+      "claimed": 6,
+      "actual": 7
+    },
+    "created_at": "2026-09-07T12:41:20+00:00",
+    "filename": "03-delhivery-q4-fy24-earnings-presentation.pdf"
+  },
+  {
+    "id": "iss_e494acafedad442b",
+    "doc_id": "d_7515a2a190534d1e",
+    "chunk_id": "c_31742cd1dd264a94",
+    "kind": "quote_relocated",
+    "severity": "info",
+    "detail": "model cited page 6 but the quote for 'Delhivery Limited — revenue from services' is on page 7; citation corrected.",
+    "payload": {
+      "claimed": 6,
+      "actual": 7
+    },
+    "created_at": "2026-09-07T12:41:20+00:00",
+    "filename": "03-delhivery-q4-fy24-earnings-presentation.pdf"
+  },
+  {
+    "id": "iss_9e1dd95449824676",
+    "doc_id": "d_7515a2a190534d1e",
+    "chunk_id": "c_31742cd1dd264a94",
+    "kind": "quote_relocated",
+    "severity": "info",
+    "detail": "model cited page 6 but the quote for 'Delhivery Limited — express parcel shipments' is on page 7; citation corrected.",
+    "payload": {
+      "claimed": 6,
+      "actual": 7
+    },
+    "created_at": "2026-09-07T12:41:20+00:00",
+    "filename": "03-delhivery-q4-fy24-earnings-presentation.pdf"
+  },
+  {
+    "id": "iss_92042149ee0a44d6",
+    "doc_id": "d_7515a2a190534d1e",
+    "chunk_id": "c_31742cd1dd264a94",
+    "kind": "quote_relocated",
+    "severity": "info",
+    "detail": "model cited page 6 but the quote for 'Delhivery Limited — Adjusted EBITDA' is on page 7; citation corrected.",
+    "payload": {
+      "claimed": 6,
+      "actual": 7
+    },
+    "created_at": "2026-09-07T12:41:20+00:00",
+    "filename": "03-delhivery-q4-fy24-earnings-presentation.pdf"
+  },
+  {
+    "id": "iss_30b10aed0d094de8",
+    "doc_id": "d_7515a2a190534d1e",
+    "chunk_id": "c_31742cd1dd264a94",
+    "kind": "quote_relocated",
+    "severity": "info",
+    "detail": "model cited page 6 but the quote for 'Delhivery Limited — Adjusted EBITDA margin' is on page 7; citation corrected.",
+    "payload": {
+      "claimed": 6,
+      "actual": 7
+    },
+    "created_at": "2026-09-07T12:41:20+00:00",
+    "filename": "03-delhivery-q4-fy24-earnings-presentation.pdf"
+  },
+  {
+    "id": "iss_69208aa0c2ea410d",
+    "doc_id": "d_7515a2a190534d1e",
+    "chunk_id": "c_31742cd1dd264a94",
+    "kind": "quote_relocated",
+    "severity": "info",
+    "detail": "model cited page 6 but the quote for 'Delhivery Limited — PTL freight tonnage' is on page 7; citation corrected.",
+    "payload": {
+      "claimed": 6,
+      "actual": 7
+    },
+    "created_at": "2026-09-07T12:41:20+00:00",
+    "filename": "03-delhivery-q4-fy24-earnings-presentation.pdf"
+  },
+  {
+    "id": "iss_b3958531fc264cc0",
+    "doc_id": "d_7515a2a190534d1e",
+    "chunk_id": null,
+    "kind": "judgment_inconsistent",
+    "severity": "warning",
+    "detail": "'Delhivery Limited — Net cash from / (used in) investing activities' vs 'Delhivery Limited — Net cash used in investing activities': labelled corroborates, but the two facts carry different normalised periods. Confidence was halved and the verdict flagged for review.",
+    "payload": {
+      "relation": "corroborates",
+      "reasoning": "Fact A reports (99) INR crore, which is -990 million INR. Fact B reports (990.92) INR million. The values are identical after accounting for rounding.",
+      "a": {
+        "value": "(99)",
+        "period": "FY2024",
+        "quote": "Net cash from / (used in) investing activities (3,411) (99)"
+      },
+      "b": {
+        "value": "(990.92)",
+        "period": "@2024-03-31",
+        "quote": "Net cash used in investing activities (B) (990.92) (34,107.48)"
+      }
+    },
+    "created_at": "2026-09-07T12:42:04+00:00",
+    "filename": "03-delhivery-q4-fy24-earnings-presentation.pdf"
+  },
+  {
+    "id": "iss_9e07f688a6744021",
+    "doc_id": "d_7515a2a190534d1e",
+    "chunk_id": null,
+    "kind": "judgment_inconsistent",
+    "severity": "warning",
+    "detail": "'Delhivery Limited — Net cash from / (used in) operating activities' vs 'Delhivery Limited — Net cash from/(used in) operating activities': labelled corroborates, but the two facts carry different normalised periods. Confidence was halved and the verdict flagged for review.",
+    "payload": {
+      "relation": "corroborates",
+      "reasoning": "Fact A reports 472 INR crore, which is 4,720 million INR. Fact B reports 4,724.02 INR million. The values are identical after accounting for rounding.",
+      "a": {
+        "value": "472",
+        "period": "FY2024",
+        "quote": "Net cash from / (used in) operating activities (30) 472"
+      },
+      "b": {
+        "value": "4,724.02",
+        "period": "@2024-03-31",
+        "quote": "Net cash from/(used in) operating activities (A) 4,724.02 (296.99)"
+      }
+    },
+    "created_at": "2026-09-07T12:42:04+00:00",
+    "filename": "03-delhivery-q4-fy24-earnings-presentation.pdf"
+  },
+  {
+    "id": "iss_1bb3f365371946d2",
+    "doc_id": "d_7515a2a190534d1e",
+    "chunk_id": null,
+    "kind": "judgment_inconsistent",
+    "severity": "warning",
+    "detail": "'Delhivery Limited — Net cash from / (used in) financing activities' vs 'Delhivery Limited — Net cash (used in)/ from financing activities': labelled corroborates, but the two facts carry different normalised periods. Confidence was halved and the verdict flagged for review.",
+    "payload": {
+      "relation": "corroborates",
+      "reasoning": "Fact A reports 3,538 INR crore, which is 35,380 million INR. Fact B reports 35,384.83 INR million. The values are identical after accounting for rounding.",
+      "a": {
+        "value": "3,538",
+        "period": "FY2023",
+        "quote": "Net cash from / (used in) financing activities 3,538 (366)"
+      },
+      "b": {
+        "value": "35,384.83",
+        "period": "@2023-03-31",
+        "quote": "Net cash (used in)/ from financing activities (C) (3,660.83) 35,384.83"
+      }
+    },
+    "created_at": "2026-09-07T12:42:04+00:00",
+    "filename": "03-delhivery-q4-fy24-earnings-presentation.pdf"
+  },
+  {
+    "id": "iss_1898ed55aaa84e02",
+    "doc_id": "d_7515a2a190534d1e",
+    "chunk_id": null,
+    "kind": "judgment_inconsistent",
+    "severity": "warning",
+    "detail": "'Delhivery Limited — Net cash from / (used in) financing activities' vs 'Delhivery Limited — Net cash (used in)/ from financing activities': labelled corroborates, but the two facts carry different normalised periods. Confidence was halved and the verdict flagged for review.",
+    "payload": {
+      "relation": "corroborates",
+      "reasoning": "Fact A reports (366) INR crore, which is -3,660 million INR. Fact B reports (3,660.83) INR million. The values are identical after accounting for rounding.",
+      "a": {
+        "value": "(366)",
+        "period": "FY2024",
+        "quote": "Net cash from / (used in) financing activities 3,538 (366)"
+      },
+      "b": {
+        "value": "(3,660.83)",
+        "period": "@2024-03-31",
+        "quote": "Net cash (used in)/ from financing activities (C) (3,660.83) 35,384.83"
+      }
+    },
+    "created_at": "2026-09-07T12:42:04+00:00",
+    "filename": "03-delhivery-q4-fy24-earnings-presentation.pdf"
+  },
+  {
+    "id": "iss_11af71d9a10d47a5",
+    "doc_id": "d_7515a2a190534d1e",
+    "chunk_id": null,
+    "kind": "judgment_inconsistent",
+    "severity": "warning",
+    "detail": "'Delhivery Limited — Adjusted EBITDA' vs 'Delhivery Limited — Adjusted EBITDA': labelled corroborates, but the two facts carry different normalised periods. Confidence was halved and the verdict flagged for review.",
+    "payload": {
+      "relation": "corroborates",
+      "reasoning": "Fact A reports 76 INR crore, which is 760 million INR. Fact B reports 757.86 INR million. The values are identical after accounting for rounding.",
+      "a": {
+        "value": "76",
+        "period": "FY2024",
+        "quote": "₹76Cr / 0.9%\nAdj. EBITDA / Adj. EBITDA margin FY23: ₹(404) Cr / (5.6%)"
+      },
+      "b": {
+        "value": "757.86",
+        "period": "@2024-03-31",
+        "quote": "Adjusted EBITDA1 757.86 (4,038.66)"
+      }
+    },
+    "created_at": "2026-09-07T12:42:04+00:00",
+    "filename": "03-delhivery-q4-fy24-earnings-presentation.pdf"
+  },
+  {
+    "id": "iss_55cfc959c2044f3d",
+    "doc_id": "d_7515a2a190534d1e",
+    "chunk_id": null,
+    "kind": "judgment_inconsistent",
+    "severity": "warning",
+    "detail": "'Delhivery Limited — EBITDA' vs 'Delhivery Limited — EBITDA': labelled corroborates, but the two facts carry different normalised periods. Confidence was halved and the verdict flagged for review.",
+    "payload": {
+      "relation": "corroborates",
+      "reasoning": "Fact A reports (452) INR crore, which is -4,520 million INR. Fact B reports (4,516.08) INR million. The values are identical after accounting for rounding.",
+      "a": {
+        "value": "(452)",
+        "period": "FY2023",
+        "quote": "EBITDA 13 109 46 (58.0%) 242.5% (452) 127"
+      },
+      "b": {
+        "value": "(4,516.08)",
+        "period": "@2023-03-31",
+        "quote": "EBITDA 1,266.41 (4,516.08)"
+      }
+    },
+    "created_at": "2026-09-07T12:42:04+00:00",
+    "filename": "03-delhivery-q4-fy24-earnings-presentation.pdf"
+  },
+  {
+    "id": "iss_bc7c59436bc04327",
+    "doc_id": "d_7515a2a190534d1e",
+    "chunk_id": null,
+    "kind": "judgment_inconsistent",
+    "severity": "warning",
+    "detail": "'Delhivery Limited — FY24 EBITDA' vs 'Delhivery Limited — EBITDA': labelled corroborates, but the two facts carry different normalised periods. Confidence was halved and the verdict flagged for review.",
+    "payload": {
+      "relation": "corroborates",
+      "reasoning": "Fact A reports 127 INR crore, which is 1,270 million INR. Fact B reports 1,266.41 INR million. The values are identical after accounting for rounding.",
+      "a": {
+        "value": "127",
+        "period": "FY2024",
+        "quote": "FY24 EBITDA increased by Rs. 578 Cr to Rs. 127 Cr from Rs. (452 Cr) in FY23"
+      },
+      "b": {
+        "value": "1,266.41",
+        "period": "@2024-03-31",
+        "quote": "EBITDA 1,266.41 (4,516.08)"
+      }
+    },
+    "created_at": "2026-09-07T12:42:04+00:00",
+    "filename": "03-delhivery-q4-fy24-earnings-presentation.pdf"
+  },
+  {
+    "id": "iss_61d0ddc50485467b",
+    "doc_id": "d_7515a2a190534d1e",
+    "chunk_id": null,
+    "kind": "judgment_inconsistent",
+    "severity": "warning",
+    "detail": "'Delhivery Limited — FY23 EBITDA' vs 'Delhivery Limited — EBITDA': labelled corroborates, but the two facts carry different normalised periods. Confidence was halved and the verdict flagged for review.",
+    "payload": {
+      "relation": "corroborates",
+      "reasoning": "Fact A reports (452) INR crore, which is -4,520 million INR. Fact B reports (4,516.08) INR million. The values are identical after accounting for rounding.",
+      "a": {
+        "value": "(452)",
+        "period": "FY2023",
+        "quote": "FY24 EBITDA increased by Rs. 578 Cr to Rs. 127 Cr from Rs. (452 Cr) in FY23"
+      },
+      "b": {
+        "value": "(4,516.08)",
+        "period": "@2023-03-31",
+        "quote": "EBITDA 1,266.41 (4,516.08)"
+      }
+    },
+    "created_at": "2026-09-07T12:42:04+00:00",
+    "filename": "03-delhivery-q4-fy24-earnings-presentation.pdf"
+  },
+  {
+    "id": "iss_6b00a8a1e0b04445",
+    "doc_id": "d_7515a2a190534d1e",
+    "chunk_id": null,
+    "kind": "judgment_inconsistent",
+    "severity": "warning",
+    "detail": "'Delhivery Limited — Adjusted EBITDA' vs 'Delhivery Limited — Adjusted EBITDA': labelled corroborates, but the two facts carry different normalised periods. Confidence was halved and the verdict flagged for review.",
+    "payload": {
+      "relation": "corroborates",
+      "reasoning": "Fact A reports (404) INR crore, which is -4,040 million INR. Fact B reports (4,038.66) INR million. The values are identical after accounting for rounding.",
+      "a": {
+        "value": "(404)",
+        "period": "FY2023",
+        "quote": "Adjusted EBITDA (217) (125) (67) 6 (25) (13) 92 21 (404) 76"
+      },
+      "b": {
+        "value": "(4,038.66)",
+        "period": "@2023-03-31",
+        "quote": "Adjusted EBITDA 757.86 (4,038.66)"
+      }
+    },
+    "created_at": "2026-09-07T12:42:04+00:00",
+    "filename": "03-delhivery-q4-fy24-earnings-presentation.pdf"
+  },
+  {
+    "id": "iss_8da2b18326a14b1e",
+    "doc_id": "d_7515a2a190534d1e",
+    "chunk_id": null,
+    "kind": "judgment_inconsistent",
+    "severity": "warning",
+    "detail": "'Delhivery Limited — Adjusted EBITDA' vs 'Delhivery Limited — Adjusted EBITDA': labelled corroborates, but the two facts carry different normalised periods. Confidence was halved and the verdict flagged for review.",
+    "payload": {
+      "relation": "corroborates",
+      "reasoning": "Fact A reports 76 INR crore, which is 760 million INR. Fact B reports 757.86 INR million. The values are identical after accounting for rounding.",
+      "a": {
+        "value": "76",
+        "period": "FY2024",
+        "quote": "Adjusted EBITDA (217) (125) (67) 6 (25) (13) 92 21 (404) 76"
+      },
+      "b": {
+        "value": "757.86",
+        "period": "@2024-03-31",
+        "quote": "Adjusted EBITDA 757.86 (4,038.66)"
+      }
+    },
+    "created_at": "2026-09-07T12:42:04+00:00",
+    "filename": "03-delhivery-q4-fy24-earnings-presentation.pdf"
+  },
+  {
+    "id": "iss_7f2cec209418451c",
+    "doc_id": "d_7515a2a190534d1e",
+    "chunk_id": null,
+    "kind": "judgment_inconsistent",
+    "severity": "warning",
+    "detail": "'Delhivery Limited — FY23 EBITDA' vs 'Delhivery Limited — EBITDA': labelled corroborates, but the two facts carry different normalised periods. Confidence was halved and the verdict flagged for review.",
+    "payload": {
+      "relation": "corroborates",
+      "reasoning": "Fact A is (452) INR crore, which is -4,520 million. Fact B is (4,516.08) INR million. These values are effectively identical when accounting for rounding differences in the presentation of the same consolidated EBITDA figure for FY2023.",
+      "a": {
+        "value": "(452)",
+        "period": "FY2023",
+        "quote": "FY24 EBITDA increased by Rs. 578 Cr to Rs. 127 Cr from Rs. (452 Cr) in FY23"
+      },
+      "b": {
+        "value": "(4,516.08)",
+        "period": "@2023-03-31",
+        "quote": "EBITDA 1,266.41 (4,516.08)"
+      }
+    },
+    "created_at": "2026-09-07T12:42:05+00:00",
+    "filename": "03-delhivery-q4-fy24-earnings-presentation.pdf"
+  },
+  {
+    "id": "iss_24cbe30284a142bb",
+    "doc_id": "d_7515a2a190534d1e",
+    "chunk_id": null,
+    "kind": "judgment_inconsistent",
+    "severity": "warning",
+    "detail": "'Delhivery Limited — revenue from services' vs 'Delhivery Limited — Revenue from services': labelled corroborates, but the two facts carry different normalised periods. Confidence was halved and the verdict flagged for review.",
+    "payload": {
+      "relation": "corroborates",
+      "reasoning": "Fact A is 8,142 INR crore, which is 81,420 million. Fact B is 81,415.38 INR million. These values are effectively identical, representing the same revenue from services for FY2024.",
+      "a": {
+        "value": "8,142",
+        "period": "FY2024",
+        "quote": "₹8,142 Cr\nFY24 revenue from services\nYoY: 12.7%(2)"
+      },
+      "b": {
+        "value": "81,415.38",
+        "period": "@2024-03-31",
+        "quote": "Revenue from services* 81,415.38 72,236.47"
+      }
+    },
+    "created_at": "2026-09-07T12:42:05+00:00",
+    "filename": "03-delhivery-q4-fy24-earnings-presentation.pdf"
+  },
+  {
+    "id": "iss_3047bd38a97145fc",
+    "doc_id": "d_7515a2a190534d1e",
+    "chunk_id": null,
+    "kind": "judgment_inconsistent",
+    "severity": "warning",
+    "detail": "'Delhivery Limited — Freight, Handling and Servicing Cost' vs 'Delhivery Limited — Freight, Handling and Servicing Costs': labelled corroborates, but the two facts carry different normalised periods. Confidence was halved and the verdict flagged for review.",
+    "payload": {
+      "relation": "corroborates",
+      "reasoning": "Fact A is 5,669 INR crore, which is 56,690 million. Fact B is 56,694.80 INR million. These values are effectively identical, representing the same freight, handling, and servicing costs for FY2023.",
+      "a": {
+        "value": "5,669",
+        "period": "FY2023",
+        "quote": "Freight, Handling and Servicing Cost(1,2) 1,502 1,372 1,572 1,519 5,669 5,971"
+      },
+      "b": {
+        "value": "56,694.80",
+        "period": "@2023-03-31",
+        "quote": "Freight, Handling and Servicing Costs 59,707.49 56,694.80"
+      }
+    },
+    "created_at": "2026-09-07T12:42:05+00:00",
+    "filename": "03-delhivery-q4-fy24-earnings-presentation.pdf"
+  },
+  {
+    "id": "iss_7c9461860f7e4956",
+    "doc_id": "d_7515a2a190534d1e",
+    "chunk_id": null,
+    "kind": "judgment_inconsistent",
+    "severity": "warning",
+    "detail": "'Delhivery Limited — Freight, Handling and Servicing Cost' vs 'Delhivery Limited — Freight, Handling and Servicing Costs': labelled corroborates, but the two facts carry different normalised periods. Confidence was halved and the verdict flagged for review.",
+    "payload": {
+      "relation": "corroborates",
+      "reasoning": "Fact A is 5,971 INR crore, which is 59,710 million. Fact B is 59,707.49 INR million. These values are effectively identical, representing the same freight, handling, and servicing costs for FY2024.",
+      "a": {
+        "value": "5,971",
+        "period": "FY2024",
+        "quote": "Freight, Handling and Servicing Cost(1,2) 1,502 1,372 1,572 1,519 5,669 5,971"
+      },
+      "b": {
+        "value": "59,707.49",
+        "period": "@2024-03-31",
+        "quote": "Freight, Handling and Servicing Costs 59,707.49 56,694.80"
+      }
+    },
+    "created_at": "2026-09-07T12:42:05+00:00",
+    "filename": "03-delhivery-q4-fy24-earnings-presentation.pdf"
+  },
+  {
+    "id": "iss_9e4d01134a9f49e4",
+    "doc_id": "d_7515a2a190534d1e",
+    "chunk_id": null,
+    "kind": "judgment_inconsistent",
+    "severity": "warning",
+    "detail": "'Delhivery Limited — Adjusted EBITDA' vs 'Delhivery Limited — Adjusted EBITDA': labelled corroborates, but the two facts carry different normalised periods. Confidence was halved and the verdict flagged for review.",
+    "payload": {
+      "relation": "corroborates",
+      "reasoning": "Fact A is (404) INR crore, which is -4,040 million. Fact B is (4,038.66) INR million. These values are effectively identical, representing the same adjusted EBITDA for FY2023.",
+      "a": {
+        "value": "(404)",
+        "period": "FY2023",
+        "quote": "Adjusted EBITDA (217) (125) (67) 6 (25) (13) 92 21 (404) 76"
+      },
+      "b": {
+        "value": "(4,038.66)",
+        "period": "@2023-03-31",
+        "quote": "Adjusted EBITDA1 757.86 (4,038.66)"
+      }
+    },
+    "created_at": "2026-09-07T12:42:05+00:00",
+    "filename": "03-delhivery-q4-fy24-earnings-presentation.pdf"
+  },
+  {
+    "id": "iss_1d27dab9d6284645",
+    "doc_id": "d_7515a2a190534d1e",
+    "chunk_id": null,
+    "kind": "judgment_inconsistent",
+    "severity": "warning",
+    "detail": "'Delhivery Limited — Adjusted EBITDA' vs 'Delhivery Limited — Adjusted EBITDA': labelled corroborates, but the two facts carry different normalised periods. Confidence was halved and the verdict flagged for review.",
+    "payload": {
+      "relation": "corroborates",
+      "reasoning": "Fact A is 76 INR crore, which is 760 million. Fact B is 757.86 INR million. These values are effectively identical, representing the same adjusted EBITDA for FY2024.",
+      "a": {
+        "value": "76",
+        "period": "FY2024",
+        "quote": "Adjusted EBITDA (217) (125) (67) 6 (25) (13) 92 21 (404) 76"
+      },
+      "b": {
+        "value": "757.86",
+        "period": "@2024-03-31",
+        "quote": "Adjusted EBITDA1 757.86 (4,038.66)"
+      }
+    },
+    "created_at": "2026-09-07T12:42:05+00:00",
+    "filename": "03-delhivery-q4-fy24-earnings-presentation.pdf"
+  },
+  {
+    "id": "iss_c683ce6c179f468d",
+    "doc_id": "d_7515a2a190534d1e",
+    "chunk_id": null,
+    "kind": "judgment_inconsistent",
+    "severity": "warning",
+    "detail": "'Delhivery Limited — Revenue for services' vs 'Delhivery Limited — Revenue from services': labelled corroborates, but the two facts carry different normalised periods. Confidence was halved and the verdict flagged for review.",
+    "payload": {
+      "relation": "corroborates",
+      "reasoning": "Fact A is 7,224 INR crore, which is 72,240 million. Fact B is 72,236.47 INR million. These values are effectively identical, representing the same revenue from services for FY2023.",
+      "a": {
+        "value": "7,224",
+        "period": "FY2023",
+        "quote": "Revenue for services (A) 1,860 2,194 2,076 (5.4%) 11.6% 7,224 8,142 12.7%"
+      },
+      "b": {
+        "value": "72,236.47",
+        "period": "@2023-03-31",
+        "quote": "Revenue from services* 81,415.38 72,236.47"
+      }
+    },
+    "created_at": "2026-09-07T12:42:05+00:00",
+    "filename": "03-delhivery-q4-fy24-earnings-presentation.pdf"
+  },
+  {
+    "id": "iss_7b20a85ada074352",
+    "doc_id": "d_7515a2a190534d1e",
+    "chunk_id": null,
+    "kind": "judgment_inconsistent",
+    "severity": "warning",
+    "detail": "'Delhivery Limited — Revenue for services' vs 'Delhivery Limited — Revenue from services': labelled corroborates, but the two facts carry different normalised periods. Confidence was halved and the verdict flagged for review.",
+    "payload": {
+      "relation": "corroborates",
+      "reasoning": "Fact A is 8,142 INR crore, which is 81,420 million. Fact B is 81,415.38 INR million. These values are effectively identical, representing the same revenue from services for FY2024.",
+      "a": {
+        "value": "8,142",
+        "period": "FY2024",
+        "quote": "Revenue for services (A) 1,860 2,194 2,076 (5.4%) 11.6% 7,224 8,142 12.7%"
+      },
+      "b": {
+        "value": "81,415.38",
+        "period": "@2024-03-31",
+        "quote": "Revenue from services* 81,415.38 72,236.47"
+      }
+    },
+    "created_at": "2026-09-07T12:42:05+00:00",
+    "filename": "03-delhivery-q4-fy24-earnings-presentation.pdf"
+  },
+  {
+    "id": "iss_bcd5323cb7014fbf",
+    "doc_id": "d_7515a2a190534d1e",
+    "chunk_id": null,
+    "kind": "judgment_inconsistent",
+    "severity": "warning",
+    "detail": "'Delhivery Limited — Total income' vs 'Delhivery Limited — Total Income': labelled corroborates, but the two facts carry different normalised periods. Confidence was halved and the verdict flagged for review.",
+    "payload": {
+      "relation": "corroborates",
+      "reasoning": "Fact A is 7,530 INR crore, which is 75,300 million. Fact B is 75,302.49 INR million. These values are effectively identical, representing the same total income for FY2023.",
+      "a": {
+        "value": "7,530",
+        "period": "FY2023",
+        "quote": "Total income 1,934 2,325 2,195 (5.6%) 13.5% 7,530 8,594 14.1%"
+      },
+      "b": {
+        "value": "75,302.49",
+        "period": "@2023-03-31",
+        "quote": "Total Income 79,294.31 69,898.35 85,942.34 75,302.49"
+      }
+    },
+    "created_at": "2026-09-07T12:42:05+00:00",
+    "filename": "03-delhivery-q4-fy24-earnings-presentation.pdf"
+  },
+  {
+    "id": "iss_570d044ba4154516",
+    "doc_id": "d_7515a2a190534d1e",
+    "chunk_id": null,
+    "kind": "judgment_inconsistent",
+    "severity": "warning",
+    "detail": "'Delhivery Limited — Total income' vs 'Delhivery Limited — Total income': labelled corroborates, but the two facts carry different normalised periods. Confidence was halved and the verdict flagged for review.",
+    "payload": {
+      "relation": "corroborates",
+      "reasoning": "Fact A is 7,530 INR crore, which is 75,300 million. Fact B is 75,302.49 INR million. These values are effectively identical, representing the same total income for FY2023.",
+      "a": {
+        "value": "7,530",
+        "period": "FY2023",
+        "quote": "Total income 1,934 2,325 2,195 (5.6%) 13.5% 7,530 8,594 14.1%"
+      },
+      "b": {
+        "value": "75,302.49",
+        "period": "@2023-03-31",
+        "quote": "Total income 85,942.34 75,302.49"
+      }
+    },
+    "created_at": "2026-09-07T12:42:05+00:00",
+    "filename": "03-delhivery-q4-fy24-earnings-presentation.pdf"
+  },
+  {
+    "id": "iss_bd669957d2504f62",
+    "doc_id": "d_7515a2a190534d1e",
+    "chunk_id": null,
+    "kind": "judgment_inconsistent",
+    "severity": "warning",
+    "detail": "'Delhivery Limited — Total income' vs 'Delhivery Limited — Total Income': labelled corroborates, but the two facts carry different normalised periods. Confidence was halved and the verdict flagged for review.",
+    "payload": {
+      "relation": "corroborates",
+      "reasoning": "A's 7,530 INR crore equals 75,300 million INR. This is effectively identical to B's 75,302.49 million INR, with the minor difference likely due to rounding in the presentation slide.",
+      "a": {
+        "value": "7,530",
+        "period": "FY2023",
+        "quote": "Total income 1,934 2,325 2,195 (5.6%) 13.5% 7,530 8,594 14.1%"
+      },
+      "b": {
+        "value": "75,302.49",
+        "period": "@2023-03-31",
+        "quote": "Total Income (I) 85,942.34 75,302.49"
+      }
+    },
+    "created_at": "2026-09-07T12:42:05+00:00",
+    "filename": "03-delhivery-q4-fy24-earnings-presentation.pdf"
+  },
+  {
+    "id": "iss_00fd9f1ab5c64b8b",
+    "doc_id": "d_7515a2a190534d1e",
+    "chunk_id": null,
+    "kind": "judgment_inconsistent",
+    "severity": "warning",
+    "detail": "'Delhivery Limited — Total income' vs 'Delhivery Limited — Total Income': labelled corroborates, but the two facts carry different normalised periods. Confidence was halved and the verdict flagged for review.",
+    "payload": {
+      "relation": "corroborates",
+      "reasoning": "A's 8,594 INR crore equals 85,940 million INR. This matches B's 85,942.34 million INR, confirming the same total income figure for FY2024.",
+      "a": {
+        "value": "8,594",
+        "period": "FY2024",
+        "quote": "Total income 1,934 2,325 2,195 (5.6%) 13.5% 7,530 8,594 14.1%"
+      },
+      "b": {
+        "value": "85,942.34",
+        "period": "@2024-03-31",
+        "quote": "Total Income 79,294.31 69,898.35 85,942.34 75,302.49"
+      }
+    },
+    "created_at": "2026-09-07T12:42:05+00:00",
+    "filename": "03-delhivery-q4-fy24-earnings-presentation.pdf"
+  },
+  {
+    "id": "iss_734bf91994c44f1c",
+    "doc_id": "d_7515a2a190534d1e",
+    "chunk_id": null,
+    "kind": "judgment_inconsistent",
+    "severity": "warning",
+    "detail": "'Delhivery Limited — Total income' vs 'Delhivery Limited — Total income': labelled corroborates, but the two facts carry different normalised periods. Confidence was halved and the verdict flagged for review.",
+    "payload": {
+      "relation": "corroborates",
+      "reasoning": "A's 8,594 INR crore equals 85,940 million INR, which matches B's 85,942.34 million INR. The figures represent the same total income for FY2024.",
+      "a": {
+        "value": "8,594",
+        "period": "FY2024",
+        "quote": "Total income 1,934 2,325 2,195 (5.6%) 13.5% 7,530 8,594 14.1%"
+      },
+      "b": {
+        "value": "85,942.34",
+        "period": "@2024-03-31",
+        "quote": "Total income 85,942.34 75,302.49"
+      }
+    },
+    "created_at": "2026-09-07T12:42:05+00:00",
+    "filename": "03-delhivery-q4-fy24-earnings-presentation.pdf"
+  },
+  {
+    "id": "iss_5194368259464243",
+    "doc_id": "d_7515a2a190534d1e",
+    "chunk_id": null,
+    "kind": "judgment_inconsistent",
+    "severity": "warning",
+    "detail": "'Delhivery Limited — Total income' vs 'Delhivery Limited — Total Income': labelled corroborates, but the two facts carry different normalised periods. Confidence was halved and the verdict flagged for review.",
+    "payload": {
+      "relation": "corroborates",
+      "reasoning": "A's 8,594 INR crore equals 85,940 million INR, which matches B's 85,942.34 million INR. The figures represent the same total income for FY2024.",
+      "a": {
+        "value": "8,594",
+        "period": "FY2024",
+        "quote": "Total income 1,934 2,325 2,195 (5.6%) 13.5% 7,530 8,594 14.1%"
+      },
+      "b": {
+        "value": "85,942.34",
+        "period": "@2024-03-31",
+        "quote": "Total Income (I) 85,942.34 75,302.49"
+      }
+    },
+    "created_at": "2026-09-07T12:42:05+00:00",
+    "filename": "03-delhivery-q4-fy24-earnings-presentation.pdf"
+  },
+  {
+    "id": "iss_8ed5ff29512e405d",
+    "doc_id": "d_7515a2a190534d1e",
+    "chunk_id": null,
+    "kind": "judgment_inconsistent",
+    "severity": "warning",
+    "detail": "'Delhivery Limited — EBITDA' vs 'Delhivery Limited — EBITDA': labelled corroborates, but the two facts carry different normalised periods. Confidence was halved and the verdict flagged for review.",
+    "payload": {
+      "relation": "corroborates",
+      "reasoning": "A's (452) INR crore equals (4,520) million INR. This is consistent with B's (4,516.08) million INR, representing the same EBITDA loss for FY2023.",
+      "a": {
+        "value": "(452)",
+        "period": "FY2023",
+        "quote": "EBITDA 13 109 46 (58.0%) 242.5% (452) 127"
+      },
+      "b": {
+        "value": "(4,516.08)",
+        "period": "@2023-03-31",
+        "quote": "EBITDA 1,266.41 (4,516.08)"
+      }
+    },
+    "created_at": "2026-09-07T12:42:05+00:00",
+    "filename": "03-delhivery-q4-fy24-earnings-presentation.pdf"
+  },
+  {
+    "id": "iss_936734765cdf4fd8",
+    "doc_id": "d_7515a2a190534d1e",
+    "chunk_id": null,
+    "kind": "judgment_inconsistent",
+    "severity": "warning",
+    "detail": "'Delhivery Limited — EBITDA' vs 'Delhivery Limited — EBITDA': labelled corroborates, but the two facts carry different normalised periods. Confidence was halved and the verdict flagged for review.",
+    "payload": {
+      "relation": "corroborates",
+      "reasoning": "A's 127 INR crore equals 1,270 million INR. This is consistent with B's 1,266.41 million INR, representing the same EBITDA for FY2024.",
+      "a": {
+        "value": "127",
+        "period": "FY2024",
+        "quote": "EBITDA 13 109 46 (58.0%) 242.5% (452) 127"
+      },
+      "b": {
+        "value": "1,266.41",
+        "period": "@2024-03-31",
+        "quote": "EBITDA 1,266.41 (4,516.08)"
+      }
+    },
+    "created_at": "2026-09-07T12:42:05+00:00",
+    "filename": "03-delhivery-q4-fy24-earnings-presentation.pdf"
+  },
+  {
+    "id": "iss_4b2f215732c042e3",
+    "doc_id": "d_7515a2a190534d1e",
+    "chunk_id": null,
+    "kind": "judgment_inconsistent",
+    "severity": "warning",
+    "detail": "'Delhivery Limited — FY24 EBITDA' vs 'Delhivery Limited — EBITDA': labelled corroborates, but the two facts carry different normalised periods. Confidence was halved and the verdict flagged for review.",
+    "payload": {
+      "relation": "corroborates",
+      "reasoning": "A's 127 INR crore equals 1,270 million INR. This is consistent with B's 1,266.41 million INR, representing the same EBITDA for FY2024.",
+      "a": {
+        "value": "127",
+        "period": "FY2024",
+        "quote": "FY24 EBITDA increased by Rs. 578 Cr to Rs. 127 Cr from Rs. (452 Cr) in FY23"
+      },
+      "b": {
+        "value": "1,266.41",
+        "period": "@2024-03-31",
+        "quote": "EBITDA 1,266.41 (4,516.08)"
+      }
+    },
+    "created_at": "2026-09-07T12:42:05+00:00",
+    "filename": "03-delhivery-q4-fy24-earnings-presentation.pdf"
+  },
+  {
+    "id": "iss_66418079ebde4fbe",
+    "doc_id": "d_7515a2a190534d1e",
+    "chunk_id": null,
+    "kind": "judgment_inconsistent",
+    "severity": "warning",
+    "detail": "'Delhivery Limited — Adjusted EBITDA' vs 'Delhivery Limited — Adjusted EBITDA': labelled corroborates, but the two facts carry different normalised periods. Confidence was halved and the verdict flagged for review.",
+    "payload": {
+      "relation": "corroborates",
+      "reasoning": "A's 76 INR crore equals 760 million INR. This is consistent with B's 757.86 million INR, representing the same Adjusted EBITDA for FY2024.",
+      "a": {
+        "value": "76",
+        "period": "FY2024",
+        "quote": "₹76Cr / 0.9%\nAdj. EBITDA / Adj. EBITDA margin FY23: ₹(404) Cr / (5.6%)"
+      },
+      "b": {
+        "value": "757.86",
+        "period": "@2024-03-31",
+        "quote": "Adjusted EBITDA 757.86 (4,038.66)"
+      }
+    },
+    "created_at": "2026-09-07T12:42:05+00:00",
+    "filename": "03-delhivery-q4-fy24-earnings-presentation.pdf"
+  },
+  {
+    "id": "iss_9d0f43761ae34692",
+    "doc_id": "d_7515a2a190534d1e",
+    "chunk_id": null,
+    "kind": "judgment_inconsistent",
+    "severity": "warning",
+    "detail": "'Delhivery Limited — Net cash from / (used in) investing activities' vs 'Delhivery Limited — Net cash used in investing activities': labelled corroborates, but the two facts carry different normalised periods. Confidence was halved and the verdict flagged for review.",
+    "payload": {
+      "relation": "corroborates",
+      "reasoning": "A's (3,411) INR crore equals (34,110) million INR. This is consistent with B's (34,107.48) million INR, representing the same net cash used in investing activities for FY2023.",
+      "a": {
+        "value": "(3,411)",
+        "period": "FY2023",
+        "quote": "Net cash from / (used in) investing activities (3,411) (99)"
+      },
+      "b": {
+        "value": "(34,107.48)",
+        "period": "@2023-03-31",
+        "quote": "Net cash used in investing activities (B) (990.92) (34,107.48)"
+      }
+    },
+    "created_at": "2026-09-07T12:42:05+00:00",
+    "filename": "03-delhivery-q4-fy24-earnings-presentation.pdf"
+  },
+  {
+    "id": "iss_c5136a9ba2e54710",
+    "doc_id": "d_7515a2a190534d1e",
+    "chunk_id": null,
+    "kind": "judgment_inconsistent",
+    "severity": "warning",
+    "detail": "'Delhivery Limited — EBITDA' vs 'Delhivery Limited — EBITDA': labelled corroborates, but the two facts carry different normalised periods. Confidence was halved and the verdict flagged for review.",
+    "payload": {
+      "relation": "corroborates",
+      "reasoning": "Fact A reports 127 crore (1,270 million) for FY24, and Fact B reports 1,266.41 million for March 31, 2024. These are the same value rounded to the nearest million/crore.",
+      "a": {
+        "value": "127",
+        "period": "FY2024",
+        "quote": "EBITDA 13 109 46 (58.0%) 242.5% (452) 127"
+      },
+      "b": {
+        "value": "1,266.41",
+        "period": "@2024-03-31",
+        "quote": "EBITDA 1,266.41 (4,516.08)"
+      }
+    },
+    "created_at": "2026-09-07T12:42:06+00:00",
+    "filename": "03-delhivery-q4-fy24-earnings-presentation.pdf"
+  },
+  {
+    "id": "iss_749e406e4f5f45bd",
+    "doc_id": "d_7515a2a190534d1e",
+    "chunk_id": null,
+    "kind": "judgment_inconsistent",
+    "severity": "warning",
+    "detail": "'Delhivery Limited — Total cash balance' vs 'Delhivery Limited — Cash balance': labelled corroborates, but the two facts carry different normalised periods. Confidence was halved and the verdict flagged for review.",
+    "payload": {
+      "relation": "corroborates",
+      "reasoning": "Fact A reports 5,444 crore (54,440 million) and Fact B reports 54,438.67 million as of March 31, 2024. The values are effectively identical when accounting for rounding.",
+      "a": {
+        "value": "5,444",
+        "period": "Q4FY2024",
+        "quote": "Total cash balance: ₹ 5,444 Cr"
+      },
+      "b": {
+        "value": "54,438.67",
+        "period": "@2024-03-31",
+        "quote": "As of the end of FY24, we had cash of ₹54,438.67 million, which included cash and cash equivalents, bank balances, investments, margin money deposits, and deposits with original maturity of >12 months."
+      }
+    },
+    "created_at": "2026-09-07T12:42:06+00:00",
+    "filename": "03-delhivery-q4-fy24-earnings-presentation.pdf"
+  },
+  {
+    "id": "iss_e230313f6fbf4687",
+    "doc_id": "d_7515a2a190534d1e",
+    "chunk_id": null,
+    "kind": "judgment_inconsistent",
+    "severity": "warning",
+    "detail": "'Delhivery Limited — Total equity' vs 'Delhivery Limited — Total Equity': labelled contradicts, but the normalised values agree. Confidence was halved and the verdict flagged for review.",
+    "payload": {
+      "relation": "contradicts",
+      "reasoning": "Fact A reports 9,177 crore (91,770 million) for Mar '23, but Fact B reports 91,446.46 million for March 31, 2024. These are different periods and different values.",
+      "a": {
+        "value": "9,177",
+        "period": null,
+        "quote": "Total equity 9,177 9,145"
+      },
+      "b": {
+        "value": "91,446.46",
+        "period": "@2024-03-31",
+        "quote": "Total Equity 91,446.46 91,771.37"
+      }
+    },
+    "created_at": "2026-09-07T12:42:06+00:00",
+    "filename": "03-delhivery-q4-fy24-earnings-presentation.pdf"
+  },
+  {
+    "id": "iss_587a679220dc4e91",
+    "doc_id": "d_7515a2a190534d1e",
+    "chunk_id": null,
+    "kind": "judgment_inconsistent",
+    "severity": "warning",
+    "detail": "'Delhivery Limited — Total equity' vs 'Delhivery Limited — Total Equity': labelled contradicts, but the normalised values agree. Confidence was halved and the verdict flagged for review.",
+    "payload": {
+      "relation": "contradicts",
+      "reasoning": "Fact A reports 9,145 crore (91,450 million) for Mar '24, but Fact B reports 91,771.37 million for March 31, 2023. These are different periods and different values.",
+      "a": {
+        "value": "9,145",
+        "period": null,
+        "quote": "Total equity 9,177 9,145"
+      },
+      "b": {
+        "value": "91,771.37",
+        "period": "@2023-03-31",
+        "quote": "Total Equity 91,446.46 91,771.37"
+      }
+    },
+    "created_at": "2026-09-07T12:42:06+00:00",
+    "filename": "03-delhivery-q4-fy24-earnings-presentation.pdf"
+  },
+  {
+    "id": "iss_c6ea5a2bee9c4aa7",
+    "doc_id": "d_7515a2a190534d1e",
+    "chunk_id": null,
+    "kind": "judgment_inconsistent",
+    "severity": "warning",
+    "detail": "'Delhivery Limited — FY23 PAT loss' vs 'Delhivery Limited — Loss for the year': labelled corroborates, but the two facts carry different normalised periods. Confidence was halved and the verdict flagged for review.",
+    "payload": {
+      "relation": "corroborates",
+      "reasoning": "Fact A reports a loss of 1,008 crore (10,080 million) for FY23, and Fact B reports a loss of 10,077.79 million for the year ended March 31, 2023. These values are effectively identical after accounting for rounding.",
+      "a": {
+        "value": "(1,008)",
+        "period": "FY2023",
+        "quote": "PAT profitable in Q3 FY24; PAT loss reduced by Rs. 759 Cr from Rs. (1,008 Cr) in FY23"
+      },
+      "b": {
+        "value": "(10,077.79)",
+        "period": "@2023-03-31",
+        "quote": "Loss for the year (1,679.68) (8,123.02) (2,491.86) (10,077.79)"
+      }
+    },
+    "created_at": "2026-09-07T12:45:07+00:00",
+    "filename": "03-delhivery-q4-fy24-earnings-presentation.pdf"
+  },
+  {
+    "id": "iss_86e26db81b5f4aff",
+    "doc_id": "d_7515a2a190534d1e",
+    "chunk_id": null,
+    "kind": "judgment_inconsistent",
+    "severity": "warning",
+    "detail": "'Delhivery Limited — Net cash from / (used in) operating activities' vs 'Delhivery Limited — Net cash from/(used in) operating activities': labelled corroborates, but the two facts carry different normalised periods. Confidence was halved and the verdict flagged for review.",
+    "payload": {
+      "relation": "corroborates",
+      "reasoning": "Fact A reports (30) crore (300 million) for FY23, and Fact B reports (296.99) million for the year ended March 31, 2023. These values are consistent.",
+      "a": {
+        "value": "(30)",
+        "period": "FY2023",
+        "quote": "Net cash from / (used in) operating activities (30) 472"
+      },
+      "b": {
+        "value": "(296.99)",
+        "period": "@2023-03-31",
+        "quote": "Net cash from/(used in) operating activities (A) 4,724.02 (296.99)"
+      }
+    },
+    "created_at": "2026-09-07T12:45:07+00:00",
+    "filename": "03-delhivery-q4-fy24-earnings-presentation.pdf"
+  }
+]
