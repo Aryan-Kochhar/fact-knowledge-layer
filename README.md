@@ -17,74 +17,68 @@ locally on `sentence-transformers` so no tokens are spent finding candidates.
 
 ## Setup and Run Instructions
 
-### Option A: explore the results with no API key (fastest)
-
-The full ingested corpus is committed at `samples/facts.db`, so the entire UI
-works without a Gemini key and without spending any quota.
+**Requirements: Python 3.11 or newer. That is the whole list.** Node is not
+needed to run this — the built frontend is committed and the backend serves it.
 
 ```bash
-mkdir -p data && cp samples/facts.db data/facts.db
+python run.py
 ```
 
-Then run steps 1, 4 and 5 below, skipping the key setup. Facts, evidence,
-relationships and the four-case walkthrough all load from that database; no API
-calls happen unless you upload a new PDF.
+Then open **<http://127.0.0.1:8000>**.
 
-Raw JSON is in `samples/` as well. `samples/showcase.json` holds the four
-required cases with their evidence and reasoning.
+That one command creates the virtual environment, installs dependencies (a few
+minutes the first time, mostly the CPU build of torch), copies `.env` from the
+template, seeds the pre-ingested corpus, and serves the API and UI from a single
+process.
 
-### Option B: run the full pipeline on your own PDFs
+**It works immediately with no API key.** A fully ingested corpus is committed
+at `samples/facts.db` and copied into place on first run, so every view is
+populated from the start: 6 documents, 511 pages, 3,460 facts, 1,377
+relationships, and the four demonstration cases.
 
-Requirements: Python 3.11+, Node 18+, and at least one Gemini API key from
-[aistudio.google.com](https://aistudio.google.com/apikey). The free tier is
-enough; the entire starter corpus cost 279 calls.
+### To ingest your own PDFs
+
+Extraction needs a Gemini key. The free tier is enough — the entire starter
+corpus cost 279 calls.
+
+1. Get a free key at <https://aistudio.google.com/apikey>.
+2. Put it in `backend/.env`:
+
+```
+GEMINI_API_KEYS=your_key_here
+```
+
+3. Restart `python run.py`, then drag a PDF onto the **Ingest** tab.
+
+Several keys can be listed comma-separated. They are rotated automatically and
+rate-limited independently, which raises throughput; one key is fine for a
+document or two.
+
+New documents are added to the existing corpus rather than replacing it, so
+uploads are immediately compared against everything already there. Start from an
+empty store instead with `python run.py --fresh`.
+
+Before a large ingest, `python backend/scripts/check_keys.py` confirms the keys
+work and `python backend/scripts/plan_ingest.py <dir>` reports the call budget a
+corpus needs — both cheap, and they save discovering a problem sixty calls in.
+
+### Running the pieces separately (for development)
 
 ```bash
-# 1. Backend dependencies
-cd backend
-python -m venv .venv
-.venv/Scripts/activate            # Windows;  source .venv/bin/activate elsewhere
-pip install --index-url https://download.pytorch.org/whl/cpu torch
-pip install -r requirements.txt
+cd backend && python -m uvicorn app.main:app --reload --port 8000
+cd frontend && npm install && npm run dev          # hot-reloading UI on :5173
 ```
 
-```bash
-# 2. Keys: copy the template, then fill in GEMINI_API_KEYS
-cp .env.example .env
-```
+Vite proxies `/api` to the backend, so there is nothing to configure. This is
+only needed to work on the UI; `run.py` covers everything else.
 
-`backend/.env` needs one line to work. More keys means more throughput; they are
-rotated automatically and rate-limited independently.
+### Other useful entry points
 
-```
-GEMINI_API_KEYS=key_one,key_two,key_three
-```
-
-```bash
-# 3. Confirm the keys work before spending an ingest on them
-python scripts/check_keys.py
-```
-
-```bash
-# 4. Run the API
-python -m uvicorn app.main:app --reload --port 8000
-```
-
-```bash
-# 5. Run the UI, in a second terminal
-cd frontend
-npm install
-npm run dev
-```
-
-Open <http://localhost:5173> and drop PDFs onto the Ingest tab. The UI proxies
-`/api` to the backend, so there is no base URL to configure.
-
-To load a folder of PDFs from the command line instead:
-
-```bash
-python scripts/ingest.py "../Problem Statement/starter-datasets/india-macroeconomy"
-```
+- Raw JSON of every result is in `samples/` — `showcase.json` holds the four
+  required cases with their evidence and reasoning, and needs no setup at all.
+- Interactive API docs at <http://127.0.0.1:8000/docs>.
+- `python run.py --port 9000` to serve elsewhere, `--no-install` to skip the
+  dependency check on restarts.
 
 ### Useful scripts
 
@@ -558,6 +552,47 @@ and visible in the UI:
 | `GET` | `/api/issues` | Everything rejected, repaired or flagged |
 
 Interactive docs at <http://localhost:8000/docs>.
+
+### Why there is no hosted URL
+
+Deliberate, and measured rather than assumed. The brief asks for something that
+runs from the instructions and accepts new PDFs, which `python run.py` does in
+one command with no key required to see results. Hosting was investigated and
+every free option failed on a specific, checkable constraint:
+
+- **Vercel and other serverless platforms.** Two independent blockers. The
+  install is 1,085 MB (torch alone is 502 MB) against a 250 MB bundle limit, and
+  ingestion of a 100-page PDF takes minutes against a seconds-long request
+  timeout. Serverless would need a queue-and-worker rewrite, not a config
+  change.
+- **Hugging Face Spaces.** Docker and Gradio Spaces now require a paid plan;
+  only Static is free, and static cannot accept uploads.
+- **512 MB free tiers (Render, Koyeb).** Too small. Measured peak resident
+  memory during embedding is 476 MB for sentence-transformers, before FastAPI,
+  PDF parsing and SQLite.
+- **Google Cloud Run.** Technically the best fit, but requires billing enabled.
+
+Two ways of shrinking the image were tested and both rejected on evidence:
+
+- **Remote embeddings instead of torch.** Gemini's embedding endpoint works, but
+  the free tier is far too small: rotating across five keys, all were exhausted
+  after **800 items**, against a corpus of 3,460 and roughly 500 per new
+  document. This is the strongest evidence for the local-embeddings decision in
+  the Approach section — on this tier, API-based embedding is not merely more
+  expensive, it is not possible.
+- **ONNX Runtime instead of torch.** The same MiniLM weights under ONNX produce
+  genuinely interchangeable vectors: cosine **1.0000** against the
+  sentence-transformers output over 120 real claims, pairwise similarity
+  correlation 1.0000, and identical candidate decisions at every threshold. It
+  cuts the install to about 180 MB — but measured peak memory was **1,034 MB
+  versus torch's 476 MB**, growing with batch size, so it solves disk and makes
+  RAM worse. The opposite of what was needed.
+
+What came out of the exercise and was kept: the backend serves the built
+frontend directly, so the whole app runs as one process on one port with no Node
+and no second terminal. `SEED_DB` populates a fresh clone from the committed
+corpus. `MAX_UPLOAD_MB`, `MAX_PAGES_PER_UPLOAD` and `DEMO_MODE` remain available
+for anyone who does want to expose an instance.
 
 ### Credentials
 

@@ -20,7 +20,10 @@ data/
 
 # --- node ---
 frontend/node_modules/
-frontend/dist/
+
+# frontend/dist is deliberately committed. The backend serves it directly, so a
+# reviewer needs only Python to run the whole app - no Node, no second terminal,
+# no build step. `npm run dev` is still the way to work on the UI.
 
 # --- editors / os ---
 .DS_Store

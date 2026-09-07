@@ -3,16 +3,17 @@
 Committed so the project can be evaluated **without a Gemini API key** and
 without waiting for an ingestion run.
 
-## Open the real UI with this data
+## You do not need to do anything with this
 
-```bash
-mkdir -p data && cp samples/facts.db data/facts.db
-```
+`python run.py` copies `facts.db` into `data/` automatically on first run, so a
+fresh clone opens with every view already populated. Facts, evidence,
+relationships and the four-case walkthrough all come from this database, and no
+API calls happen unless you upload a new PDF.
 
-Then start the API and the frontend as described in the root README. Every view
-works — facts, evidence, relationships, the four-case walkthrough — because all
-of it is served from this database. No API calls are made unless you upload a
-new PDF.
+To start from an empty store instead: `python run.py --fresh`. To re-seed after
+that, delete `data/facts.db` and run again.
+
+The JSON files are here for reading directly, without running anything at all.
 
 ## Files
 

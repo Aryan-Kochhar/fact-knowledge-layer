@@ -8,9 +8,15 @@ pnpm-debug.log*
 lerna-debug.log*
 
 node_modules
-dist
+
+# dist is deliberately NOT ignored. The backend serves it directly, so a
+# reviewer needs only Python to run the whole app - no Node, no build step.
+# Rebuild with `npm run build` after changing anything under src/.
 dist-ssr
 *.local
+
+# Static-data bundle, generated; not part of the app.
+public/data
 
 # Editor directories and files
 .vscode/*

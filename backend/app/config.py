@@ -51,11 +51,21 @@ def _env_bool(name: str, default: bool) -> bool:
 class Settings:
     # --- storage ---
     data_dir: Path = field(default_factory=lambda: Path(os.getenv("DATA_DIR") or PROJECT_DIR / "data"))
-    # On first boot, copy this database in if the data directory is empty. Lets a
-    # container ship with the corpus already ingested so the demo works instantly
-    # and without spending anyone's quota.
+    # On first run, copy this database in if there is no database yet.
+    #
+    # Defaults to the committed snapshot, so a fresh clone starts with the corpus
+    # already ingested: the whole UI is populated on first boot, with no API key
+    # and no waiting. Uploading a new PDF still needs a key, and adds to this
+    # store rather than replacing it.
+    #
+    # Set SEED_DB= (empty) to start from nothing, or delete data/facts.db to
+    # re-seed.
     seed_db: Path | None = field(
-        default_factory=lambda: Path(os.getenv("SEED_DB")) if os.getenv("SEED_DB") else None
+        default_factory=lambda: (
+            Path(os.environ["SEED_DB"])
+            if os.getenv("SEED_DB")
+            else (None if "SEED_DB" in os.environ else PROJECT_DIR / "samples" / "facts.db")
+        )
     )
 
     # --- deployment guards ---
