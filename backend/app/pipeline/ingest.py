@@ -293,6 +293,11 @@ async def ingest_document(*, job_id: str, doc_id: str, path: Path, filename: str
         pages = await asyncio.to_thread(parse_pdf, path)
         if not pages:
             raise ValueError("no pages could be read from this PDF")
+        if settings.max_pages_per_upload and len(pages) > settings.max_pages_per_upload:
+            raise ValueError(
+                f"{len(pages)} pages exceeds the {settings.max_pages_per_upload}-page limit for this "
+                "deployment. Run the project locally to ingest documents of any size."
+            )
 
         execute_many(
             "INSERT OR REPLACE INTO pages (doc_id, page_index, printed_label, text, char_count) VALUES (?, ?, ?, ?, ?)",

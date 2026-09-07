@@ -51,6 +51,20 @@ def _env_bool(name: str, default: bool) -> bool:
 class Settings:
     # --- storage ---
     data_dir: Path = field(default_factory=lambda: Path(os.getenv("DATA_DIR") or PROJECT_DIR / "data"))
+    # On first boot, copy this database in if the data directory is empty. Lets a
+    # container ship with the corpus already ingested so the demo works instantly
+    # and without spending anyone's quota.
+    seed_db: Path | None = field(
+        default_factory=lambda: Path(os.getenv("SEED_DB")) if os.getenv("SEED_DB") else None
+    )
+
+    # --- deployment guards ---
+    # A public URL means strangers can spend the owner's free-tier quota. These
+    # bound the damage; DAILY_CALL_BUDGET is the backstop behind them.
+    max_upload_mb: int = _env_int("MAX_UPLOAD_MB", 25)
+    max_pages_per_upload: int = _env_int("MAX_PAGES_PER_UPLOAD", 0)  # 0 = unlimited
+    # Read-only: serve everything already ingested, refuse new uploads.
+    demo_mode: bool = _env_bool("DEMO_MODE", False)
 
     # --- gemini ---
     # GEMINI_API_KEYS is a comma (or newline) separated pool. GEMINI_API_KEY is
@@ -162,6 +176,16 @@ class Settings:
     def ensure_dirs(self) -> None:
         self.data_dir.mkdir(parents=True, exist_ok=True)
         self.upload_dir.mkdir(parents=True, exist_ok=True)
+
+    def seed_if_empty(self) -> bool:
+        """Copy the seed database in when there is no database yet."""
+        if not self.seed_db or self.db_path.exists() or not self.seed_db.is_file():
+            return False
+        import shutil
+
+        self.ensure_dirs()
+        shutil.copy2(self.seed_db, self.db_path)
+        return True
 
 
 settings = Settings()

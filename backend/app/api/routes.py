@@ -71,6 +71,8 @@ def health() -> dict[str, Any]:
         "calls_last_24h": used,
         "daily_call_budget": settings.daily_call_budget,
         "budget_remaining": max(0, settings.daily_call_budget - used) if settings.daily_call_budget else None,
+        "demo_mode": settings.demo_mode,
+        "max_upload_mb": settings.max_upload_mb,
     }
 
 
@@ -136,6 +138,16 @@ async def upload_documents(
 ) -> dict[str, Any]:
     from ..llm.gemini import get_pool
 
+    if settings.demo_mode:
+        raise HTTPException(
+            status_code=403,
+            detail=(
+                "This deployment is read-only. It serves a corpus that was ingested ahead of "
+                "time so the results can be explored without an API key. Clone the repository "
+                "and run it locally to ingest your own PDFs."
+            ),
+        )
+
     if len(get_pool()) == 0:
         raise HTTPException(
             status_code=503,
@@ -169,6 +181,15 @@ async def upload_documents(
             continue
         if not payload.startswith(b"%PDF"):
             accepted.append({"filename": name, "status": "rejected", "reason": "not a valid PDF (bad header)"})
+            continue
+        if settings.max_upload_mb and len(payload) > settings.max_upload_mb * 1_000_000:
+            accepted.append(
+                {
+                    "filename": name,
+                    "status": "rejected",
+                    "reason": f"larger than the {settings.max_upload_mb} MB limit",
+                }
+            )
             continue
 
         target = settings.upload_dir / f"{new_id()}_{name}"
