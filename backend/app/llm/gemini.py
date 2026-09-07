@@ -31,6 +31,28 @@ _BASE = "https://generativelanguage.googleapis.com/v1beta/models"
 _TRANSIENT_STATUS = {408, 429, 500, 502, 503, 504}
 
 
+_KEY_IN_URL_RE = re.compile(r"([?&]key=)[^&\s\"'>]+")
+
+
+def redact(text: object) -> str:
+    """Strip API keys from anything that gets logged or persisted.
+
+    The key travels as a query parameter, so an httpx transport error can carry
+    the full request URL - key included - in its string form. That string is
+    written to `llm_calls.error`, and that table lives in a database this repo
+    commits. Redacting at every sink is cheaper than reasoning about which
+    exception types embed a URL.
+    """
+    out = str(text)
+    if not out:
+        return out
+    out = _KEY_IN_URL_RE.sub(r"\1<redacted>", out)
+    for key in settings.gemini_keys:
+        if key and len(key) > 8:
+            out = out.replace(key, "<redacted>")
+    return out
+
+
 class GeminiError(RuntimeError):
     pass
 
@@ -412,7 +434,7 @@ async def generate_json(
         ):
             await pool.report_error(state, fatal=True, reason=f"HTTP {resp.status_code}")
             last_error = GeminiError(f"key {state.index} rejected: {detail}")
-            log.warning("Disabling API key #%s: %s", state.index, detail)
+            log.warning("Disabling API key #%s: %s", state.index, redact(detail))
             continue
 
         if resp.status_code in _TRANSIENT_STATUS:
@@ -434,6 +456,8 @@ async def generate_json(
         latency_ms=int((time.perf_counter() - started) * 1000),
         in_chars=len(prompt),
         out_chars=0,
-        error=str(last_error)[:500],
+        error=redact(last_error)[:500],
     )
-    raise GeminiError(f"all {settings.max_attempts_per_call} attempts failed: {last_error}")
+    raise GeminiError(
+        f"all {settings.max_attempts_per_call} attempts failed: {redact(last_error)}"
+    )

@@ -23,6 +23,7 @@ from ..db import execute, execute_many, get_conn, new_id, now_iso, query, record
 from .chunking import build_chunks
 from .embeddings import VectorIndex, embed_texts, to_blob
 from .extract import extract_from_chunk, profile_document
+from ..llm.gemini import redact
 from .linking import build_candidates, filter_candidates, judge_batch, load_facts, needs_escalation
 from .pdf_parse import document_opening, parse_pdf
 
@@ -90,17 +91,20 @@ async def _run_extraction(
                     profile=profile,
                 )
             except Exception as exc:  # one bad chunk must not sink the document
-                log.warning("chunk %s failed: %s", chunk["id"], exc)
+                # Redacted: a transport error can carry the request URL, and the
+                # API key rides in its query string.
+                safe = redact(exc)
+                log.warning("chunk %s failed: %s", chunk["id"], safe)
                 execute(
                     "UPDATE chunks SET status = 'failed', error = ? WHERE id = ?",
-                    (str(exc)[:500], chunk["id"]),
+                    (safe[:500], chunk["id"]),
                 )
                 record_issue(
                     doc_id=doc_id,
                     chunk_id=chunk["id"],
                     kind="chunk_failed",
                     severity="error",
-                    detail=f"extraction failed for pages {chunk['page_start']}–{chunk['page_end']}: {exc}",
+                    detail=f"extraction failed for pages {chunk['page_start']}–{chunk['page_end']}: {safe}",
                 )
             else:
                 _persist_facts(result.facts)
@@ -220,13 +224,14 @@ async def _run_linking(job_id: str, new_facts: list[dict[str, Any]]) -> int:
             try:
                 relation_rows = await judge_batch(batch, model=model)
             except Exception as exc:
-                log.warning("judge batch failed: %s", exc)
+                safe = redact(exc)
+                log.warning("judge batch failed: %s", safe)
                 record_issue(
                     doc_id=batch[0]["a"]["doc_id"],
                     chunk_id=None,
                     kind="judge_failed",
                     severity="error",
-                    detail=f"relationship judgment failed for {len(batch)} pairs: {exc}",
+                    detail=f"relationship judgment failed for {len(batch)} pairs: {safe}",
                 )
                 relation_rows = []
 
