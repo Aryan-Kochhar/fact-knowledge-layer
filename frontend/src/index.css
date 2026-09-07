@@ -1,0 +1,185 @@
+@import 'tailwindcss';
+
+/* ------------------------------------------------------------------
+   Design tokens
+
+   A near-black neutral base with a single violet accent, plus three
+   semantic colours that carry the only meaning-bearing hue in the app:
+   agreement, conflict, and conflict-explained. Keeping colour scarce is
+   what lets those three read instantly.
+   ------------------------------------------------------------------ */
+@theme {
+  --color-ink-950: #08080a;
+  --color-ink-900: #0c0c10;
+  --color-ink-850: #101016;
+  --color-ink-800: #16161e;
+  --color-ink-700: #1e1e28;
+  --color-line: #23232e;
+  --color-line-soft: #1a1a22;
+
+  --color-fg: #ececef;
+  --color-muted: #8b8b99;
+  --color-faint: #5c5c6b;
+
+  --color-accent: #b9a7ff;
+  --color-accent-dim: #6b5bb0;
+
+  --color-agree: #3ecf8e;
+  --color-conflict: #ff6b81;
+  --color-context: #f5b544;
+  --color-neutral: #6b7280;
+
+  --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+}
+
+@layer base {
+  html {
+    background-color: var(--color-ink-950);
+    color-scheme: dark;
+  }
+
+  body {
+    margin: 0;
+    background-color: var(--color-ink-950);
+    color: var(--color-fg);
+    font-family: var(--font-sans);
+    font-size: 14px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background: color-mix(in oklab, var(--color-accent) 32%, transparent);
+    color: #fff;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-ink-700);
+    border-radius: 999px;
+    border: 3px solid var(--color-ink-950);
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #2e2e3c;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+}
+
+/* ------------------------------------------------------------------
+   Motion — present but restrained. Everything respects reduced-motion.
+   ------------------------------------------------------------------ */
+@keyframes fkl-rise {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fkl-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fkl-slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(18px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fkl-shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes fkl-pulse-ring {
+  0% {
+    box-shadow: 0 0 0 0 color-mix(in oklab, var(--color-accent) 45%, transparent);
+  }
+  70% {
+    box-shadow: 0 0 0 8px transparent;
+  }
+  100% {
+    box-shadow: 0 0 0 0 transparent;
+  }
+}
+
+@utility animate-rise {
+  animation: fkl-rise 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@utility animate-fade {
+  animation: fkl-fade 0.4s ease both;
+}
+
+@utility animate-slide-in {
+  animation: fkl-slide-in 0.32s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@utility animate-pulse-ring {
+  animation: fkl-pulse-ring 2s ease-out infinite;
+}
+
+@utility shimmer {
+  background: linear-gradient(
+    90deg,
+    var(--color-ink-850) 25%,
+    var(--color-ink-800) 37%,
+    var(--color-ink-850) 63%
+  );
+  background-size: 200% 100%;
+  animation: fkl-shimmer 1.6s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* Staggered entrance for lists — index passed via a CSS variable. */
+.stagger {
+  animation-delay: calc(var(--i, 0) * 40ms);
+}
+
+/* The highlighted evidence span inside a page of source text. */
+.evidence-mark {
+  background: color-mix(in oklab, var(--color-accent) 22%, transparent);
+  color: #fff;
+  border-radius: 3px;
+  padding: 1px 2px;
+  box-shadow: inset 0 -1px 0 color-mix(in oklab, var(--color-accent) 55%, transparent);
+}
