@@ -72,9 +72,25 @@ class Settings:
     # A public URL means strangers can spend the owner's free-tier quota. These
     # bound the damage; DAILY_CALL_BUDGET is the backstop behind them.
     max_upload_mb: int = _env_int("MAX_UPLOAD_MB", 25)
-    max_pages_per_upload: int = _env_int("MAX_PAGES_PER_UPLOAD", 0)  # 0 = unlimited
+    # 0 = unlimited. A default is set because PDF parsing is unsandboxed: a
+    # decompression-bomb PDF declaring a hundred thousand pages should be
+    # refused before PyMuPDF is asked to walk it.
+    max_pages_per_upload: int = _env_int("MAX_PAGES_PER_UPLOAD", 600)
+    # Ceiling on extracted characters per document, so a pathological file
+    # cannot exhaust memory during parsing.
+    max_document_chars: int = _env_int("MAX_DOCUMENT_CHARS", 12_000_000)
     # Read-only: serve everything already ingested, refuse new uploads.
     demo_mode: bool = _env_bool("DEMO_MODE", False)
+
+    # --- access control ---
+    # Optional. When set, every mutating request must carry
+    # `Authorization: Bearer <token>`. Unset by default: this binds to localhost
+    # and is a single-user tool, so requiring a token locally is friction with no
+    # benefit. Set it before exposing the app to anything else.
+    api_token: str = os.getenv("API_TOKEN", "").strip()
+    # Requests per minute per client. Protects the process, not the API bill -
+    # DAILY_CALL_BUDGET and the key pool do that. 0 disables.
+    rate_limit_per_minute: int = _env_int("RATE_LIMIT_PER_MINUTE", 120)
 
     # --- gemini ---
     # GEMINI_API_KEYS is a comma (or newline) separated pool. GEMINI_API_KEY is

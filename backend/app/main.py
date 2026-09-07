@@ -7,14 +7,15 @@ import os
 from contextlib import asynccontextmanager
 from pathlib import Path
 
-from fastapi import FastAPI
+from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import FileResponse
+from fastapi.responses import FileResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
 
 from .api.routes import router
 from .config import settings
 from .db import init_db
+from .security import RateLimiter
 
 logging.basicConfig(
     level=logging.INFO,
@@ -64,6 +65,33 @@ app = FastAPI(
     version="1.0.0",
     lifespan=lifespan,
 )
+
+_limiter = RateLimiter(settings.rate_limit_per_minute)
+
+
+@app.middleware("http")
+async def rate_limit(request: Request, call_next):
+    """Per-client request ceiling.
+
+    Bounds what a runaway script or a stranger can do to the process. It is not
+    the quota guard - DAILY_CALL_BUDGET and the key pool cover the API bill.
+    """
+    if request.url.path.startswith("/api"):
+        client = request.client.host if request.client else "unknown"
+        allowed, retry_after = _limiter.allow(client)
+        if not allowed:
+            return JSONResponse(
+                status_code=429,
+                content={
+                    "detail": (
+                        f"Rate limit of {settings.rate_limit_per_minute} requests/minute reached. "
+                        f"Retry in {retry_after}s, or raise RATE_LIMIT_PER_MINUTE."
+                    )
+                },
+                headers={"Retry-After": str(retry_after)},
+            )
+    return await call_next(request)
+
 
 app.add_middleware(
     CORSMiddleware,

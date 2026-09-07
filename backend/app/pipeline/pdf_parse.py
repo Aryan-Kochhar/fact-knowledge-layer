@@ -273,10 +273,26 @@ def _resolve_labels(pages: list[PageContent]) -> None:
 # entry point
 # --------------------------------------------------------------------------
 
+class PdfTooLarge(ValueError):
+    """Refused before parsing, to bound memory on a hostile or absurd file."""
+
+
 def parse_pdf(path: Path) -> list[PageContent]:
-    """Extract per-page text (including rendered tables) from a PDF."""
+    """Extract per-page text (including rendered tables) from a PDF.
+
+    Parsing is unsandboxed, so the limits are checked up front: a PDF declaring
+    an enormous page count is refused before PyMuPDF is asked to walk it, and
+    extraction stops if the accumulated text passes the character ceiling.
+    """
     pages: list[PageContent] = []
+    total_chars = 0
     with fitz.open(path) as doc:
+        limit = settings.max_pages_per_upload
+        if limit and doc.page_count > limit:
+            raise PdfTooLarge(
+                f"{doc.page_count} pages exceeds the {limit}-page limit for this deployment. "
+                "Raise MAX_PAGES_PER_UPLOAD to ingest documents this large."
+            )
         # Prefer the PDF's own page labels when the file declares them - they are
         # authoritative and free.
         declared: dict[int, str] = {}
@@ -305,6 +321,13 @@ def parse_pdf(path: Path) -> list[PageContent]:
                 )
 
             body = _collapse_whitespace(body)
+
+            total_chars += len(body)
+            if settings.max_document_chars and total_chars > settings.max_document_chars:
+                raise PdfTooLarge(
+                    f"extracted text passed the {settings.max_document_chars:,}-character ceiling "
+                    f"at page {i}. Raise MAX_DOCUMENT_CHARS if this document is genuinely this large."
+                )
 
             content = PageContent(page_index=i, text=body)
             content.label_candidates = _label_candidates(body)

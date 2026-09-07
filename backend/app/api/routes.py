@@ -12,10 +12,11 @@ import asyncio
 import json
 import logging
 import re
+import secrets
 from pathlib import Path
 from typing import Any
 
-from fastapi import APIRouter, BackgroundTasks, File, HTTPException, Query, UploadFile
+from fastapi import APIRouter, BackgroundTasks, Depends, File, Header, HTTPException, Query, UploadFile
 
 from ..config import settings
 from ..db import calls_in_last_day, execute, new_id, query, query_one
@@ -24,6 +25,30 @@ from ..pipeline.ingest import create_job, ingest_document, register_document
 
 log = logging.getLogger("fkl.api")
 router = APIRouter(prefix="/api")
+
+
+def require_token(authorization: str | None = Header(default=None)) -> None:
+    """Gate for requests that change state or spend quota.
+
+    No-op unless API_TOKEN is set, because the app binds to localhost and is a
+    single-user tool; demanding a token there would be friction without benefit.
+    Set API_TOKEN before exposing it to anything wider, and these endpoints
+    start requiring `Authorization: Bearer <token>`.
+    """
+    expected = settings.api_token
+    if not expected:
+        return
+    supplied = ""
+    if authorization and authorization.lower().startswith("bearer "):
+        supplied = authorization[7:].strip()
+    # Constant-time compare: a plain == leaks the shared secret one byte at a
+    # time to anyone who can measure response latency.
+    if not supplied or not secrets.compare_digest(supplied, expected):
+        raise HTTPException(
+            status_code=401,
+            detail="This endpoint requires a bearer token (API_TOKEN is set on the server).",
+            headers={"WWW-Authenticate": "Bearer"},
+        )
 
 # Hold strong references so in-flight ingest tasks are not garbage collected.
 _RUNNING: set[asyncio.Task] = set()
@@ -131,7 +156,7 @@ def stats() -> dict[str, Any]:
 # documents
 # --------------------------------------------------------------------------
 
-@router.post("/documents")
+@router.post("/documents", dependencies=[Depends(require_token)])
 async def upload_documents(
     background: BackgroundTasks,  # noqa: ARG001 - kept for API symmetry
     files: list[UploadFile] = File(...),
@@ -254,7 +279,7 @@ def get_document(doc_id: str) -> dict[str, Any]:
     return doc
 
 
-@router.delete("/documents/{doc_id}")
+@router.delete("/documents/{doc_id}", dependencies=[Depends(require_token)])
 def delete_document(doc_id: str) -> dict[str, Any]:
     """Remove a document. Cascades take out its facts, embeddings and exactly the
     relations that referenced them - other documents are untouched."""

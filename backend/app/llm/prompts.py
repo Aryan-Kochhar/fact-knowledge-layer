@@ -25,6 +25,8 @@ from __future__ import annotations
 import json
 from typing import Any
 
+from ..security import UNTRUSTED_PREAMBLE, fence, new_fence
+
 # --------------------------------------------------------------------------
 # 1. document profile
 # --------------------------------------------------------------------------
@@ -53,13 +55,20 @@ Infer the document's reporting context. Respond with a single JSON object:
 Use null for anything you cannot determine. Do not guess an entity or period \
 that is not supported by the text.
 
---- DOCUMENT OPENING ---
-{text}
---- END ---"""
+{untrusted}
+
+## Document opening
+
+{text}"""
 
 
 def profile_prompt(filename: str, text: str) -> str:
-    return PROFILE_PROMPT.format(filename=filename, text=text)
+    token = new_fence()
+    return PROFILE_PROMPT.format(
+        filename=filename,
+        untrusted=UNTRUSTED_PREAMBLE,
+        text=fence(text, token),
+    )
 
 
 # --------------------------------------------------------------------------
@@ -165,9 +174,11 @@ A JSON array. Each element:
 Return `[]` if the text contains no extractable facts. Output the array and \
 nothing else.
 
---- TEXT ---
-{text}
---- END TEXT ---"""
+{untrusted}
+
+## Document content
+
+{text}"""
 
 
 def _profile_block(profile: dict[str, Any] | None) -> str:
@@ -190,9 +201,14 @@ def _profile_block(profile: dict[str, Any] | None) -> str:
 
 
 def extract_prompt(text: str, profile: dict[str, Any] | None, max_facts: int = 40) -> str:
+    # The document is fenced with a per-request random token. A fixed delimiter
+    # would let a PDF containing that delimiter end the data block early and have
+    # everything after it read as instructions.
+    token = new_fence()
     return EXTRACT_PROMPT.format(
         profile_block=_profile_block(profile),
-        text=text,
+        untrusted=UNTRUSTED_PREAMBLE,
+        text=fence(text, token),
         max_facts=max_facts,
     )
 

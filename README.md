@@ -594,11 +594,63 @@ and no second terminal. `SEED_DB` populates a fresh clone from the committed
 corpus. `MAX_UPLOAD_MB`, `MAX_PAGES_PER_UPLOAD` and `DEMO_MODE` remain available
 for anyone who does want to expose an instance.
 
-### Credentials
+### Security
 
-`backend/.env` is gitignored and no key is committed. `scripts/check_env.py` and
-`scripts/check_keys.py` mask key values in all output, and `scripts/set_env.py`
-refuses to write any variable whose name looks like a secret.
+Three things here are untrusted: the API keys, the PDFs, and the callers.
+
+**Credentials.** `backend/.env` is gitignored and no key is committed — verified
+by scanning every tracked file *and* the bytes of the committed database. Keys
+are masked wherever they surface (`/api/keys` returns `AQ.A…jwTQ`), the pool
+stores only a key *index* in the database, and `scripts/set_env.py` refuses to
+write any variable whose name looks like a secret.
+
+One real leak was found and closed. The key travels as a query parameter, so an
+httpx transport error can carry the full request URL in its string form — and
+that string was written to `llm_calls.error`, in a database this repo commits.
+Nothing had actually leaked, because the errors encountered did not embed a URL,
+but that is luck rather than design. `gemini.redact()` now runs at every sink
+that logs or persists an exception.
+
+**Prompt injection.** PDF content goes into an LLM prompt, so a document can
+contain text written to manipulate the model. The structural defences do most of
+the work and are not bypassable by text: a fact is stored only if its quote is
+found in the real page, and relation labels come from a fixed whitelist — so an
+injected instruction cannot fabricate a citation or invent a relationship.
+
+The gap that *was* exploitable: fixed prompt delimiters. A PDF containing
+`--- END TEXT ---` could close the data block early and have everything after it
+read as instructions. Now the document is fenced with a **per-request random
+token** that a document authored beforehand cannot guess, delimiter-shaped
+sequences inside the text are defanged, and the prompt states explicitly that
+the block is data. Documents matching known injection patterns are logged as
+`prompt_injection_suspected` and their facts have confidence halved — visible in
+the UI rather than silently absorbed.
+
+**Hostile or malformed PDFs.** Uploads are checked for the `%PDF` magic bytes,
+not just the extension; filenames are sanitised through an allowlist and stored
+under a generated id, so an uploaded name never becomes a path. Parsing is
+unsandboxed, so limits are enforced before and during it: `MAX_UPLOAD_MB`,
+`MAX_PAGES_PER_UPLOAD` (checked against the declared page count *before*
+PyMuPDF walks the file) and `MAX_DOCUMENT_CHARS`.
+
+**Callers.** `RATE_LIMIT_PER_MINUTE` (default 120/client) bounds what a runaway
+script can do to the process; `DAILY_CALL_BUDGET` and the key pool bound what it
+can do to the API bill. Setting `API_TOKEN` requires
+`Authorization: Bearer <token>` on every mutating endpoint, compared in constant
+time; it is unset by default because the app binds to localhost and is
+single-user, where a token would be friction without benefit.
+
+**SQL and paths.** Every user-supplied value reaches SQLite as a bound `?`
+parameter; only code-literal fragments are ever interpolated into query text.
+The SPA fallback resolves candidate paths and refuses anything outside the build
+directory.
+
+**What remains open.** Prompt-injection defence is mitigation, not a proof — a
+sufficiently clever document could still bias *which* facts get extracted, even
+though it cannot forge their evidence. PDF parsing would be better in a
+subprocess with a hard memory ceiling than behind size caps. And the rate
+limiter is per-process and in-memory, so it would not survive being run behind
+multiple workers.
 
 ### A note on the corpus
 

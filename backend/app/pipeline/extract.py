@@ -19,6 +19,7 @@ from ..config import settings
 from ..db import new_id, now_iso
 from ..llm import prompts
 from ..llm.gemini import generate_json
+from ..security import scan_for_injection
 from .normalize import (
     canonical_claim,
     detect_basis,
@@ -112,6 +113,24 @@ async def extract_from_chunk(
     profile: dict[str, Any] | None,
 ) -> ExtractionResult:
     result = ExtractionResult()
+
+    # A document that tries to talk to the model is worth recording. The prompt
+    # fence stops it changing the task, and quote verification stops it inventing
+    # evidence, but a reader should still be told the attempt was there - facts
+    # from such a chunk deserve more scepticism, not less.
+    injection = scan_for_injection(chunk_text)
+    if injection:
+        result.issue(
+            "prompt_injection_suspected",
+            (
+                f"the source text on pages {min(page_texts)}–{max(page_texts)} contains "
+                f"patterns typical of prompt injection ({', '.join(injection)}). The document "
+                "block is fenced with a per-request token and its content was treated as data; "
+                "facts from this chunk are flagged for review."
+            ),
+            payload={"patterns": injection},
+            severity="warning",
+        )
 
     raw = await generate_json(
         prompts.extract_prompt(chunk_text, profile, max_facts=settings.max_facts_per_chunk),
@@ -223,7 +242,9 @@ async def extract_from_chunk(
                 "time_scope_raw": time_raw,
                 "qualifiers": json.dumps(qualifiers, ensure_ascii=False),
                 "fact_type": str(item.get("fact_type") or parsed_value.dimension or "unknown")[:40],
-                "confidence": _as_float(item.get("confidence"), 0.6),
+                # Facts drawn from a page that tried to address the model are
+                # kept but demoted, so they cannot lead a ranked view.
+                "confidence": round(_as_float(item.get("confidence"), 0.6) * (0.5 if injection else 1.0), 3),
                 "value_num": parsed_value.number,
                 "value_unit": parsed_value.unit,
                 "value_dim": parsed_value.dimension,
