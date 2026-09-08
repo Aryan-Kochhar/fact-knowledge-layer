@@ -577,11 +577,30 @@ extraction and profiling, `gemini-3.1-flash-lite` for routine judgment,
 **Scanned PDFs are not handled.** A document with no text layer yields nothing
 but a logged `no_text_layer` warning. An OCR pass would complete the ingest path.
 
-**Fiscal-year convention is assumed.** April to March, correct for these
-documents and wrong elsewhere. It is a single constant
-(`normalize.FY_START_MONTH`) rather than something spread through the code, but
-it should be inferred per document. The profile pass already reads the front
-matter and could determine it.
+**Fiscal-year convention is assumed: April to March.** Correct for every
+document here, and the exposure elsewhere is narrower than it sounds, so it is
+worth being exact about where it breaks.
+
+| Phrasing | Normalises to | |
+|---|---|---|
+| `year ended December 31, 2023` | `CY2023` | correct — calendar-year filers are fine |
+| `as of September 30, 2024` | `@2024-09-30` | correct — dated instants carry no convention |
+| `the three months ended June 30, 2024` | `3M@2024-06-30` | correct |
+| `2022/23`, `FY24` | `FY2023`, `FY2024` | correct on the April–March convention |
+| `year ended 30 June 2024` | `FY2025` | **wrong** for an Australian filer; should be FY2024 |
+| `fiscal year ending September 30, 2024` | `FY2025` | **wrong** for a US federal report |
+
+So the break is confined to documents whose fiscal year ends in neither March
+nor December *and* which label it with an `FY`-style token. Most US and European
+filings state calendar year-ends and pass through correctly. When it does break
+it mis-labels the period by one year — the fact, its value and its evidence are
+all still right, but it would be compared against the wrong year.
+
+`normalize.FY_START_MONTH` is a single constant rather than logic spread through
+the code, and the profile pass already reads front matter, so inferring it per
+document is the obvious fix. It is not done here because it would change an
+LLM-facing schema that cannot be tested without a foreign-convention PDF to test
+it against.
 
 **Some period phrasings still fall through.** Abbreviated forms with an
 apostrophe (`Mar '23`) do not parse, leaving those facts without a period key. An
