@@ -93,7 +93,7 @@ From `backend/`. All but the last cost no API calls.
 | Command | What it does |
 |---|---|
 | `python eval/run_eval.py` | Score the pipeline against hand-labelled facts |
-| `python -m pytest` | 258 unit tests |
+| `python -m pytest` | 272 unit tests |
 | `python scripts/diagnose.py` | Corpus-wide quality report |
 | `python scripts/peek.py facts\|relations\|issues` | Readable sample of what was extracted |
 | `python scripts/debug_reject.py` | Show rejected extractions beside the source text |
@@ -562,7 +562,7 @@ direction during the build — dropping the deployment work once it proved
 overkill, and pushing for the security audit that found API keys leaking into a
 database about to be committed.
 
-**Claude Code (Opus 5).** Implementation, the 258 tests, and the debugging
+**Claude Code (Opus 5).** Implementation, the 272 tests, and the debugging
 behind the fixes above. It also contributed design that was not in my brief: the
 quote-verification gate, the deterministic normalisation layer, the
 document-profile pass, the priority ranking that rations judgment calls, and the
@@ -655,7 +655,7 @@ fiscal-year inference, then OCR.
 cd backend && python -m pytest
 ```
 
-258 tests, covering the logic where mistakes are silent and expensive: unit and
+272 tests, covering the logic where mistakes are silent and expensive: unit and
 scale conversion, fiscal-versus-calendar period parsing, quote matching against
 deliberately hallucinated and paraphrased quotes, truncated-JSON recovery, metric
 identity across period labels, the candidate priority ranking, escalation

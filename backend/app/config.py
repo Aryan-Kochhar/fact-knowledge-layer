@@ -8,6 +8,7 @@ defaults, so the app runs with zero configuration except the API keys.
 from __future__ import annotations
 
 import os
+import re
 from dataclasses import dataclass, field
 from pathlib import Path
 
@@ -20,10 +21,25 @@ load_dotenv(BACKEND_DIR / ".env")
 
 
 def _split_keys(raw: str | None) -> list[str]:
+    """Parse the key pool, discarding the template's placeholders.
+
+    `.env` is written from `.env.example` on first run, and that template ships
+    `key_one,key_two,key_three` so the format is obvious. Without this filter the
+    pool counts those as three working keys: the console, `/api/health` and the
+    UI all report a healthy pool, and the first upload fails with an auth error
+    that looks like a bug in the app rather than a missing key.
+
+    Real Gemini keys are ~39 characters, so anything short is a placeholder.
+    """
     if not raw:
         return []
     parts = [p.strip() for p in raw.replace("\n", ",").split(",")]
-    return [p for p in parts if p]
+    return [p for p in parts if p and len(p) > 20 and not _PLACEHOLDER_RE.match(p)]
+
+
+_PLACEHOLDER_RE = re.compile(
+    r"^(key[_-]?\w+|your[_-]?key\w*|<.*>|x{4,}|\.{3,})$", re.IGNORECASE
+)
 
 
 def _env_int(name: str, default: int) -> int:
