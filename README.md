@@ -19,7 +19,7 @@ locally on `sentence-transformers` so no tokens are spent finding candidates.
 
 | | |
 |---|---|
-| **Watch it first** | [Demo video, 2:59](https://drive.google.com/file/d/1hkrObqIwGNGNwbADmzf6fCAWErWNQoSt/view?usp=sharing) — all four cases, then a live ingest |
+| **Watch it first** | [Demo video, 3 min](https://www.youtube.com/watch?v=1nwO144tIu0) — all four cases, then a live ingest |
 | **Run it** | [Setup](#setup-and-run-instructions) — one command. No key needed to browse; a free Gemini key to ingest your own PDFs |
 | **The four required cases** | [Results](#results-on-the-starter-corpus) — corroboration, contradiction, context, failure |
 | **How well it works** | [Measured accuracy](#how-accurate-is-it-measured) — recall against hand-labelled facts, and where it fails |
@@ -108,7 +108,8 @@ judgment check after a parser fix, without re-requesting anything from the model
 
 ## Video Demo
 
-**[Demo video — 2:59](https://drive.google.com/file/d/1hkrObqIwGNGNwbADmzf6fCAWErWNQoSt/view?usp=sharing)**
+**[Demo video — 3 minutes](https://www.youtube.com/watch?v=1nwO144tIu0)**
+· [mirror on Google Drive](https://drive.google.com/file/d/1hkrObqIwGNGNwbADmzf6fCAWErWNQoSt/view?usp=sharing)
 
 Walks through each of the four required cases with its source evidence and the
 system's reasoning, then ends on one of the starter PDFs being deleted and
