@@ -106,10 +106,11 @@ the judgment check after a parser fix without re-requesting anything.
 
 ## Video Demo
 
-**[Demo video (3 minutes or less)](ADD_YOUR_LINK_HERE)**
+**[Demo video — 2:59](https://drive.google.com/file/d/1hkrObqIwGNGNwbADmzf6fCAWErWNQoSt/view?usp=sharing)**
 
-Shows a PDF being ingested end to end, then each of the four required cases with
-its source evidence and the system's reasoning.
+Walks through each of the four required cases with its source evidence and the
+system's reasoning, then ends on one of the starter PDFs being deleted and
+re-ingested live — so the pipeline is visible running, not just described.
 
 ---
 
