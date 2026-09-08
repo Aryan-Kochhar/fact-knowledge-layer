@@ -41,12 +41,43 @@ _SCALES: list[tuple[str, float]] = [
     ("k", 1e3),
 ]
 
+# Order matters: the first hit wins, so anything that contains a shorter token
+# has to come before it. Every dollar variant precedes bare "$", and every
+# "<country> dollar" precedes bare "dollar", or a Singapore figure would be
+# read as US dollars.
+#
+# Deliberately absent: "won", "real", "rand", "peso", "krona". Each is either a
+# common English word or ambiguous across countries, and a false currency hit
+# is worse than no hit - it would silently make two unrelated figures look
+# comparable. Their ISO codes are listed instead. "¥" stays JPY; nothing in the
+# text can reliably separate it from renminbi.
 _CURRENCIES: list[tuple[str, str]] = [
     ("inr", "INR"), ("rs.", "INR"), ("rs", "INR"), ("rupee", "INR"), ("₹", "INR"),
-    ("us$", "USD"), ("usd", "USD"), ("$", "USD"), ("dollar", "USD"),
-    ("eur", "EUR"), ("€", "EUR"),
-    ("gbp", "GBP"), ("£", "GBP"),
-    ("jpy", "JPY"), ("¥", "JPY"),
+
+    # dollar family - symbols and qualified names before the bare forms
+    ("us$", "USD"), ("a$", "AUD"), ("c$", "CAD"), ("s$", "SGD"),
+    ("hk$", "HKD"), ("nz$", "NZD"),
+    ("australian dollar", "AUD"), ("canadian dollar", "CAD"),
+    ("singapore dollar", "SGD"), ("hong kong dollar", "HKD"),
+    ("new zealand dollar", "NZD"),
+    ("usd", "USD"), ("aud", "AUD"), ("cad", "CAD"), ("sgd", "SGD"),
+    ("hkd", "HKD"), ("nzd", "NZD"),
+    ("$", "USD"), ("dollar", "USD"),
+
+    ("eur", "EUR"), ("€", "EUR"), ("euro", "EUR"),
+    ("gbp", "GBP"), ("£", "GBP"), ("sterling", "GBP"),
+    ("jpy", "JPY"), ("¥", "JPY"), ("yen", "JPY"),
+    ("chf", "CHF"), ("sfr", "CHF"), ("swiss franc", "CHF"),
+    ("cny", "CNY"), ("rmb", "CNY"), ("renminbi", "CNY"), ("yuan", "CNY"),
+    ("krw", "KRW"), ("₩", "KRW"),
+    ("aed", "AED"), ("dirham", "AED"),
+    ("sar", "SAR"), ("qar", "QAR"),
+    ("zar", "ZAR"), ("brl", "BRL"), ("mxn", "MXN"), ("rub", "RUB"),
+    ("sek", "SEK"), ("nok", "NOK"), ("dkk", "DKK"), ("pln", "PLN"),
+    ("try", "TRY"), ("ils", "ILS"), ("₪", "ILS"),
+    ("idr", "IDR"), ("myr", "MYR"), ("thb", "THB"), ("php", "PHP"),
+    ("vnd", "VND"), ("bdt", "BDT"), ("pkr", "PKR"), ("lkr", "LKR"),
+    ("ngn", "NGN"), ("kes", "KES"), ("egp", "EGP"),
 ]
 
 _PERCENT_TOKENS = ("percentage point", "per cent", "percent", "pct", "%")

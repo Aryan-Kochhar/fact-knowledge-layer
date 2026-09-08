@@ -90,7 +90,7 @@ All run from `backend/`, and all but one cost no API calls.
 | Command | What it does |
 |---|---|
 | `python eval/run_eval.py [--verbose]` | Score the pipeline against hand-labelled facts |
-| `python -m pytest` | 215 unit tests |
+| `python -m pytest` | 258 unit tests |
 | `python scripts/diagnose.py` | Corpus-wide quality report |
 | `python scripts/peek.py facts\|relations\|issues` | Readable sample of what was extracted |
 | `python scripts/debug_reject.py [n]` | Show rejected extractions beside the source text |
@@ -160,6 +160,17 @@ reports Kharif food-grain production growth as both `8.2%` and `5.7%` for
 other against the previous year. Labelled `reconcilable_context`, dimension
 `scope`. A second example differs on `basis`: an RBI inflation projection for
 FY25 appears as both `4.5%` and `4.8%` because the December 2024 MPC revised it.
+
+A third is non-numeric, and is the brief's own illustration of a director active
+in one document and gone from a later one. The prospectus states `5`
+Non-Executive Independent Directors as on 14 May 2022; the FY24 annual report
+states `6` as on 31 March 2024. Dimension `time`, confidence 1.00, reconciled as
+*"the figures refer to different points in time"* — the board changed between
+the filings. Nothing about this pair is financial, and no rule anywhere names
+directors: it works because a fact is `subject · predicate · value · period`
+whatever the subject happens to be. The same mechanism corroborates
+`19/08/2021` against `August 19, 2021` for a director's appointment date, which
+is the brief's differently-written-addresses case in another costume.
 
 **4. An extraction or reasoning failure.** Three distinct kinds, all surfaced in
 the UI rather than swallowed: 76 facts rejected because their quote could not be
@@ -404,6 +415,17 @@ drive normalisation, and the four demonstration cases are queries over live
 data. Ingest a corpus about shipping or pharmaceuticals and the same queries
 surface that corpus's examples.
 
+The two lookup tables that *are* content — currencies and period phrasings —
+were widened past the starter corpus and tested there, since the brief warns
+that other PDFs may be used. 30-plus currencies resolve by ISO code, symbol or
+qualified name (`A$` and `Australian dollar` reach AUD without the bare `$` or
+`dollar` catching them first), and calendar-year filings normalise correctly:
+`year ended December 31, 2023` becomes `CY2023`, not a fiscal year. Ambiguous
+English words are deliberately excluded — `won`, `real`, `rand` and `peso` are
+absent, because a false currency match would silently make two unrelated figures
+look comparable, which is worse than not matching at all. There are tests
+asserting that `audited` is not read as Australian dollars.
+
 ### Design decisions and trade-offs
 
 **SQLite over Postgres.** Single-node system, thousands of rows. It gives
@@ -537,7 +559,7 @@ direction during the build — dropping the deployment work once it proved
 overkill, and pushing for the security audit that found API keys leaking into a
 database about to be committed.
 
-**Claude Code (Opus 5).** Implementation, the 215 tests, and the debugging
+**Claude Code (Opus 5).** Implementation, the 258 tests, and the debugging
 behind the fixes above. It also contributed design that was not in my brief: the
 quote-verification gate, the deterministic normalisation layer, the
 document-profile pass, the priority ranking that rations judgment calls, and the
@@ -611,7 +633,7 @@ fiscal-year inference, then OCR.
 cd backend && python -m pytest
 ```
 
-215 tests, covering the logic where mistakes are silent and expensive: unit and
+258 tests, covering the logic where mistakes are silent and expensive: unit and
 scale conversion, fiscal-versus-calendar period parsing, quote matching against
 deliberately hallucinated and paraphrased quotes, truncated-JSON recovery, metric
 identity across period labels, the candidate priority ranking, escalation
