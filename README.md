@@ -21,6 +21,7 @@ locally on `sentence-transformers` so no tokens are spent finding candidates.
 |---|---|
 | **Just run it** | [Setup](#setup-and-run-instructions) — one command, no API key needed to see results |
 | **The four required cases** | [Results](#results-on-the-starter-corpus) — corroboration, contradiction, context, failure |
+| **How well it works** | [Measured accuracy](#how-accurate-is-it-measured) — recall against hand-labelled facts, and where it fails |
 | **How it works** | [Architecture](#architecture) — two diagrams, then the ideas behind them |
 | **Why it's built this way** | [Design decisions](#design-decisions-and-trade-offs) and [what went wrong](#things-that-went-wrong-and-what-fixed-them) |
 | **What it can't do** | [Limitations](#limitations-and-next-steps) |
@@ -110,7 +111,8 @@ only needed to work on the UI; `run.py` covers everything else.
 | `python scripts/renormalize.py [--apply]` | Re-derive comparison keys after a parser fix | 0 |
 | `python scripts/revalidate.py [--apply]` | Replay the judgment consistency check | 0 |
 | `python scripts/export_samples.py` | Regenerate `samples/` | 0 |
-| `python -m pytest` | 140 unit tests | 0 |
+| `python eval/run_eval.py [--verbose]` | Score the pipeline against hand-labelled facts | 0 |
+| `python -m pytest` | 215 unit tests | 0 |
 
 ---
 
@@ -176,6 +178,84 @@ the UI rather than swallowed: 76 facts rejected because their quote could not be
 found in the source, 47 citations automatically repaired, and 18 verdicts
 flagged where the model's label contradicted the deterministic analysis. The
 "Things that went wrong" section below describes each and what fixed it.
+
+### How accurate is it, measured
+
+```bash
+cd backend && python eval/run_eval.py
+```
+
+Three questions, answered separately because they fail for different reasons.
+No API calls, and no model is asked to score the system — a scoring function
+that calls the thing under test is not a measurement.
+
+**Is every stored fact anchored to evidence?** Whole corpus, no ground truth
+needed. 3,460 of 3,460 facts have a quote located in the source; 76 more were
+proposed and rejected for having none. This is a property the system can be held
+to on any PDF, not just these six.
+
+**Does a fact carry the number its own quote carries?** Also whole corpus. A
+quote that verified against the page still says nothing about whether the value
+attached to it came from that quote — this checks the join.
+
+| | |
+|---|---|
+| Numeric facts checked | 3,411 |
+| Value present in its own quote | **3,399 — 99.65%** |
+| Value absent from its quote | 12 — 0.35% |
+
+All twelve are printed in full by the harness, because they are worth reading
+rather than assuming wrong. Most are the model resolving a number the sentence
+states in words (`"No meetings of the M&A Committee were held during FY24"` →
+`0`; `"across six offices"` → `6`) or reading a value off a chart and citing its
+axis label. They are correct facts with a weak evidence link — a real
+limitation, and a different one from hallucination.
+
+**Does it find what a human reading the page would write down?** This needs
+ground truth, so it is necessarily small: 30 facts in
+[`eval/labeled_facts.json`](backend/eval/labeled_facts.json), read off the
+source pages before looking at what the pipeline produced, spread across all six
+documents and graded easy/medium/hard up front.
+
+| | | |
+|---|---|---|
+| Found, on the labelled page | **20/30** | 66.7% |
+| Same fact, elsewhere in the document | 3/30 | 10.0% |
+| Number present under a name the rule didn't match | 1/30 | 3.3% |
+| Not in the knowledge layer at all | 6/30 | 20.0% |
+| Normalised value correct, of those found | **20/20** | 100% |
+| Period key exactly right, of those found | 11/16 | 68.8% |
+
+By difficulty: 6/6 easy, 7/10 medium, 7/14 hard. The hard ones are wide
+projection tables where the wanted figure is the fourth of ten columns, and
+monthly series where it is the last of thirteen — the system routinely takes the
+first column and stops.
+
+Two results are worth being precise about:
+
+*Normalisation is 100% on everything found.* Where the pipeline extracts a fact
+it converts the units correctly — crore, million, lakh, bracketed negatives. It
+is finding facts, not converting them, that is the weaker half.
+
+*All five period mismatches are one root cause,* and it is a known one. An annual
+report column headed `March 31, 2024` is a year ended on that date, but the bare
+date normalises to an instant (`@2024-03-31`) rather than `FY2024`. This is the
+exact case `compare_periods` has an `aligned` state for, so downstream
+reconciliation still matches those facts against `FY2024` figures from other
+documents — case 1 above depends on it. The eval measures strict key equality
+and so counts it as wrong; that is the harness being stricter than the design,
+and it is reported rather than tuned away.
+
+Recall is reported alone rather than folded into an F1. Dividing a recall over
+thirty labels by a precision over thousands would produce a number that looks
+authoritative and means very little.
+
+The harness caught one bug in itself while being written: an earlier version
+let an exchange rate of ₹85.62 satisfy a label asking for ₹85.6 — two readings
+six months apart — and scored itself higher for it. Value tolerance cannot
+separate those, because it has to stay loose enough to accept ₹127 Cr matching
+₹1,266.41 million. Requiring the match to sit on the labelled page is what fixed
+it, and dropped reported recall from 76.7% to 66.7%.
 
 ---
 
@@ -552,6 +632,15 @@ trace to wide tables whose rows are re-flowed during extraction. Feeding the
 model a structured table representation, and matching quotes against cells rather
 than lines, would remove the largest surviving failure mode.
 
+**Wide tables are read left-to-right and abandoned.** The clearest finding from
+the eval: on a ten-column IMF projection row the pipeline takes the first column
+and stops, so `External debt ... 619.1 623.9 668.8 736.3 ...` yields the 2021/22
+figure and never the 2024/25 one. Same on a thirteen-month RBI series where the
+wanted value is the last column. This is the single largest source of missed
+facts — five of the six outright misses in the labelled set — and it is the same
+root cause as the point above: without cell structure, the model has no reliable
+way to pair a value with its column header.
+
 **The relationship graph is a ranked subset, not exhaustive.** Bounded by
 `MAX_PAIRS_PER_INGEST`. The count of skipped pairs is recorded, but a pair that
 was never judged is not a pair that was judged unrelated.
@@ -580,13 +669,21 @@ fiscal-year inference, then OCR.
 cd backend && python -m pytest
 ```
 
-140 tests, covering the logic where mistakes are silent and expensive: unit and
+215 tests, covering the logic where mistakes are silent and expensive: unit and
 scale conversion, fiscal-versus-calendar period parsing, quote matching against
 deliberately hallucinated and paraphrased quotes, truncated-JSON recovery, metric
 identity across period labels, the candidate priority ranking, escalation
 routing, the model circuit breaker, and the judgment consistency guard. Cases
 taken from real failures on the starter corpus are marked as such in the test
 docstrings.
+
+The evaluation harness has its own tests. A scorer that is too generous inflates
+the result it reports, which is worse than not measuring at all, so
+`tests/test_eval_matching.py` covers both directions: matches that must be
+accepted despite different wording, and near-misses that must be rejected
+despite looking close. One test exists purely to document a limit — that the
+value rule cannot separate two readings 0.02% apart, and that rejecting those is
+the page rule's job.
 
 `scripts/reverify.py` is the integration-level check: it re-parses every ingested
 PDF and re-tests every stored quote, so a change to PDF handling can be measured
