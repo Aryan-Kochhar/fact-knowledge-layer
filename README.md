@@ -19,22 +19,24 @@ locally on `sentence-transformers` so no tokens are spent finding candidates.
 
 | | |
 |---|---|
-| **Just run it** | [Setup](#setup-and-run-instructions) — one command, no API key needed to see results |
+| **Watch it first** | [Demo video, 2:59](https://drive.google.com/file/d/1hkrObqIwGNGNwbADmzf6fCAWErWNQoSt/view?usp=sharing) — all four cases, then a live ingest |
+| **Run it** | [Setup](#setup-and-run-instructions) — one command. No key needed to browse; a free Gemini key to ingest your own PDFs |
 | **The four required cases** | [Results](#results-on-the-starter-corpus) — corroboration, contradiction, context, failure |
 | **How well it works** | [Measured accuracy](#how-accurate-is-it-measured) — recall against hand-labelled facts, and where it fails |
 | **How it works** | [Architecture](#architecture) — two diagrams, then the ideas behind them |
 | **Why it's built this way** | [Design decisions](#design-decisions-and-trade-offs) and [what went wrong](#things-that-went-wrong-and-what-fixed-them) |
 | **What it can't do** | [Limitations](#limitations-and-next-steps) |
 
-The first three take about five minutes. The rest is there if you want the
-reasoning behind a particular decision.
+The video and the first three rows take about ten minutes. The rest is there if
+you want the reasoning behind a particular decision.
 
 ---
 
 ## Setup and Run Instructions
 
-**Requirements: Python 3.11 or newer. That is the whole list.** Node is not
-needed to run this — the built frontend is committed and the backend serves it.
+**You need: Python 3.11 or newer** — and, *only if you want to ingest your own
+PDFs*, a **free Google Gemini API key**. Nothing else. Node is not required; the
+built frontend is committed and the backend serves it.
 
 ```bash
 python run.py
@@ -43,64 +45,64 @@ python run.py
 Then open **<http://127.0.0.1:8000>**.
 
 That one command creates the virtual environment, installs dependencies (a few
-minutes the first time, mostly the CPU build of torch), copies `.env` from the
-template, seeds the pre-ingested corpus, and serves the API and UI from a single
+minutes the first time, mostly the CPU build of torch), writes `.env` from the
+template, seeds the pre-ingested corpus, and serves the API and UI from one
 process.
 
-**It works immediately with no API key.** A fully ingested corpus is committed
-at `samples/facts.db` and copied into place on first run, so every view is
-populated from the start: 6 documents, 511 pages, 3,460 facts, 1,377
-relationships, and the four demonstration cases.
+### Browsing results — no key needed
 
-### To ingest your own PDFs
+A fully ingested corpus ships in `samples/facts.db` and is copied into place on
+first run, so every view is populated immediately: **6 documents, 511 pages,
+3,460 facts, 1,377 relationships** and all four demonstration cases. Open it and
+everything is there.
 
-Extraction needs a Gemini key. The free tier is enough — the entire starter
-corpus cost 279 calls.
+### Ingesting your own PDFs — one free key
 
-1. Get a free key at <https://aistudio.google.com/apikey>.
-2. Put it in `backend/.env`:
+Extraction and reconciliation call Gemini. **The free tier is enough**: the
+entire starter corpus cost 279 calls, and no billing account is required.
 
-```
-GEMINI_API_KEYS=your_key_here
-```
+1. Get a key at **<https://aistudio.google.com/apikey>** — free, takes a minute.
+2. Paste it into `backend/.env`:
+
+   ```
+   GEMINI_API_KEYS=your_key_here
+   ```
 
 3. Restart `python run.py`, then drag a PDF onto the **Ingest** tab.
 
 Several keys can be listed comma-separated; they are rotated and rate-limited
-independently, which raises throughput. One key is fine for a document or two.
+independently, which raises throughput. One key is plenty for a document or two.
 
-New documents are added to the existing corpus rather than replacing it, so
-uploads are compared against everything already there. `python run.py --fresh`
+New documents are added to the existing corpus rather than replacing it, so an
+upload is compared against everything already there. `python run.py --fresh`
 starts from an empty store instead.
 
-### Other useful entry points
+### If you'd rather not run anything
 
-- Raw JSON of every result is in `samples/` — `showcase.json` holds the four
-  required cases with their evidence and reasoning, and needs no setup at all.
-- Interactive API docs at <http://127.0.0.1:8000/docs>.
-- `python run.py --port 9000` to serve elsewhere, `--no-install` to skip the
-  dependency check on restarts.
-- To work on the UI: `cd frontend && npm install && npm run dev` for a
-  hot-reloading build on `:5173` that proxies `/api` to the backend.
+Every result is also committed as raw JSON in `samples/` —
+`showcase.json` holds the four required cases with their evidence and reasoning.
+No setup, no key, readable in a browser.
+
+Also: interactive API docs at `/docs`, `--port 9000` to serve elsewhere, and
+`cd frontend && npm run dev` for a hot-reloading UI on `:5173`.
 
 ### Useful scripts
 
-All run from `backend/`, and all but one cost no API calls.
+From `backend/`. All but the last cost no API calls.
 
 | Command | What it does |
 |---|---|
-| `python eval/run_eval.py [--verbose]` | Score the pipeline against hand-labelled facts |
+| `python eval/run_eval.py` | Score the pipeline against hand-labelled facts |
 | `python -m pytest` | 258 unit tests |
 | `python scripts/diagnose.py` | Corpus-wide quality report |
 | `python scripts/peek.py facts\|relations\|issues` | Readable sample of what was extracted |
-| `python scripts/debug_reject.py [n]` | Show rejected extractions beside the source text |
+| `python scripts/debug_reject.py` | Show rejected extractions beside the source text |
 | `python scripts/reverify.py` | Re-check every stored quote against a fresh parse |
-| `python scripts/plan_ingest.py <dir>` | Report the call budget a corpus needs, before spending it |
-| `python scripts/check_keys.py` | Probe every key against the live API (1 call per key) |
+| `python scripts/plan_ingest.py <dir>` | Report a corpus's call budget before spending it |
+| `python scripts/check_keys.py` | Probe every key against the live API |
 
-Also in `scripts/`: `check_env.py`, `ingest.py`, `export_samples.py`, and
-`renormalize.py` / `revalidate.py`, which re-derive comparison keys and replay
-the judgment check after a parser fix without re-requesting anything.
+`renormalize.py` and `revalidate.py` re-derive comparison keys and replay the
+judgment check after a parser fix, without re-requesting anything from the model.
 
 ---
 
@@ -710,25 +712,21 @@ Interactive docs at <http://localhost:8000/docs>.
 ### Why there is no hosted URL
 
 Deliberate, and measured rather than assumed. `python run.py` satisfies the
-brief in one command, with no key needed to see results. Every free option
-failed on a checkable constraint: Vercel's 250 MB bundle limit against a
-1,085 MB install (torch alone is 502 MB), plus minutes-long ingestion against a
-seconds-long request timeout; Hugging Face Docker and Gradio Spaces now require
-a paid plan; Render and Koyeb's 512 MB tiers against a measured 476 MB peak for
-embedding alone; Cloud Run requires billing enabled.
+brief in one command with no key needed to see results, and every free host
+failed on a checkable constraint: a 1,085 MB install against Vercel's 250 MB
+limit, minutes-long ingestion against seconds-long timeouts, 512 MB tiers
+against a measured 476 MB embedding peak, paid plans, or billing accounts.
 
-Two ways to shrink it were tested and rejected on evidence. Gemini's embedding
-endpoint exhausted all five keys after **800 items**, against a corpus of 3,460
-— on this tier, API-based embedding is not merely more expensive, it is not
-possible, which is the strongest argument for embedding locally. ONNX produced
-interchangeable vectors (cosine **1.0000** over 120 real claims, identical
-candidate decisions at every threshold) and cut the install to 180 MB, but peak
-memory measured **1,034 MB versus torch's 476 MB** — it solves disk and makes
-RAM worse.
+Two ways to shrink it were tested and rejected. Gemini's embedding endpoint
+exhausted all five keys after **800 items** against a corpus of 3,460 — on this
+tier API-based embedding is not merely dearer, it is impossible, which is the
+strongest argument for embedding locally. ONNX gave interchangeable vectors
+(cosine **1.0000**, identical candidate decisions) and a 180 MB install, but
+peak memory measured **1,034 MB against torch's 476 MB** — it fixes disk and
+makes RAM worse.
 
-What was kept: the backend serves the built frontend, so the app is one process
-on one port with no Node. `MAX_UPLOAD_MB`, `MAX_PAGES_PER_UPLOAD` and
-`DEMO_MODE` remain for anyone who does want to expose an instance.
+What the exercise left behind: the backend serves the built frontend, so the app
+is one process on one port with no Node.
 
 ### Security
 
